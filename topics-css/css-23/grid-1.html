@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Grid Model</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="../../contents-html.html">HTML</a>
+                <a class="active-top" href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Grid-konteýner we grid-element</a></li>
+                    <li><a class="btn" href="#c-2">Esasy terminler</a></li>
+                    <li>
+                        <a class="btn" href="#c-3">Grid-konteýnere degişli stil atributlary</a>
+                        <ul id="sublist">
+                            <li><a class="btn" href="#c-3"><b class="atr">grid-template-columns</b> we <b class="atr">grid-template-rows</b></a></li>
+                            <li><a class="btn" href="#c-4"><b class="atr">grid-auto-columns</b> we <b class="atr">grid-auto-rows</b></a></li>
+                            <li><a class="btn" href="#c-5"><b class="atr">grid-auto-flow</b></a></li>
+                            <li><a class="btn" href="#c-6"><b class="atr">grid-template-areas</b></a></li>
+                            <li><a class="btn" href="#c-7"><b class="atr">grid-template</b></a></li>
+                            <li><a class="btn" href="#c-8"><b class="atr">row-gap</b>, <b class="atr">column-gap</b> we <b class="atr">gap</b></a></li>
+                            <li><a class="btn" href="#c-9"><b class="atr">justify-content</b></a></li>
+                            <li><a class="btn" href="#c-10"><b class="atr">align-content</b><a></li>
+                            <li><a class="btn" href="#c-11"><b class="atr">place-content</b></a></li>
+                            <li><a class="btn" href="#c-12"><b class="atr">justify-items</b></a></li>
+                            <li><a class="btn" href="#c-13"><b class="atr">align-items</b></a></li>
+                            <li><a class="btn" href="#c-14"><b class="atr">place-items</b></a></li>
+                            <li><a class="btn" href="#c-15"><b class="atr">grid</b></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="btn" href="#c-16">Grid-elemente degişli stil atributlary</a>
+                        <ul id="sublist">
+                            <li><a class="btn" href="#c-16"><b class="atr">grid-column</b>, <b class="atr">grid-column-end</b>, <b class="atr">grid-row-start</b>, <b class="atr">grid-row-end</b></a></li>
+                            <li><a class="btn" href="#c-17"><b class="atr">grid-column</b> we <b class="atr">grid-row</b></a></li>
+                            <li><a class="btn" href="#c-18"><b class="atr">grid-area</b></a></li>
+                            <li><a class="btn" href="#c-19"><b class="atr">justify-self</b></a></li>
+                            <li><a class="btn" href="#c-20"><b class="atr">align-self</b></a></li>
+                            <li><a class="btn" href="#c-21"><b class="atr">place-self</b></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="btn" href="#c-22">Goşmaça</a>
+                        <ul id="sublist">
+                            <li><a class="btn" href="#c-22"><b class="atr">minmax()</b> funksiýasy, <b class="atr">auto-fill</b>/<b class="atr">auto-fit</b> açarsözleri</a></li>
+                            <li><a class="btn" href="#c-23"><b class="atr">min-content</b>, <b class="atr">max-content</b> we <b class="atr">fit-content</b> açarsözleri</a></li>
+                            <li><a class="btn" href="#c-24">Demolar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="date">Täzelenme senesi: 27.12.2023</div>
+                
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-css.html">CSS</a><span>/</span></li>
+                    <li class="active">Grid Model</li>
+                </ul>
+                <!--grid-container-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Grid-konteýner we grid-element <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        Grid modeli setir we sütünlere eýe gözenekli maket ulgamyny teklip edýär. Grid modeli döwrebap çylşyrymly 
+                        web-sahypa maketlerini taýýarlamagy aňsatlaşdyrýar we bu model häzir hem işlenip taýýarlanyş tapgyrynda. 
+                        Fleksboks modeli birölçegli gurluşa eýe, ýagny şol bir wagtyň özünde diňe ýa keseligine ýa dikligine esasy 
+                        okuň ugrundaky elementleriň üstünde amallary ýerine ýetirip bolýar. Grid modeli bolsa ikiölçegli gurluşa eýe, 
+                        ýagny şol bir wagtyň özünde hem keseligine, hem dikligine ýerleşen elementleriň üstünde amallary ýerine 
+                        ýetirmäge mümkinçilik berýär.
+                    </div>
+                    <div class="note">
+                        <strong>Grid-konteýner: </strong><span class="atr">display:grid</span> 
+                        (ýa-da <span class="atr">display:inline-grid</span>) stili berlen ene elemente grid-konteýner diýilýär. <br>
+                        <strong>Grid-element: </strong>grid-konteýneriň çaga elementlerine grid-elementler diýilýär. 
+                        Grid-elementler grid modeliň ähli düzgünlerine boýun egýär. 
+                        Aşakda grid-konteýneriň we grid-elementleriň gurluşy berlen:
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="grid-container">
+                            <div class="grid-item">1</div>
+                            <div class="grid-item">2</div>
+                            <div class="grid-item">3</div>
+                            <div class="grid-item">4</div>
+                            <div class="grid-item">5</div>
+                            <div class="grid-item">6</div>
+                            <div class="grid-item">7</div>
+                            <div class="grid-item">8</div>
+                            <div class="grid-item">9</div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: auto auto auto;
+                                background-color: #1e90ff;
+                                padding: 10px;
+                            } 
+                            
+                            .grid-item {
+                                background-color: lightblue;
+                                border: 1px solid black;
+                                text-align: center;
+                                font-size: 1.8em;
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-0">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                </div>
+                <!--esasy düşünjeler-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Esasy terminler <a href="#c-2">#</a></h2>
+                    <div class="note">
+                        <b>Grid-liniýa: </b> gridiň gurluşyny emele getiýän bölüji liniýalara grid-liniýalar diýilýär. Dik liniýalara <i>sütün 
+                        grid-liniýalary</i>, kese liniýalara bolsa <i>setir grid-liniýalary</i> diýilýär. Grid-liniýalar sütüniň ýa-da setiriň iki 
+                        tarapynda ýerleşendir. Grid-liniýlar <b>grid-meýdançalary</b> döretmeklik üçin ulanylýar.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/grid-6.webp" alt="Grid-liniýalar">
+                        <figcaption>Grid-liniýa</figcaption>
+                    </figure>
+                    <div class="note">
+                        <b>Grid-öýjük: </b> iki goňşy sütün we iki goňşy setir grid-liniýalaryň arasynda galan ýere grid-öýjük diliýär. 
+                        Grid-maketiň ölçeg birligidir.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/grid-7.webp" alt="Grid-öýjük">
+                        <figcaption>Grid-öýjük</figcaption>
+                    </figure>
+                    <div class="note">
+                        <b>Grid-ýodajyk: </b> iki goňşy grid-liniýanyň arasynda galan zologa grid-ýodajyk diýilýär.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/grid-8.webp" alt="Grid-ýodajyk">
+                        <figcaption>Grid-ýodajyk</figcaption>
+                    </figure>
+                    <div class="note">
+                        <b>Grid-meýdança: </b> dört sany grid-liniýanyň arasynda galan ýere grid-meýdança diýilýär. 
+                        Grid-meýdança islendik mukdarda grid-öýjüklerden emele gelip biler.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/grid-9.webp" alt="Grid-meýdança">
+                        <figcaption>Grid-meýdança</figcaption>
+                    </figure>
+                    <details style="display: none;">
+                            <summary>Grid-konteýnere degişli stil atributlary</summary>
+                            <ul>
+                                <li><a href="#gc-1"><span class="atr">grid-template-columns</span> we <span class="atr">grid-template-rows</span></a></li>
+                                <li><a href="#gc-2"><span class="atr">grid-auto-columns</span> we <span class="atr">grid-auto-rows</span></a></li>
+                                <li><a href="#gc-3"><span class="atr">grid-auto-flow</span></a></li>
+                                <li><a href="#gc-4"><span class="atr">grid-template-areas</span></a></li>
+                                <li><a href="#gc-5"><span class="atr">grid-template</span></a></li>
+                                <li><a href="#gc-6"><span class="atr">row-gap</span>, <span class="atr">column-gap</span> we <span class="atr">gap</span></a></li>
+                                <li><a href="#gc-7"><span class="atr">justify-content</span></a></li> 
+                                <li><a href="#gc-8"><span class="atr">align-content</span></a></li>
+                                <li><a href="#gc-9"><span class="atr">place-content</span></a></li>
+                                <li><a href="#gc-10"><span class="atr">justify-items</span></a></li>
+                                <li><a href="#gc-11"><span class="atr">align-items</span></a></li>
+                                <li><a href="#gc-12"><span class="atr">place-items</span></a></li> 
+                                <li><a href="#gc-13"><span class="atr">grid</span></a></li>   
+                            </ul>
+                    </details>
+                    <details style="display: none;">
+                            <summary>Grid-elemente degişli stil atributlary</summary>
+                            <ul>
+                                <li>
+                                    <a href="#ge-1">
+                                        <span class="atr">grid-column-start</span>, 
+                                        <span class="atr">grid-column-end</span>, 
+                                        <span class="atr">grid-row-start</span>, 
+                                        <span class="atr">grid-row-end</span>
+                                    </a>
+                                </li>
+                                <li><a href="#ge-2"><span class="atr">grid-column</span> we <span class="atr">grid-row</span></a></li>
+                                <li><a href="#ge-3"><span class="atr">grid-area</span></a></li>
+                                <li><a href="#ge-4"><span class="atr">justify-self</span></a></li>
+                                <li><a href="#ge-5"><span class="atr">align-self</span></a></li>
+                                <li><a href="#ge-6"><span class="atr">place-self</span></a></li> 
+                            </ul>
+                    </details>
+                    <details style="display: none;">
+                        <summary>Goşmaça</summary>
+                        <ul>
+                            <li>
+                                <a href="#fun-1">
+                                    <span class="atr">minmax()</span> funksiýasy we <span class="atr">auto-fill</span> / <span class="atr">auto-fit</span> açarsözleri
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#fun-2">
+                                    <span class="atr">min-content</span>, <span class="atr">max-content</span> we <span class="atr">fit-content</span> açar sözleri
+                                </a>
+                            </li>
+                            <li><a href="#fun-3">Demolar</a></li>
+                        </ul>
+                    </details>           
+                </div>
+                <!--grid-template-columns & grid-template-rows-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky"><span class="atr">grid-template-columns</span> we <span class="atr">grid-template-rows</span> stil atributlary <a href="#c-3">#</a></h2>
+                    <div class="note">
+                        <span class="atr">grid-template-columns</span> we <span class="atr">grid-template-rows</span> stil atributlary arkaly 
+                        grid-maketiň degişlilikde setirleriniň we sütünleriniň mukdaryny we ölçegini bermeklik mümkin. Atributyň alýan bahalary 
+                        grid-ýodajygyň ululygyny, bahalaryň arasyndaky boşluk bolsa grid-liniýalary aňldaýar. 
+                        Eger-de ölçeg berilmän <span class="atr">auto</span> baha berilse, onda sütüniň ýa-da setiriň ululygy konteýneriň 
+                        ululygyna we konteýneriň içindäki elementiň düzümine görä berler.
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 150px 60px 200px;
+                                grid-template-rows: 70px 80px 4em 90px;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-1">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                        <div class="grid-item">10</div>
+                        <div class="grid-item">11</div>
+                        <div class="grid-item">12</div>
+                    </div>
+                    <!--line name-->
+                    <h2>Liniýalara at bermek</h2>
+                    <div class="note">Kwadrat ýaýlaryň kömegi bilen grid-liniýalara <em>aýdyň</em> at bermeklik hem mümkin:</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [start] 150px [line2] 60px [line3] 200px [end];
+                                grid-template-rows: [row1-start] 70px [row1-end] 90px [last];
+                            }                      
+                        </code>
+                    </pre>
+                    <div class="grid-container-2">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <!--multiple line name-->
+                    <h2>Liniýalara birden köp at bermek</h2>
+                    <div class="note">
+                        Grid-liniýalaryň aralaryna boşluk goýmaklyk bilen birden köp at hem berip bolar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [start] 140px [line2 col2-start] 250px [col2-end end];
+                                grid-template-rows: [row1-start] 25rem [row1-end] 10vh [last];
+                            }                      
+                        </code>
+                    </pre>
+                    <!--repeat() function-->
+                    <h2><span class="atr">repeat()</span> funksiýasyny ulanmak</h2>
+                    <div class="note">
+                        Eger-de ölçegleri deň bolan sütün ýa-da setir zerur bolan ýagdaýynda <span class="atr">repeat()</span> 
+                        funksiýanyny hem ulanmaklyk mümkin:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                /* grid-template-columns: 200px 200px 200px; */
+                                grid-template-columns: repeat(3, 200px);
+                            }                      
+                        </code>
+                    </pre>
+                    <div class="grid-container-3">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                        <div class="grid-item">10</div>
+                        <div class="grid-item">11</div>
+                        <div class="grid-item">12</div>
+                    </div>
+                    <!--fr unit-->
+                    <h2><span class="atr">fr</span> ölçeg birligi</h2>
+                    <div class="note">
+                        Grid-modeliň girizilmegi bilen täze CSS ölçeg birligi bolan <span class="atr">fr</span> ölçeg birligi hem girizildi. 
+                        Bu ölçeg birligi grid-konteýneriň içindäki boş ýeriň paýyny aňladýar. Mysal üçin, aşakdaky koduň netijesinde üç sütünli 
+                        grid-konteýner dörediler we birinji sütüniň ululygy konteýneriň ininiň 2/6-ne, ikinji sütüniň ululygy konteýneriň ininiň 3/6-ne,
+                        üçünji sütüniň ululygy bolsa, konteýneriň ininiň 1/6-ne deň bolar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 2fr 3fr 1fr;
+                            }                      
+                        </code>
+                    </pre>
+                    <div class="grid-container-4">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <div class="note">
+                        <span class="atr">fr</span> ölçeg birligi ulanylanda konteýneriň içindäki ýer ilki bilen adaty ölçeg birliklere berilýär. 
+                        Ondan soň, galan ýer bolsa, <span class="atr">fr</span> ölçeg birligine görä paýlanýar. Aşakdaky mysalda birinji sütüniň 
+                        ini <span class="atr">100px</span>, ikinji sütüniň ini konteýneriň galan boş ýeriniň 1/4-ne, üçünji sütüniň ini konteýneriň
+                        galan boş ýeriniň 3/4-ne deň bolar.  
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 100px 1fr 3fr;
+                            }                      
+                        </code>
+                    </pre>
+                    <div class="grid-container-5">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                </div>
+                <!--grid-auto-columns & grid-auto-rows-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky"><span class="atr">grid-auto-columns</span> we <span class="atr">grid-auto-rows</span> stil atributlary <a href="#c-4">#</a></h2>
+                    <div class="note">
+                        Grid-konteýner üçin aýdyň beýan edilen setir we sütünleriň içine sygyp biljek mukdardan kän elementi grid-konteýneriň içine goýanymyzda, 
+                        artykmaç elementler üçin awtomatiki aýdyň bolmaýan setir we sütünler döredilýär. Awtomatiki döredilýän bu setir we sütünleriň ölçegini 
+                        <span class="atr">grid-auto-columns</span> we <span class="atr">grid-auto-rows</span> stil atributlary arkaly bermeklik mümkin.
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="grid-container">
+                            <div class="grid-item">1</div>
+                            <div class="grid-item">2</div>
+                            <div class="grid-item">3</div>
+                            <div class="grid-item">4</div>
+                            <div class="grid-item">5</div>
+                            <div class="grid-item">6</div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-rows: 60px 100px;
+                                grid-auto-rows: 80px;
+                                gap: 5px;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-6">
+                        <div class="grid-item" style="background-color:gold;">1</div>
+                        <div class="grid-item" style="background-color:gold;">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <div class="note">
+                        Ýokardaky mysalda birinji setiriň beýikligi <span class="atr">60px</span>, ikinji setiriň beýikligi <span class="atr">100px</span>
+                        görnüşinde aýdyň beýan edildi. Galan setirleriň beýikligi aýdyň beýan edilmedigi üçin beýikliginiň bahasy <span class="atr">auto</span> bolan 
+                        aýdyň bolmaýan setirler awtomatiki görnüşde dörediler. <span class="atr">grid-auto-row:80px</span> stili arkaly aýdyň bolmaýan awtomatiki 
+                        döredilýän setirleriň beýikligi berildi. 
+                    </div>
+                    <!--grid-auto-columns & grid-auto-rows birden köp baha bermek-->
+                    <div class="note">
+                        Awtomatiki döredilýän setir we sütünler üçin birden köp baha hem bermeklik mümkin. Bu ýagdaýda artykmaç elementler 
+                        gutarýança döredilýän setir ýa-da sütünler üçin berlen bahalar gaýtalanar. Aşakdaky mysalda birinji sütüniň ini 
+                        <span class="atr">30px</span>, ikinji sütüniň ini bolsa <span class="atr">50px</span> görnüşinde aýdyň beýan edildi. 
+                        <span class="atr">grid-auto-flow:column</span> stili arkaly awtomatiki ýerleşdiriljek elementleriň sütün görnüşinde 
+                        ýerleşdirilmegi ýola goýuldy. Şeýlelikde aýdyň beýan edilmedik sütünleriň inleriniň bahalary <span class="atr">75px</span>,
+                        <span class="atr">100px</span>, <span class="atr">50px</span> görnüşinde konteýner dolýança gaýtalanar. 
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 30px 50px;
+                                grid-auto-columns: 75px 100px 50px;
+                                grid-auto-flow: column;
+                                gap: 5px;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-7">
+                        <div class="grid-item" style="background-color:gold;">1</div>
+                        <div class="grid-item" style="background-color:gold;">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                    <div class="note">
+                        Aýdyň bolmaýan grid-ýodajyklaryň gurluşyna gowy düşünmeklik üçin aşakdaky mysala seredip geçeliň:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 90px 90px;
+                                grid-template-rows: 80px 80px;
+                                grid-auto-columns: 90px;
+                            } 
+                            /* Grid-elmentlere orun bermek */
+                            .item-a {
+                                grid-column: 1 / 2;
+                                grid-row: 2 / 3;
+                            }
+                            .item-b {
+                                grid-column: 5 / 6;
+                                grid-row: 2 / 3;
+                            }
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Ýokardaky mysalda <b>Item-b</b>-niň orny berlende 5-nji we 6-njy sütün liniýalaryň aralygy, 2-nji we 3-nji setir liniýalaryň
+                        aralygy görnüşinde berildi, ýagny bu element, grid-maketiň içinde hakykatda bolmaýan grid-gözenege ýerleşdirildi. 
+                        Bu elementi hakykatda bolmaýan grid-gözenege ýerleşdirmek üçin aýdyň bolmaýan setir we sütünler awtomatiki ýagdaýda döredilýär. 
+                        Aslynda aýdyň bolmaýan awtomatiki döredilýän setir we sütünleriň ölçeginiň bahasy <span class="atr">auto</span> berilýär. 
+                        <span class="atr">grid-auto-columns:90px</span> stili arkaly awtomatiki dörediljek sütünleriň ölçegi berildi.    
+                    </div>
+                    <div class="img-container">
+                        <img src="../../images/grid-1.jpg" alt="grid-auto-column">
+                    </div>
+                    <div class="grid-container-7-1-1" style="display: none;">
+                        <div class="item7_1_1-a">Item-a</div>
+                        <div class="item7_1_1-b">Item-b</div>
+                    </div>
+                </div>
+                <!--grid-auto-flow-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky"><span class="atr">grid-auto-flow</span> stil atributy <a href="#c-5">#</a></h2>
+                    <div class="note">
+                        Orunlary aýdyň beýan edilmedik grid-elementer konteýnere awtomatiki ýerleşdiriler. 
+                        Awtomatiki ýerleşdiriljek elementleriň setirmi ýa-da sütün görnüşinde ýerleşdiriljegini <span class="atr">grid-auto-flow</span> 
+                        stil atributy kesgitleýär. Bu atributyň kabulgörlen bahasy <span class="atr">row</span>, ýagny orunlary aýdyň 
+                        beýan edilmedik elementler konteýneriň içine setir görnüşinde ýerleşdiriler. Bu atributyň alyp biljek bahalary aşakda berlen: 
+                        <ul>
+                            <li><span class="atr">row</span>: awtomatiki ýerleşdiriljek elementler konteýneriň içinde setir görnüşünde düzüler (kabulgörlen);</li>
+                            <li><span class="atr">column</span>: awtomatiki ýerleşdiriljek elementler konteýneriň içinde sütün görnüşünde düzüler;</li>
+                            <li><span class="atr">dense</span>: awtomatiki ýerleşdiriljek elmenetler grid-maketdäki boş göznekeleri doldurjak görnüşde düzüler. 
+                                Beýleki bahlaryň utgaşmasy bilen bilelikde ulanylyp bilner (row dense ýa-da column dense).</li>
+                        </ul>
+                        Aşakdaky iki mysalda grid-elementleriň orunlary aýdyň beýan edilmedik. Birinji mysalda elementler konteýneriň içinde setir görnüşünde 
+                        ýerleşdirilýär, ikinji mysalda bolsa sütün görnüşinde ýerleşdirilýär:
+                    </div>
+                    <h2><span class="atr">grid-auto-flow:row</span></h2>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="grid-container">
+                            <div class="item-1">1</div>
+                            <div class="item-2">2</div>
+                            <div class="item-3">3</div>
+                            <div class="item-4">4</div>
+                            <div class="item-5">5</div>
+                            <div class="item-6">6</div>
+                            <div class="item-7">7</div>
+                            <div class="item-8">8</div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template-columns: auto auto auto;
+                                grid-template-rows: auto auto;
+                                grid-auto-flow: row;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-7-1">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                    </div>
+                    <h2><span class="atr">grid-auto-flow:column</span></h2>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template-columns: auto auto auto;
+                                grid-template-rows: auto auto;
+                                grid-auto-flow: column;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-7-2">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysalda bolsa, <b>Item-a</b> we <b>Item-e</b>-niň orny aýdyň beýan edilen, ýagny Item-a ilkinji sütüniň iki öýjügini gurşap alýar, 
+                        Item-e bolsa soňky sütüniň iki öýjügini gurşap alýar. Elementleriň orunlaryny aýdyň beýan etmek üçin <span class="atr">grid-column</span> we 
+                        <span class="atr">grid-row</span> atributlary ulanyldy. Galan elementleriň orunlary bolsa aýdyň beýan edilmedik. 
+                        <span class="atr">grid-auto-flow:column</span> stili arkaly orunlary aýdyň beýan edilmedik elementleriň sütün boýunça ýerleşdirilmegi
+                        ýola goýuldy.
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="grid-container">
+                            <div class="item-a">Item-a</div>
+                            <div class="item-b">Item-b</div>
+                            <div class="item-c">Item-c</div>
+                            <div class="item-d">Item-d</div>
+                            <div class="item-e">Item-e</div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 90px 90px;
+                                grid-template-rows: 80px 80px;
+                                grid-auto-flow: column;
+                            } 
+                            .item-a {
+                                grid-column: 1;
+                                grid-row: 1 / 3;
+                            }
+                            .item-e {
+                                grid-column: 5;
+                                grid-row: 1 / 3;
+                            }
+                        </code>
+                    </pre>
+                    <div class="img-container">
+                        <img src="../../images/grid-2.jpg" alt="grid-auto-flow">
+                    </div>
+                    <div class="grid-container-7-1-2" style="display: none;">
+                        <div class="item7_1_2-a">Item-a</div>
+                        <div class="item7_1_2-b">Item-b</div>
+                        <div class="item7_1_2-c">Item-c</div>
+                        <div class="item7_1_2-d">Item-d</div>
+                        <div class="item7_1_2-e">Item-e</div>
+                    </div>
+                    <h2><span class="atr">grid-auto-flow:dense</span></h2>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template-columns: auto auto auto;
+                                grid-template-rows: auto auto;
+                                grid-auto-flow: column;
+                            } 
+                            /* Üçünji grid-element iki sany sütün öýjügini gurşap eýeleýär */
+                            .item-3 { grid-column: span 2 } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-7-3">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item" style="grid-column: span 2; background-color: gold;">3</div>
+                        <div class="grid-item">4</div>
+                    </div>
+                    <div class="note">
+                        Ýokardaky mysalda görülşi ýaly orny aýdyň beýan edilen 3-nji element birinji setiriň bir gözenegine sygmadygy üçin aşaky setire geçdi we 
+                        birinji setirde boş gözenek emele geldi. Eger-de <span class="atr">grid-auto-flow:dense</span> stili berilse brauzer
+                        grid-maketdäki boş gözenekleri ölçegi gabat gelýän elementler bilen doldurmaga synanyşar, ýagny 4-nji element boş gözenegi doldurar.
+                        <span class="atr">grid-auto-flow</span> atributy grid-maketdäki boş gözenekleri ölçegi gabat gelýän elementler bilen doldurmaga synanyşýar: 
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template-columns: auto auto auto;
+                                grid-template-rows: auto auto;
+                                grid-auto-flow: dense;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-7-3" style="grid-auto-flow: dense;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item" style="grid-column: span 2; background-color: gold;">3</div>
+                        <div class="grid-item">4</div>
+                    </div>
+                    Aşakda ýene bir mysal berlen:
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template-columns: auto auto;
+                                grid-template-rows: auto auto auto;
+                                grid-auto-flow: column;
+                            } 
+                            /* Üçünji grid-element iki sany setir öýjügini gurşap eýeleýär */
+                            .item-3 { grid-row: span 2 }
+                        </code>
+                    </pre>
+                    <div class="grid-container-7-4">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item" style="grid-row: span 2; background-color: gold;">3</div>
+                        <div class="grid-item">4</div>
+                    </div>
+                    <div class="note">Aýdyň orny berlen 3-nji element birinji sütüniň bir öýjügine sygmadygy üçin indiki sütüne geçirildi we 
+                        4-nji element onuň yzyndan geldi. Eger-de <span class="atr">grid-auto-flow:column dense</span> stili berilse, onda brauzer 
+                        grid-maketdäki boş göznekeleri sütün boýunça doldurmaga synanyşar, ýagny 4-nji element boş gözenegi doldurar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template-columns: auto auto;
+                                grid-template-rows: auto auto auto;
+                                grid-auto-flow: column dense;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-7-4" style="grid-auto-flow: column dense;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item" style="grid-row: span 2; background-color: gold;">3</div>
+                        <div class="grid-item">4</div>
+                    </div>
+                </div>
+                <!--grid-template-areas-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky"><span class="atr">grid-template-areas</span> stil atributy <a href="#c-6">#</a></h2>
+                    <div class="note">
+                        <span class="atr">grid-template-areas</span> stil atributy gözenekli maketiň belli bir gözeneklerine kesgitlenen atlary bermeklik bilen
+                        gözenekleri birleşdirmek arkaly grid-meýdançalary döretmäge mümkinçilik berýär. Grid-meýdançalaryň atlary <span class="atr">grid-area</span> 
+                        stil atributy arkaly berilýär. <span class="atr">grid-template-areas</span> stil atributyň alyp biljek bahalary aşakda berlen:
+                        <ul>
+                            <li><span class="atr">none</span>: kabulgörlen baha. Maketiň gözeneklerine at berilmez;</li>
+                            <li><span class="atr">.</span>: nokat belgisi boş gözenegi (öýjügi) aňladýar;</li>
+                            <li><span class="atr">"at"</span>: gözenege berlen at. Gözenege islendik at berlip bilner, hat-da <i>emodzi</i> hem berlip bilner 😀.</li>
+                        </ul> 
+                        Aşakdaky mysalda grid-konteýneriň 12 sany öýjügi bar. Kesgitlenen öýjükleriň birleşmesinden 4 sany grid-meýdança döredildi 
+                        (Header, Content, 😎, Footer). Haýsy öýjügiň haýsy grid-meýdança degişlidigi <span class="atr">grid-template-areas</span> stil 
+                        atributyň bahasynda aýratynlykda görkezilmeli. Mysal üçin, birinji setirde üç gezek "header" sözi ýazyldy, ýagny birinji setiriň üç
+                        öýjüginiň birleşmesi "header" grid-meýdançasyna degişli.
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="grid-container">
+                            <div class="item-1">Header</div>
+                            <div class="item-2">Content</div>
+                            <div class="item-3">😎</div>
+                            <div class="item-4">Footer</div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                grid-template-rows: repeat(4, 1fr);
+                                grid-template-areas: 
+                                    "header header header"
+                                    "content content 😎"
+                                    "content content ."
+                                    "footer footer footer";
+                            } 
+
+                            .item-1 { grid-area: header }
+                            .item-2 { grid-area: content }
+                            .item-3 { grid-area: 😎 }
+                            .item-4 { grid-area: footer }
+                        </code>
+                    </pre>
+                    <div class="grid-container-8">
+                        <div class="item8-1">Header</div>
+                        <div class="item8-2">Content</div>
+                        <div class="item8-3">😎</div>
+                        <div class="item8-4">Footer</div>
+                        <div class="maket">
+                            <div class="grid-item">&nbsp;</div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--grid-template-->
+                <div class="item-container" id="c-7">
+                    <h2 class="sticky"><span class="atr">grid-template</span> stil atributy <a href="#c-7">#</a></h2>
+                    <div class="note">Bu stil atributyň sintaksisi aşakda berlen:</div>
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        grid-template: none | <grid-template-rows> / <grid-template-columns> | <grid-template-areas>;
+                    </script>
+                    <div class="note">
+                        <span class="atr">grid-template</span> stil atributy arkaly <span class="atr">grid-template-rows</span> we 
+                        <span class="atr">grid-template-columns</span> stil atributlaryň bahasyny birbada bermeklik mümkin. Ýa-da aýratynlykda 
+                        <span class="atr">grid-template-areas</span> stil atributyň bahasyny hem berip bolýar. Aşakdaky mysallara seredip geçeliň:
+                    </div>
+                    <div class="note">
+                        <span class="atr">grid-template-rows</span> we <span class="atr">grid-template-columns</span> stil atributlaryň bahalarynyň 
+                        birbada berilmegi:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid; 
+                                grid-template: repeat(3, 70px) / repeat(2, auto);
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-9">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <div class="note">Diňe <span class="atr">grid-template-areas</span> stil atributyň bahasynyň berilmegi:</div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="grid-container">
+                            <div class="item-1">Header</div>
+                            <div class="item-2">Menu</div>
+                            <div class="item-3">Main</div>
+                            <div class="item-4">Right</div>
+                            <div class="item-5">Footer</div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template: 
+                                    "header header header header header header"
+                                    "menu main main main right right"
+                                    "menu footer footer footer footer footer";
+                            } 
+                            .item-1 { grid-area: header }
+                            .item-2 { grid-area: menu }
+                            .item-3 { grid-area: main }
+                            .item-4 { grid-area: right }
+                            .item-5 { grid-area: footer }
+                        </code>
+                    </pre>
+                    <div class="grid-container-10">
+                        <div class="grid-item item10-1">Header</div>
+                        <div class="grid-item item10-2">Menu</div>
+                        <div class="grid-item item10-3">Main</div>
+                        <div class="grid-item item10-4">Right</div>
+                        <div class="grid-item item10-5">Footer</div>
+                    </div>
+                    <div class="note">Aşakda <span class="atr">grid-template-areas</span> stil atributyň çylşyrymly ulanylyşyna degişli mysal 
+                    berlen. Bu mysalda <span class="atr">grid-template-rows</span>, <span class="atr">grid-template-columns</span> 
+                    we <span class="atr">grid-template-areas</span> stil atributlaryň bahalary birbada berildi:</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template:
+                                [row1-start] "header header header" 25px [row1-end]
+                                [row2-start] "footer footer footer" 25px [row2-end]
+                                / auto 50px auto;
+                            }                      
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Ýokardaky mysalda koduň <i>okaýjylygy</i> pes bolany üçin aşakdaky görnüşde stil atributlaryň bahalarynyň 
+                        aýratynlykda berilmegi maslahat berilýär:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template:
+                                [row1-start] 25px [row1-end]
+                                [row2-start] 25px [row2-end]
+                                / auto 50px auto;
+                                grid-template-areas:
+                                "header header header"
+                                "footer footer footer";
+                            }                       
+                        </code>
+                    </pre>
+                </div>
+                <!--row-gap, column-gap & gap-->
+                <div class="item-container" id="c-8">
+                    <h2 class="sticky"><span class="atr">row-gap</span> we <span class="atr">column-gap</span> stil atributlary <a href="#c-8">#</a></h2>
+                    <div class="note">
+                        <span class="atr">row-gap</span> we <span class="atr">column-gap</span> stil atributlary degişlilikde grid-maketiň
+                        setirleriniň we sütünleriniň arasyndaky boşlugyň ölçegini berýär. Aşakdaky mysalda setirleriň arasyndaky boşluklar
+                        <span class="atr">30px</span>, sütünleriň arasyndaky boşluklar <span class="atr">10px</span> berlen.
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: auto auto auto;
+                                row-gap: 30px;
+                                column-gap: 10px;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-11">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                    <h2><span class="atr">gap</span> stil atributy</h2>
+                    <div class="note">
+                        <span class="atr">gap</span> stil atributy arkaly <span class="atr">row-gap</span> we <span class="atr">column-gap</span>
+                        stil atributlaryň bahalaryny birbada bermeklik mümkin. Eger-de bu atributa bir haha berilse, onda setir we sütünleriň 
+                        arasyndaky boşluklar biri-birine deň bolar. Aşakdaky mysalda-da setirleriň arasyndaky boşluklar
+                        <span class="atr">30px</span>, sütünleriň arasyndaky boşluklar hem <span class="atr">10px</span> berlen:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: auto auto auto;
+                                gap: 30px 10px;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-12">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                </div>
+                <!--justify-content-->
+                <div class="item-container" id="c-9">
+                    <h2 class="sticky"><span class="atr">justify-content</span> stil atributy <a href="#c-9">#</a></h2>
+                    <div class="note">
+                        <span class="atr">justify-content</span> stil atributy grid-maketiň konteýneriň içinde keseligine (setir boýunça) deňlenmegini ýola goýýar.
+                        Bu stil atributyň täsirini diňe grid-maketiň ini konteýneriň ininden kiçi bolan ýagdaýynda görmeklik mümkin. Atributyň alyp 
+                        biljek bahalary aşakda berlen:
+                        <ul>
+                            <li><b>start</b> – gözenekli maketi konteýneriň çep tarapyna deňleýär;</li>
+                            <li><b>end</b> – gözenekli maketi konteýneriň sag tarapyna deňleýär;</li>
+                            <li><b>center</b> – gözenekli maketi keseligine konteýneriň merkezi boýunça deňleýär;</li>
+                            <li><b>stretch</b> – grid-elementleriň ölçegi konteýneri keseligine doldurjak görnüşde süýndüriler;</li>
+                            <li><b>space-around</b> – sütünleriň arasyna deň boşluk goýlar. Çep we sag tarapdaky sütünleriň gyralaryna bolsa
+                            elementleriň arasyna goýlan boşlugyň ýarsy ýaly boşluk goýlar;</li>
+                            <li><b>space-between</b> – sütünleriň arasyna deň boşluk goýlar, ýöne çep we sag tarapdaky sütünleriň 
+                            gyralaryna boşluk goýulmaz;</li>
+                            <li><b>space-evenly</b> – sütünleriň arasyna we çep/sag tarapdaky sütünleriň gyralaryna deň boşluk goýlar.</li>
+                        </ul>
+                    </div>
+                    <h2><span class="atr">justify-content:start</span></h2>
+                    <div class="note">Gözenekli maketi konteýneriň çep tarapyna deňleýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 50px);
+                                justify-content: start;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: start;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">justify-content:end</span></h2>
+                    <div class="note">Gözenekli maketi konteýneriň sag tarapyna deňleýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 50px);
+                                justify-content: end;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: end;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">justify-content:center</span></h2>
+                    <div class="note">Gözenekli maketi keseligine konteýneriň merkezi boýunça deňleýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 50px);
+                                justify-content: center;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: center;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">justify-content:stretch</span></h2>
+                    <div class="note">Grid-elementleriň ölçegi konteýneri keseligine doldurjak görnüşde süýndüriler.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                justify-content: stretch;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: stretch; grid-template-columns: 1fr 1fr 1fr;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">justify-content:space-around</span></h2>
+                    <div class="note">Sütünleriň arasyna deň boşluk goýlar. Çep we sag tarapdaky sütünleriň gyralaryna bolsa
+                        elementleriň arasyna goýlan boşlugyň ýarsy ýaly boşluk goýlar.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 50px);
+                                justify-content: space-around;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: space-around;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">justify-content:space-between</span></h2>
+                    <div class="note">Sütünleriň arasyna deň boşluk goýlar, ýöne çep we sag tarapdaky sütünleriň 
+                        gyralaryna boşluk goýulmaz.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 50px);
+                                justify-content: space-between;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: space-between;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">justify-content:space-evenly</span></h2>
+                    <div class="note">Sütünleriň arasyna we çep/sag tarapdaky sütünleriň gyralaryna deň boşluk goýlar.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 50px);
+                                justify-content: space-evenly;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="justify-content: space-evenly;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                </div>
+                <!--align-content-->
+                <div class="item-container" id="c-10">
+                    <h2 class="sticky"><span class="atr">align-content</span> stil atributy <a href="#c-10">#</a></h2>
+                    <div class="note">
+                        <span class="atr">align-content</span> stil atributy grid-maketiň konteýneriň içinde dikligine (sütün boýunça) deňlenmegini ýola goýýar.
+                        Bu stil atributyň täsirini diňe grid-maketiň beýikligi konteýneriň beýikliginden kiçi bolan ýagdaýynda görmeklik mümkin. Atributyň alyp 
+                        biljek bahalary aşakda berlen:
+                        <ul>
+                            <li><b>start</b> – gözenekli maketi konteýneriň ýokarky tarapyna deňleýär;</li>
+                            <li><b>end</b> – gözenekli maketi konteýneriň aşaky tarapyna deňleýär;</li>
+                            <li><b>center</b> – gözenekli maketi dikligine konteýneriň merkezi boýunça deňleýär;</li>
+                            <li><b>stretch</b> – grid-elementleriň ölçegi konteýneri dikligine doldurjak görnüşde süýndüriler;</li>
+                            <li><b>space-around</b> – element hatarlaryň arasyna deň boşluk goýlar. Ýokarky we aşaky element hatarlaryň gyralaryna bolsa
+                                element hatarlaryň arasyna goýlan boşlugyň ýarsy ýaly boşluk goýlar;</li>
+                            <li><b>space-between</b> – element hatarlaryň arasyna deň boşluk goýlar, ýöne ýokarky we aşaky element hatarlaryň 
+                                gyralaryna boşluk goýulmaz;</li>
+                            <li><b>space-evenly</b> – element hatarlaryň arasyna we ýokarky/aşaky element hatarlaryň gyralaryna deň boşluk goýlar.</li>
+                        </ul>
+                    </div>
+                    <h2><span class="atr">align-content:start</span></h2>
+                    <div class="note">Gözenekli maketi konteýneriň ýokarky tarapyna deňleýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: start;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: start; grid-template-columns: 1fr 1fr 1fr; height: 150px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">align-content:end</span></h2>
+                    <div class="note">Gözenekli maketi konteýneriň aşaky tarapyna deňleýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: end;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: end; grid-template-columns: 1fr 1fr 1fr; height: 150px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">align-content:center</span></h2>
+                    <div class="note">Gözenekli maketi dikligine konteýneriň merkezi boýunça deňleýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: center;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: center; grid-template-columns: 1fr 1fr 1fr; height: 150px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">align-content:stretch</span></h2>
+                    <div class="note">Grid-elementleriň ölçegi konteýneri dikligine doldurjak görnüşde süýndüriler.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: stretch;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: stretch; grid-template-columns: 1fr 1fr 1fr; height: 150px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <h2><span class="atr">align-content:space-around</span></h2>
+                    <div class="note">Element hatarlaryň arasyna deň boşluk goýlar. Ýokarky we aşaky element hatarlaryň gyralaryna bolsa
+                        element hatarlaryň arasyna goýlan boşlugyň ýarsy ýaly boşluk goýlar.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: space-around;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: space-around; grid-template-columns: 1fr 1fr 1fr; height: 180px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                    <h2><span class="atr">align-content:space-between</span></h2>
+                    <div class="note">Element hatarlaryň arasyna deň boşluk goýlar, ýöne ýokarky we aşaky element hatarlaryň 
+                        gyralaryna boşluk goýulmaz.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: space-between;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: space-between; grid-template-columns: 1fr 1fr 1fr; height: 180px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                    <h2><span class="atr">align-content:space-evenly</span></h2>
+                    <div class="note">Element hatarlaryň arasyna we ýokarky/aşaky element hatarlaryň gyralaryna deň boşluk goýlar.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                align-content: space-evenly;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-13" style="align-content: space-evenly; grid-template-columns: 1fr 1fr 1fr; height: 180px;">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>
+                    </div>
+                </div>
+                <!--place-content-->
+                <div class="item-container" id="c-11">
+                    <h2 class="sticky"><span class="atr">place-content</span> stil atributy <a href="#c-11">#</a></h2>
+                    <div class="note">
+                        <span class="atr">place-content</span> gysgaýol stil atributy arkaly <span class="atr">align-content</span> we
+                        <span class="atr">justify-content</span> stil atributlaryň bahalaryny birbada bermeklik mümkin. Bu atributyň 
+                        sintaksisi aşakda berlen:
+                    </div>
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        place-content: <align-content> | <justify-content>;
+                    </script>
+                    <div class="note">
+                        Eger-de sintaksisde ikinji baha ýazylmasa, onda iki atribut üçin hem şol bir baha berler.
+                        <b>Microsoft Edge</b> brauzerden galan ähli döwrebap brauzerler <span class="atr">place-content</span> stil atributyny gollaýar.
+                    </div>
+                </div>
+                <!--justify-items-->
+                <div class="item-container" id="c-12">
+                    <h2 class="sticky"><span class="atr">justify-items</span> stil atributy <a href="#c-12">#</a></h2>
+                    <div class="note">
+                        <span class="atr">justify-items</span> stil atributy grid-elementleriň grid-gözenegiň içinde keseligine deňlenmegini 
+                        ýola goýýar. Atributyň alyp biljek bahalary aşakda berlen:
+                        <ul>
+                            <li><b>start</b> – grid-elementler keseligine grid-gözenekleriň başlangyjyna deňlenýär;</li>
+                            <li><b>end</b> – grid-elementler keseligine grid-gözenekleriň ahyryna deňlenýär;</li>
+                            <li><b>center</b> – grid-elementler keseligine grid-gözenekleriň merkezi boýunça deňlenýär;</li>
+                            <li><b>stretch</b> – grid-elementler grid-gözenekleriň inini eýelejek görnüşde süýndürilýär.</li>
+                        </ul>
+                    </div>
+                    <h2><span class="atr">justify-items:start</span></h2>
+                    <div class="note">Grid-elementler keseligine grid-gözenekleriň başlangyjyna deňlenýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                justify-items: start;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-14" style="justify-items: start;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <h2><span class="atr">justify-items:end</span></h2>
+                    <div class="note">Grid-elementler keseligine grid-gözenekleriň ahyryna deňlenýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                justify-items: end;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-14" style="justify-items: end;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <h2><span class="atr">justify-items:center</span></h2>
+                    <div class="note">Grid-elementler keseligine grid-gözenekleriň merkezi boýunça deňlenýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                justify-items: center;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-14" style="justify-items: center;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <h2><span class="atr">justify-items:stretch</span></h2>
+                    <div class="note">Grid-elementler grid-gözenekleriň inini eýelejek görnüşde süýndürilýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                justify-items: stretch;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-14" style="justify-items: stretch;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        Aýratyn grid-elementleri grid-gözenegiň içinde keseligine deňlemek üçin <span class="atr">justify-self</span>
+                        stil atributy ulanylyp bilner. Bu atributa aşakda içgin seredilip geçiler.
+                    </div>
+                </div>
+                <!--align-items-->
+                <div class="item-container" id="c-13">
+                    <h2 class="sticky"><span class="atr">align-items</span> stil atributy <a href="#c-13">#</a></h2>
+                    <div class="note">
+                        <span class="atr">align-items</span> stil atributy grid-elementleriň grid-gözenegiň içinde dikligine deňlenmegini 
+                        ýola goýýar. Atributyň alyp biljek bahalary aşakda berlen:
+                        <ul>
+                            <li><b>start</b> – grid-elementler dikligine grid-gözenekleriň başlangyjyna deňlenýär;</li>
+                            <li><b>end</b> – grid-elementler dikligine grid-gözenekleriň ahyryna deňlenýär;</li>
+                            <li><b>center</b> – grid-elementler dikligine grid-gözenekleriň merkezi boýunça deňlenýär;</li>
+                            <li><b>stretch</b> – grid-elementler grid-gözenekleriň beýikligini eýelejek görnüşde süýndürilýär.</li>
+                        </ul>
+                    </div>
+                    <h2><span class="atr">align-items:start</span></h2>
+                    <div class="note">Grid-elementler dikligine grid-gözenekleriň başlangyjyna deňlenýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                grid-template-rows: repeat(2, 60px);
+                                align-items: start;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-15" style="align-items: start;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket-1">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <h2><span class="atr">align-items:end</span></h2>
+                    <div class="note">Grid-elementler dikligine grid-gözenekleriň ahyryna deňlenýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                grid-template-rows: repeat(2, 60px);
+                                align-items: end;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-15" style="align-items: end;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket-1">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <h2><span class="atr">align-items:center</span></h2>
+                    <div class="note">Grid-elementler dikligine grid-gözenekleriň merkezi boýunça deňlenýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                grid-template-rows: repeat(2, 60px);
+                                align-items: center;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-15" style="align-items: center;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket-1">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <h2><span class="atr">align-items:stretch</span></h2>
+                    <div class="note">Grid-elementler grid-gözenekleriň beýikligini eýelejek görnüşde süýndürilýär.</div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                grid-template-rows: repeat(2, 60px);
+                                align-items: stretch;
+                            } 
+                        </code>
+                    </pre>
+                    <div class="grid-container-15" style="align-items: stretch;">
+                        <div class="grid-item-1">1</div>
+                        <div class="grid-item-1">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket-1">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        Aýratyn grid-elementleri grid-gözenegiň içinde dikligine deňlemek üçin <span class="atr">align-self</span>
+                        stil atributy ulanylyp bilner. Bu atributa aşakda içgin seredilip geçiler.
+                    </div>
+                </div>
+                <!--place-items-->
+                <div class="item-container" id="c-14">
+                    <h2 class="sticky"><span class="atr">place-items</span> stil atributy <a href="#c-14">#</a></h2>
+                    <div class="note">
+                        <span class="atr">place-items</span> gysgaýol stil atributy arkaly <span class="atr">align-items</span> we
+                        <span class="atr">justify-items</span> stil atributlaryň bahalaryny birbada bermeklik mümkin. Bu atributyň 
+                        sintaksisi aşakda berlen:
+                    </div>
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        place-items: <align-items> | <justify-items>;
+                    </script>
+                    Mysal üçin:
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                place-items: stretch end;
+                            }
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Eger-de bu atributa bir baha berilse, onda iki atributyň bahasy hem berlen baha deň bolar. Mysal üçin,
+                        bu stil atributyň kömegi bilen grid-elementi grid-öýjügiň içinde hem dikligine, hem keseligine 
+                        merkez boýunça deňlemegi bir setirde ýola goýup bolýar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .center {
+                                display: grid;
+                                place-items: center;
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <!--grid-->
+                <div class="item-container" id="c-15">
+                    <h2 class="sticky"><span class="atr">grid</span> stil atributy <a href="#c-15">#</a></h2>
+                    <div class="note">
+                        <span class="atr">grid</span> gysgaýol stil atributy arkaly aşakdaky stil atributlaryň bahasyny birbada bermeklik mümkin:
+                        <ul>
+                            <li><span class="atr">grid-template-rows;</span></li>
+                            <li><span class="atr">grid-template-columns;</span></li>
+                            <li><span class="atr">grid-template-areas;</span></li>
+                            <li><span class="atr">grid-auto-rows;</span></li>
+                            <li><span class="atr">grid-auto-columns;</span></li>
+                            <li><span class="atr">grid-auto-flow.</span></li>
+                        </ul>
+                        Bu stil atributyň okaýjylygynyň (readability) pesdigini belläp geçmeklik zerur. Atributyň sintaksisi aşakda berlen:
+                    </div>
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        grid: none|grid-template-rows / grid-template-columns|grid-template-areas
+                        |grid-template-rows / [grid-auto-flow] grid-auto-columns|[grid-auto-flow] 
+                        grid-auto-rows / grid-template-columns|initial|inherit;
+                    </script>
+                    <div class="note">
+                        Eger-de bu stil atributa <span class="atr">none</span> baha berlen ýagdaýynda gysgaýol atributyň düzümine girýän ähli atributlaryň 
+                        kabulgörlen bahalary berilýär.
+                    </div> 
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid: none;
+                            } 
+                        </code>
+                    </pre>  
+                    <div class="note">
+                        Bu atributa <span class="atr">grid-template</span> gysgaýol stil atributyň alyp biljek bahalaryny hem bermeklik mümkin:
+                    </div> 
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid: repeat(4, 150px) / 1fr 200px 1fr;
+                                /* grid-template: repeat(4, 150px) / 1fr 200px 1fr; */
+                            } 
+                            /*
+                            .grid-container {
+                                display: grid;
+                                grid-template-rows: 150px 150px 150px 150px;
+                                grid-template-columns: 1fr 200px 1fr;
+                            }
+                            */
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Şol sanda setir liniýalaryň atlaryny hem aýdyň bermeklik mümkin:
+                    </div> 
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid:
+                                [row1-start] 25px [row1-end row2-start] 25px [row2-end] / auto 50px auto;
+                            } 
+                            /*
+                            .grid-container {
+                                display: grid;
+                                grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+                                grid-template-columns: auto 50px auto;
+                            }
+                            */
+                        </code>
+                    </pre>  
+                    <div class="note">
+                        Sütün we setirleriň ölçegini hem bermeklik mümkin. Iki setir we iki sütünden ybarat grid-konteýner döredeliň:
+                    </div> 
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid: 200px 100px / 30% 30%;
+                            } 
+                            /*
+                            .grid-container {
+                                display: grid;
+                                grid-template-rows: 200px 100px;
+                                grid-template-columns: 30% 30%;
+                            }
+                            */
+                        </code>
+                    </pre>  
+                    <div class="note">
+                        Grid-konteýneriň içinde elementleriň akyşyny, ýagny setirmi ýa-da sütün görnüşinde düzüljegini hem berip bolýar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid: auto-flow / 200px 1fr;
+                            } 
+                            /*
+                            .grid-container {
+                                display: grid;
+                                grid-auto-flow: row;
+                                grid-template-columns: 200px 1fr;
+                            }
+                            */
+                            .grid-container-1 {
+                                display: grid;
+                                grid: auto-flow dense 100px / 1fr 2fr;
+                            } 
+                            /*
+                            .grid-container-1 {
+                                grid-auto-flow: row dense;
+                                grid-auto-rows: 100px;
+                                grid-template-columns: 1fr 2fr;
+                            }
+                            */
+                            .grid-container-2 {
+                                display: grid;
+                                grid: 100px 300px / auto-flow 200px;
+                            } 
+                            /*
+                            .grid-container-2 {
+                                grid-template-rows: 100px 300px;
+                                grid-auto-flow: column;
+                                grid-auto-columns: 200px;
+                            }
+                            */
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Aşakda has çylşyrymly ulanylyşa degişli mysal berlen:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid:
+                                    [row1-start] "header header header" 1fr [row1-end]
+                                    [row2-start] "footer footer footer" 25px [row2-end]
+                                    / auto 50px auto;
+                            } 
+                            /*
+                            .grid-container {
+                                display: grid;
+                                grid-template-areas:
+                                    "header header header"
+                                    "footer footer footer";
+                                grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
+                                grid-template-columns: auto 50px auto;
+                            }
+                            */
+                        </code>
+                    </pre>
+                    <div class="note">
+                        <b>BELLIK: </b> Aşakdaky stil  atributlary grid-elementler üçin täsir netijesini bermez:
+                        <ul>
+                            <li><span class="atr">float</span>;</li>
+                            <li><span class="atr">display:inline-block</span>;</li>
+                            <li><span class="atr">display:table-cell</span>;</li>
+                            <li><span class="atr">vertical-align</span>;</li>
+                            <li><span class="atr">column-*</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--grid-column-start, grid-column-end & grid-row-start, grid-row-end-->
+                <div class="item-container" id="c-16">
+                    <h2 class="sticky"><span class="atr">grid-column-start</span>, <span class="atr">grid-column-end</span>,
+                        <span class="atr">grid-row-start</span>, <span class="atr">grid-row-end</span> stil atributlary <a href="#c-16">#</a></h2>
+                    <div class="note">
+                        Bu stil atributlary arkaly grid-maketiň içinde kesgitlenen liniýalar boýunça grid-elementiň aýdyň ornuny bermeklik mümkin. 
+                        Bu stil atributlaryň alyp biljek bahalary aşakda berlen:
+                        <ul>
+                            <li><b>&ltliniýa&gt</b> – liniýanyň tertip belgisi ýa-da liniýanyň ady bolup biler;</li>
+                            <li><span class="atr">span</span> <b>&ltsan&gt</b> – element görkezilen öýjük mukdaryna çenli süýndüriler;</li>
+                            <li><span class="atr">span</span> <b>&ltat&gt</b> – element görkezilen liniýanyň adyna çenli süýndüriler;</li>
+                            <li><span class="atr">auto</span> – element awtomatiki ýerleşdiriler. Awtomatiki ýerleşdirilen element grid-maketde 
+                            bir öýjük orny eýeleýär.</li>
+                        </ul> 
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysalda grid-elementiň orny 2-nji we 5-nji sütün liniýalaryň, 1-nji we 3-nji setir liniýalaryň aralygynda berildi:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+                                grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+                            } 
+                            .item {
+                                grid-column-start: 2;
+                                grid-column-end: five;
+                                grid-row-start: row1-start;
+                                grid-row-end: 3;
+                            }
+                        </code>
+                    </pre>
+                    <div class="img-container">
+                        <img src="../../images/grid-3.jpg" alt="Grids">
+                    </div>
+                    <div class="grid-container-16" style="display: none;">
+                        <div class="item16-1"></div>
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysalda grid-elementiň keseligine orny 1-nji sütün liniýadan başlap <span class="atr">[four]</span> atly liniýa çenli süýndürildi.
+                        Elementiň dikligine orny bolsa, 2-nji setir liniýadan başlap iki setir öýjügi boýunça süýndürildi. 
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+                                grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+                            } 
+                            .item {
+                                grid-column-start: 1;
+                                grid-column-end: four;
+                                grid-row-start: 2;
+                                grid-row-end: span 2;
+                            }
+                        </code>
+                    </pre>
+                    <div class="img-container">
+                        <img src="../../images/grid-4.jpg" alt="Grids">
+                    </div>
+                    <div class="grid-container-16" style="display: none;">
+                        <div class="item16-2"></div>
+                    </div>
+                    <div class="note">
+                        Eger-de <span class="atr">grid-column-end</span> we <span class="atr">grid-row-end</span> stil atributlaryň bahalary berilmedik ýagdaýynda
+                        grid-elementiň ölçegi bir öýjügi eýelär. 
+                    </div>
+                    <div class="note">
+                        Aýdyň orny berlen elementler biri-biriniň üstüni ýapyp biler. Şonuň üçin, bu ýagdaýda gatlaklary dolandyrmak üçin 
+                        <span class="atr">z-index</span> stil atributy ulanylyp bilner. 
+                    </div>
+                </div>
+                <!--grid-column & grid-row-->
+                <div class="item-container" id="c-17">
+                    <h2 class="sticky"><span class="atr">grid-column</span> we <span class="atr">grid-row</span> stil atributlary <a href="#c-17">#</a></h2>
+                    <div class="note">
+                        Degişlilikde <span class="atr">grid-column-start</span>, <span class="atr">grid-column-end</span> we
+                        <span class="atr">grid-row-start</span>, <span class="atr">grid-row-end</span> stil atributlary üçin gysgaýol stil atributydyr. 
+                        Başalaýan we gutarýan liniýalaryň arasyna <span class="atr">/</span> (sleş) belgisi goýulýar.
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysalda grid-elementiň orny 2-nji we 5-nji sütün liniýalaryň, 1-nji we 3-nji setir liniýalaryň aralygynda berildi:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+                                grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+                            } 
+                            .item {
+                                grid-column: 2 / five;
+                                grid-row: row1-start / 3;
+                            }
+                        </code>
+                    </pre>
+                    <div class="img-container">
+                        <img src="../../images/grid-3.jpg" alt="Grids">
+                    </div>
+                    <div class="grid-container-16" style="display: none;">
+                        <div class="item16-11"></div>
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysalda grid-elementiň keseligine orny 1-nji sütün liniýadan başlap <span class="atr">[four]</span> atly liniýa çenli süýndürildi.
+                        Elementiň dikligine orny bolsa, 2-nji setir liniýadan başlap iki setir öýjügi boýunça süýndürildi. 
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+                                grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+                            } 
+                            .item {
+                                grid-column: 1 / four;
+                                grid-row: 2 / span 2;
+                            }
+                        </code>
+                    </pre>
+                    <div class="img-container">
+                        <img src="../../images/grid-4.jpg" alt="Grids">
+                    </div>
+                    <div class="grid-container-16" style="display: none;">
+                        <div class="item16-21"></div>
+                    </div>
+                    <div class="note">
+                        Eger-de <span class="atr">/</span> (sleş) belgisi we yzyndaky san ýazylmadyk ýagdaýynda
+                        grid-elementiň ölçegi bir öýjügi eýelär. 
+                    </div>
+                </div>
+                <!--grid-area-->
+                <div class="item-container" id="c-18"> 
+                    <h2 class="sticky"><span class="atr">grid-area</span> stil atributy <a href="#c-18">#</a></h2>
+                    <div class="note">
+                        <span class="atr">grid-template-areas</span> stil atributy arkaly atlandyrylan meýdançalara salgylanmak üçin grid-elemente
+                        at berýär. Ýa-da bu stil atributy, <span class="atr">grid-column-start</span>, <span class="atr">grid-column-end</span>,
+                        <span class="atr">grid-row-start</span> we <span class="atr">grid-row-end</span> stil atributlaryň bahalaryny birbada berýän 
+                        gysgaýol atributy hökmünde hem ulanmaklyk mümkin. Bu atributyň sintaksisi aşakda berlen atributyň bahalaryny sintaksisde berlen
+                        tertipde ulanmaklyk hökmany: 
+                    </div>
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;
+                    </script>
+                    <div class="note">
+                        Aşakdaky mysalda <span class="atr">grid-template-areas</span> stil atributy arkaly atlandyrylan "header" atly meýdança salgylanmasy üçin
+                        grid-elemente at berildi:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .item {
+                                grid-area: header;
+                            }
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Aşakdaky mysalda bolsa bu atribut gysgaýol hökmünde ulanyldy we elementiň aýdyň orny berildi:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+                                grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+                            }
+                            .item {
+                                grid-area: 2 / 2 / 3 / five;
+                            }
+                        </code>
+                    </pre>
+                    <div class="img-container">
+                        <img src="../../images/grid-5.jpg" alt="Grids">
+                    </div>
+                    <div class="grid-container-16" style="display: none;">
+                        <div class="item16-31"></div>
+                    </div>
+                </div>
+                <!--justify-self-->
+                <div class="item-container" id="c-19">
+                    <h2 class="sticky"><span class="atr">justify-self</span> stil atributy <a href="#c-19">#</a></h2>
+                    <div class="note">
+                        Bu stil atributyň kömegi bilen aýratyn öýjügiň içindäki elementiň keseligine deňlenmegini ýola goýup bolýar.
+                        Atributyň alyp biljek bahalary <a href="#gc-10"><span class="atr">justify-items</span></a> stil atributyňka meňzeş.
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                justify-items: start;
+                            } 
+                            .item-1 { justify-self: center }
+                            .item-2 { justify-self: end; }
+                        </code>
+                    </pre>
+                    <div class="grid-container-14" style="justify-items: start;">
+                        <div class="grid-item-1" style="justify-self: center;">1</div>
+                        <div class="grid-item-1" style="justify-self: end;">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <!--align-self-->
+                <div class="item-container" id="c-20">
+                    <h2 class="sticky"><span class="atr">align-self</span> stil atributy <a href="#c-20">#</a></h2>
+                    <div class="note">
+                        Bu stil atributyň kömegi bilen aýratyn öýjügiň içindäki elementiň dikligine deňlenmegini ýola goýup bolýar.
+                        Atributyň alyp biljek bahalary <a href="#gc-11"><span class="atr">align-items</span></a> stil atributyňka meňzeş.
+                    </div>            
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                grid-template-rows: repeat(2, 60px);
+                                align-items: start;
+                            } 
+                            .item-1 { align-self: center }
+                            .item-2 { align-self: end }
+                        </code>
+                    </pre>
+                    <div class="grid-container-15" style="align-items: start;">
+                        <div class="grid-item-1" style="align-self: center;">1</div>
+                        <div class="grid-item-1" style="align-self: end;">2</div>
+                        <div class="grid-item-1">3</div>
+                        <div class="grid-item-1">4</div>
+                        <div class="grid-item-1">5</div>
+                        <div class="grid-item-1">6</div>
+                        <div class="grid-maket-1">
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                            <div class="grid-item-1">&nbsp;</div>
+                        </div>
+                    </div>   
+                </div>
+                <!--place-self-->
+                <div class="item-container" id="c-21">
+                    <h2 class="sticky"><span class="atr">place-self</span> stil atributy <a href="#c-21">#</a></h2>
+                    <div class="note">
+                        <span class="atr">place-self</span> gysgaýol stil atributy arkaly <span class="atr">align-self</span> we
+                        <span class="atr">justify-self</span> stil atributlaryň bahalaryny birbada bermeklik mümkin. Bu atributyň 
+                        sintaksisi aşakda berlen:
+                    </div>
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        place-self: <align-self> | <justify-self>;
+                    </script>
+                    Mysal üçin:
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                place-self: stretch end;
+                            }
+                        </code>
+                    </pre>
+                    <div class="note">
+                        Eger-de bu atributa bir baha berilse, onda iki atributyň bahasy hem berlen baha deň bolar. Mysal üçin,
+                        bu stil atributyň kömegi bilen aýratyn grid-elementi grid-öýjügiň içinde hem dikligine, hem keseligine 
+                        merkez boýunça deňlemegi bir setirde ýola goýup bolýar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .center {
+                                display: grid;
+                                place-self: center;
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <!--minmax() & auto-fit, auto-fill-->
+                <div class="item-container" id="c-22">
+                    <h2 class="sticky"><span class="atr">minmax()</span> funksiýasy we <span class="atr">auto-fill</span> / <span class="atr">auto-fit</span> açar sözleri <a href="#c-22">#</a></h2>
+                    <div class="note">
+                        Aşakdaky ýaly 6 kolonkoly grid-maket döredeliň. Her kolonkanyň ini hem boş ýeriň 1/6 bölegine deň bolsun.
+                        Bu ýagdaýda brauzeriň penjiresiniň ulaldylyp kiçeldilmesine garamazdan grid-konteýneriň içinde 6 kolonka bolar, ýagny
+                        penjire kiçeldilse kolonkalar hem kiçeldiler, tersine penjire ulaldylsa kolonkalar hem ulalar. (Aşakdaky grid-konteýneriň
+                        aşaky sag burçundan süýşürip barlaň).
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(6, 1fr);
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <div class="note">
+                        Ýokardaky mysalda, eger-de web-dokumente ekrany kiçi bolan enjamlar arkaly girilen ýagdaýynda öýjükler gysylýandygy üçin 
+                        öýjügiň kontenti hem gysylar. Bu ýagdaý kontentiň dogry-dürs görkezilmesiniň öňüni alar. Beýle ýagdaýyň ýüze çykmazlygy üçin
+                        <span class="atr">minmax()</span> funksiýasy arkaly öýjügiň minimum we maksimum inini bermeklik mümkin: 
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(6, minmax(100px, 1fr));
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17" style="grid-template-columns: repeat(6, minmax(100px, 1fr));">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>
+                    </div>
+                    <div class="note">
+                        Ýokardaky mysalda sütünleriň minimum ini <span class="atr">100px</span>, ýagny 6 sütüniň konteýnere doly sygmasy üçin konteýneriň 
+                        minimum ini <span class="atr">600px</span> bolmaly, sütünleriň maksimum ini bolsa <span class="atr">1fr</span>, ýagny
+                        konteýneriň ini <span class="atr">600px</span>-den uly bolan ýagdaýynda galan boş ýer sütünleriň arasynda deň paýlaşylýar.
+                        Bu mysalda sütünleriň minimum ini <span class="atr">100px</span> berlendigi üçin konteýneriň ini <span class="atr">600px</span>-den
+                        kiçi ýagdaýa getirilende konteýnere sygmadyk sütünleriň görkezilmesi üçin konteýnerde keseligine süýşürme zolagy peýda bolar, 
+                        ýagny ekrana sygmadyk elementler täze setire geçirilmez, çünki biz her setirde 6 sütüniň bolmalydygyny brauzere aç-açan beýan etdik. 
+                        Ekrana sygmadyk elementleriň awtomatiki täze setire geçirilmesi üçin <span class="atr">auto-fill</span> ýa-da 
+                        <span class="atr">auto-fit</span> <i>orun berme</i> açar sözleri ulanylýar:  
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(auto-fill, 100px);
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17" style="grid-template-columns: repeat(auto-fill, 100px);">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                    </div>
+                    <div class="note">
+                        Ýokardaky mysalda kolonkolaryň mukdarynyň deregine <span class="atr">auto-fill</span> açarsözi ulanyldy. Bu ýagdaýda 
+                        brauzer grid-maketiň setirlerine ini <span class="atr">100px</span> bolan kolonklardan sygdyryp bilenini sygdyrmaga synanyşar 
+                        (hatda kolonkalaryň içinde grid-element ýok bolsa-da). Setirde kolonkalaryň sygmasy üçin ýer bolmadyk ýagdaýynda bolsa içi 
+                        elementli kolonkalar täze setire awtomatiki geçiriler. Bu gurluş bize media-ýüztutmalary ulanmazdan adaptiw web-maketleri 
+                        taýýarlamagymyza mümkinçilik berýär.      
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysalda bolsa, <span class="atr">auto-fill</span> açarsözi bilen bilelikde <span class="atr">minmax(100px, 200px)</span>
+                        funksiýasy ulanyldy, ýagny kolonkolaryň minimum ini <span class="atr">100px</span>, maksimum ini bolsa <span class="atr">200px</span> berildi.
+                        Bu ýagdaýda brauzer kolonkalaryň <b>maksimum</b> bahalaryna görä sygdyryp bilenini setirlere sygdyrmaga synanyşar, ýagny 
+                        bu mysalda ini <span class="atr">200px</span> bolan kolonkalardan sygdyryp bilenini setirlere sygdyrmaga synanyşar. Setirlere 
+                        sygmadyk içi elementli kolonkolar bolsa awtomatiki aşaky setire geçiriler.    
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(auto-fill, minmax(100px, 200px));
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17" style="grid-template-columns: repeat(auto-fill, minmax(100px, 200px))">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                    </div>
+                    <div class="note">
+                        Aşaky mysalda bolsa, <span class="atr">auto-fill</span> açarsözi bilen bilelikde <span class="atr">minmax(100px, 1fr)</span>
+                        funksiýasy ulanyldy, ýagny kolonkolaryň minimum ini <span class="atr">100px</span>, maksimum ini bolsa <span class="atr">1fr</span> berildi.
+                        Bu ýagdaýda brauzer ini <span class="atr">1fr</span> bolan kolonkalardan sygdyryp bilenini setirlere sygdyrmaga synanyşar, 
+                        ýagny ilki bilen setirlere ini <span class="atr">100px</span> bolan kolonkalardan ýerleşdirip bilenini ýerleşdirer, 
+                        soňra setirdäki galan boş ýeri kolonkalaryň arasynda deň paýlamaklyk bilen bu ölçegdäki kolonkalardan setirlere ýerleşdirip bilenini 
+                        ýerleşdirer.   
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(auto-fill, minmax(100px, 1fr));
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17" style="grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                    </div>
+                    <div class="note">
+                        <span class="atr">auto-fit</span> açarsözüniň <span class="atr">auto-fill</span>
+                        açarsözünden tapawutly tarapy grid-konteýnerde diňe bir setir bolanda ýüze çykýar. Eger-de bu setire grid-elementli kolonkalar
+                        ýerleşdirilende, setirde awto-kolonkalaryň sygmasy üçin boş ýer galsa-da, awto-kolonkalaryň inine 0 berler. Başga-ça aýtsak
+                        grid-elementsiz kolonkalar konteýnerde ýer eýelemez.        
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(auto-fit, minmax(100px, 200px));
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17" style="grid-template-columns: repeat(auto-fit, minmax(100px, 200px))">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                    </div>
+                    <div class="note">
+                        <span class="atr">auto-fit</span> açarsözi ulanylanda grid-elementsiz kolonkalar konteýnerde ýer eýelemez. Şonuň üçin 
+                        kolonkanyň maksimum inine <span class="atr">1fr</span> berlende setirdäki galan boş ýer grid-elementli kolonkalaryň 
+                        arasynda deň paýlaşylar. Aşakdaky mysalda brauzer ilki bilen ini <span class="atr">100px</span> bolan grid-elementli 
+                        kolonkalary ýerleşdirer we eger-de setirde boş ýer galsa bu boş ýer grid-elementli kolonkalaryň arasynda deň paýlaşylar.     
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-column: repeat(auto-fit, minmax(100px, 1fr));
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-17" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))">
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>
+                    </div>
+                </div>
+                <!--min-content, max-content & fit-content-->
+                <div class="item-container" id="c-23">
+                    <h2 class="sticky"><span class="atr">min-content</span>, <span class="atr">max-content</span> we <span class="atr">fit-content</span> açar sözleri <a href="#c-23">#</a></h2>
+                    <div class="note">
+                        Eger-de elementiň ölçegi (ini ýa-da beýikligi) <span class="atr">min-content</span> açarsözi arkaly berilse, onda elementiň ölçegi
+                        düzüminiň (kontentiň) alyp biljek iň kiçi bahasyna görä berler. Keseligine kontent üçin <span class="atr">min-content</span> açarsözi 
+                        ulanylanda, konteniň iň uzyn böleginiň ölçegi elementiň ininiň ölçegi hökmünde berler. Meselem, aşakdaky mysalda birinji elementiň
+                        ini we beýikligi <span class="atr">200px</span> berildi we kontent elementiň içine sygmadygy üçin <i>çogma</i> (overflow) ýüze çykdy.
+                        Ikinji bloguň ini bolsa <span class="atr">min-content</span> berlendigi üçin elementiň ölçegi düzüminiň alyp biljek iň kiçi bahasyna 
+                        görä berildi.
+                    </div>
+                    <div class="flex-container-1">
+                        <div style="width: 200px; height: 200px; overflow: auto;">
+                            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, 
+                            qui ratione voluptatemsequinesciuntneque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur
+                            adipiscing velit, sed quia non numquam...
+                        </div>
+                        <div style="width: min-content;">
+                            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, 
+                            qui ratione voluptatemsequinesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur 
+                            adipiscing velit, sed quia non numquam...
+                        </div>
+                    </div>
+                    <div class="note">
+                        Aşakdaky grid-konteýnerde bolsa 1-nji kolonkanyň minimum we maksimum ini <span class="atr">min-content</span>, ikinji 
+                        kolonkanyň ini galan boş ýeriň 2/3-ne, 3-nji kolonkanyň ini galan boş ýeriň 1/3-ne deň berildi.   
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-columns: minmax(min-content, min-content) 2fr 1fr;
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-18">
+                        <div>
+                            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, 
+                            qui ratione voluptatemsequinesciuntneque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur
+                            adipiscing velit, sed quia non numquam...
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="note">
+                        Eger-de elementiň ölçegi (ini ýa-da beýikligi) <span class="atr">max-content</span> açarsözi arkaly berilse, onda 
+                        elementiň ölçegi düzüminiň alyp bijek maksimum bahasyna görä berilýär. Meselem, aşakdaky mysalda birinji blok elementiň
+                        ininiň ölçegi berilmedi, şonuň üçin bu element keselegine elýeterli boşlugy eýeledi. Ikinji bloguň ini bolsa,
+                        <span class="atr">max-content</span> berlendigi üçin elemenitiň ininiň ölçegi düzüminiň alyp bijek maksimum bahasyna görä berildi.      
+                    </div>
+                    <div class="flex-container-1" style="flex-direction: column; gap: 5px">
+                        <div style="border: 1px solid #f15ecd">
+                            Nemo enim ipsam voluptatem, quia voluptas sit.
+                        </div>
+                        <div style="width: max-content; border: 1px solid #f15ecd">
+                            Nemo enim ipsam voluptatem, quia voluptas sit.
+                        </div>
+                    </div>
+                    <div class="note">
+                        Aşakdaky grid-konteýnerde bolsa 1-nji kolonkanyň ini <span class="atr">min-content</span>, ikinji 
+                        kolonkanyň ini <span class="atr">max-content</span>, 3-nji kolonkanyň ini bolsa galan boş ýeri eýelejek görnüşde berildi.   
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-columns: min-content max-content 1fr;
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-18" style="grid-template-columns: min-content max-content 1fr">
+                        <div>Nemo ratione voluptatemsequinesciunt porro.</div>
+                        <div>Nemo ratione voluptatemsequinesciunt porro.</div>
+                        <div></div>
+                    </div>
+                    <div class="note">
+                        Aşakdaky mysal bolsa <span class="atr">max-content</span> ulanylanda ýüze çykyp biljek meseläni görkezýär, ýagny 
+                        elementiň ininiň <span class="atr">max-content</span> berilmeginiň netijesinde eger-de konteýneriň ini kiçi bolsa onda çogma (overflow)
+                        ýüze çykar.    
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        <div class="container">
+                            <div class="block">
+                                Nemo enim ipsam voluptatem, quia 
+                                voluptas sit, aspernatur aut odit aut fugit.
+                            </div>
+                        </div>
+                    </script>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container { width: 400px }
+                            .block { width: max-content }
+                        </code>
+                    </pre>
+                    <div class="flex-container-1" style="flex-direction: column; gap: 5px; border: 1px solid var(--text-color); padding: 10px; max-width: 400px;">
+                        <div style="border: 1px solid #f15ecd; width: max-content;">
+                            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit.
+                        </div>
+                    </div>
+                    <div class="note">
+                        Ýokardaky ýaly ýüze çykýan meseläniň öňüni almaklyk üçin <span class="atr">fit-content</span> açarsözi ulanylýar. 
+                        Eger-de elemente <span class="atr">fit-content</span> ölçegi berilse, onda elementiň ölçegi
+                        düzüminiň alyp biljek iň kiçi (<span class="atr">min-content</span>) bahasy bilen düzüminiň alyp biljek 
+                        maksimum (<span class="atr">max-content</span>) bahasynyň aralygynda berler:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container { width: 400px }
+                            .block { width: fit-content }
+                        </code>
+                    </pre>
+                    <div class="flex-container-1" style="flex-direction: column; gap: 5px; border: 1px solid var(--text-color); padding: 10px; max-width: 400px;">
+                        <div style="border: 1px solid #f15ecd; width: fit-content;">
+                            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit.
+                        </div>
+                    </div>
+                    <div class="note">
+                        Eger-de elementiň ölçegi berlende <span class="atr">fit-content(<i>&ltbaha&gt</i>)</span> funksiýasy ulanylsa, onda elementiň ölçegi
+                        düzüminiň alyp biljek iň kiçi (<span class="atr">min-content</span>) bahasy bilen düzüminiň alyp biljek maksimum
+                        (<span class="atr">max-content</span>) bahasynyň aralygyndaky <em>maksimum</em> <span class="atr"><i>&ltbaha&gt</i></span> deň bolar. 
+                        Köplenç <span class="atr">grid-template-columns</span> ýa-da <span class="atr">grid-template-rows</span> stil atributlary bilen bilelikde
+                        ulanylýar:
+                    </div>
+                    <pre>
+                        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            .container {
+                                display: grid;
+                                grid-template-columns: fit-content(300px) max-content 1fr;
+                            }
+                        </code>
+                    </pre>
+                    <div class="grid-container-18" style="grid-template-columns: fit-content(200px) max-content 1fr">
+                        <div>Nemo ratione voluptatemsequinesciunt porro.</div>
+                        <div>Nemo ratione voluptatemsequinesciunt porro.</div>
+                        <div></div>
+                    </div>
+                    Bu funksiýanyň sintaksisi aşakda berlen:
+                    <script type="text/plain" class="language-css" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                        fit-content(<prosent-baha> | <absolýut-baha>);
+                    </script>
+                </div>
+                <!--demolar-->
+                <div class="item-container" id="c-24">
+                    <h2 class="sticky">Demolar <a href="#c-24">#</a></h2>
+                    <ul>
+                        <li><a href="css-grid-2.html" target="_blank">Demo-1: Adaptiw maket</a></li>
+                        <li><a href="css-grid-3.html" target="_blank">Demo-2: Adaptiw gutular</a></li>
+                        <li><a href="css-grid-3/index.html" target="_blank">Demo-3: Adaptiw maket</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

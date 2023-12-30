@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - HTML dokumentiň gurluşy</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">HTML dokumentini döretmek üçin gerekli abzallar</a></li>
+                    <li><a class="btn" href="#c-2">Tegleriň atributlary</a></li>
+                    <li><a class="btn" href="#c-3"><b>&lt!DOCTYPE&gt</b> yglany</a></li>
+                    <li><a class="btn" href="#c-4"><b>&lthtml&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-5"><b>&lthead&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-6"><b>&ltstyle&gt</b> tegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 22.07.2023</div>
+                
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">HTML dokumentiň gurluşy</li>
+                </ul>
+                <!--Gerekli abzallar-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">HTML dokumentini döretmek üçin gerekli abzallar <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        <ul>
+                            <li>Islendik tekst redaktory: Bloknot, Notepad++, Atom, Sublime, <em>Visual Studio Code</em> we ş.m.;</li>
+                            <li>Islendik web-brauzer: Chrome, Safari, Edge, Firefox, Opera we ş.m.</li>
+                        </ul>
+                        <p>
+                            Web-sahypalaryň düzümi HTML dilini ulanmaklyk bilen taýýarlanylýar. Bu diliň iň soňky wersiýasy HTML 5. HTML dili
+                            programmalaşdyrma dili däl-de web-sahypalary <em>belgileme</em> dilidir.
+                        </p>
+                    </div>
+                    <h2 class="sticky">HTML dokumentiň gurluşy</h2>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Web-sahypa mysal</title>
+                        </head>
+                        <body>
+                            <!-- Teswir setiri -->
+                            <h1>HTML dilini öwrenýäris</h1>
+                            <p><strong>HTML</strong> dili Web-sahypalaryň 
+                                düzümini taýýarlamak üçin niýetlenen.</p>
+                        </body>
+                        </html>
+                    </script>
+                    <div class="note">
+                        HTML dilinde tegler <span class="atr">&lt</span> we <span class="atr">&gt</span> simwollarynyň içine alynýar. HTML dilinde köp mukdarda tegler bardyr. Islendik teg barada
+                        <span class="atr">https://www.w3schools.com/</span> internet saýtynda giňişleýin maglumat alyp bolýar.
+                    </div>
+                    <div class="note">
+                        <span class="atr">&lth1&gt</span>...<span class="atr">&lt/h1&gt</span> - bu tegleriň arasyndaky tekst sözbaşyna öwrülýär 
+                        (header tegi). HTML dilinde sözbaşy teginiň 1-den 6-a çenli görnüşi bar. Sanlar ulaldykça sözbaşy tekstiň ululygy kiçelýär.
+                    </div>
+                    <div class="note">
+                        Käbir düşünjeler:
+                        <ul>
+                            <li>Açylýan teg: <span class="atr">&lth1&gt</span></li>
+                            <li>Tegiň ady: <span class="atr">h1</span></li>
+                            <li>Ýapylýan teg: <span class="atr">&lt/h1&gt</span></li>
+                            <li>Tegiň düzümi: HTML dilini öwrenýäris</li>
+                            <li>Jübüt teg: <span class="atr">&lth1&gt</span>...<span class="atr">&lt/h1&gt</span></li>
+                            <li>Ýeke teg: <span class="atr">&ltmeta charset="UTF-8"&gt</span>. 
+                                Ýeke teglerde ýapylýan jübüt teg bolmaýar. Bu tegler HTML koduň haýsy nokadynda
+                                ýerleşdirilen bolsa, şol nokatda täsirini ýetirýär;</li>
+                            <li>Teswir setiri: <span class="atr">&lt!-- we --&gt</span> tegleriň arasyna alnan tekst teswir setiri 
+                                hökmünde kabul edilýär.</li>
+                        </ul>
+                        <p>
+                            Tegiň adyny baş ýa-da setir harp bilen ýazyp bolýar. HTML 5 dilinde tegiň ady 
+                                adatça setir harp bilen ýazylýar.
+                        </p>
+                    </div>
+                    <div class="note">
+                        <ul>
+                            <li><span class="atr">&ltp&gt</span>...<span class="atr">&lt/p&gt</span> - bu tegleriň arasyndaky tekst absaza öwrülýär, 
+                                abzasyň öňüne we yzyna boşluk goýulýar (paragraph, abzas tegi); 
+                            </li>
+                            <li><span class="atr">&ltstrong&gt</span>...<span class="atr">&lt/strong&gt</span> - bu tegleriň arasyndaky tekst has 
+                                gara ýazylan görnüşe öwrülýär.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Tegleriň atributlary-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Tegleriň atributlary <a href="#c-2">#</a></h2>
+                    <div class="note">
+                        Ýene-de tegiň adyndan soňra onuň atribut(lar)yny hem berip bolýar. Tegiň atributynyň kömegi bilen tege degişli
+                        parametrler berilýär. Mysal üçin: <span class="atr">&lthtml lang="tm">...&lt/html></span>. Bu mysalda html tegiň lang atly 
+                        atributynyň bahasy "tm" berlipdir, 
+                        ýagny bu web-sahypadaky tekstiň diliniň türkmençedigini beýan edýäris. Tegleriň hökmany we hökmany däl atributlary bolýar. 
+                        Hökmany atributlar tegiň içinde hökman ýazylmaly, hökmany däl atributlary ýazmasaň hem bolýar.
+                    </div>
+                </div>
+                <!--DOCTYPE yglany-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky"><span class="atr">&lt!DOCTYPE&gt</span> yglany <a href="#c-3">#</a></h2>
+                    <div class="note">
+                        <span class="atr">&lt!DOCTYPE&gt</span> yglany HTML tegi hasaplanmaýar we birinji setirde ýazylýar we brauzere HTML
+                        dokumentiň görnüşi, ýagny HTML diliň wersiýasy barada maglumat berýär. Aşakda HTML diliniň wersiýalaryna görä
+                        yglanyň ýazylyşlary berlen:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!--HTML 5:-->
+                        <!DOCTYPE html>
+                    
+                        <!--HTML 4.01:-->
+                        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                        "http://www.w3.org/TR/html4/loose.dtd">
+                        
+                        <!--XHTML 1.1:-->
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+                        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+                    </script>
+                </div>
+                <!--html tegi-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky"><span class="atr">&lthtml&gt</span> tegi <a href="#c-4">#</a></h2>
+                    <div class="note">
+                        HTML dokumentiň (
+                        <span class="atr">&lt!DOCTYPE&gt</span> teginden başga) ähli tegleri bu kök tegiň içinde ýazylýar. Bu tegiň birnäçe atributlary bardyr. 
+                        Olara soňradan seredip geçeris. HTML dokument iki bölekden emele gelýär sözbaşdan (<span class="atr">&lthead&gt</span>) 
+                        we mazmundan (<span class="atr">&ltbody&gt</span>).
+                    </div>
+                </div>
+                <!--head-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky"><span class="atr">&lthead&gt</span> tegi <a href="#c-5">#</a></h2>
+                    <div class="note">
+                        <span class="atr">&lthead&gt</span> teginiň düzüminde sahypanyň tehniki maglumatlary ýazylýär: sahypanyň sözbaşysy,
+                        sahypanyň beýany, gözleg motorlary üçin açarsözleri, sahypanyň döredilen wagty we awtory hakynda maglumatlar,
+                        sahypanyň kodlamasy we ş.m. Bu tegiň içinde ýeketäk hökmany ýazylmaly teg, <span class="atr">&lttitle&gt</span>
+                        tegidir. <span class="atr">&lttitle&gt</span> teginiň arasyna ýazylan tekst brauzeriň sözbaşy bölmesinde
+                        görkezilýär. Brauzeriň sözbaşy bölmesi maksimum uzynlygy 60 simwol bolup bilýär. Köplenç bu tegiň arasyndaky tekst
+                        gözleg motorlary tarapyndan netije hökmünde görkezilýär. Şonuň üçin sahypanyň sözbaşyny giňişleýin ýazmaklyk gözleg
+                        motory optimizasiýasy üçin peýdalydyr.
+                    </div>
+                    <div class="note">
+                        <span class="atr">&lthead&gt</span> teginiň içinde ýazylýan <span class="atr">&ltmeta&gt</span> tegi HTML dokument
+                        hakyndaky metamaglumaty kesgitlemäge kömek edýär. Metamaglumat diýlip, maglumat hakyndaky informasiýa aýdylýar. Ýeke
+                        teg bolan <span class="atr">&ltmeta&gt</span> tegiň kömegi bilen sahypanyň mazmunynyň gysgaça anyk beýanyny hem-de
+                        gözleg motorlary üçin (arasyna otur goýmaklyk bilen) açarsözleri ýazyp bolýar:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <meta name="description" content="Bu sahypada dürli awtoulag harytlaryny tapyp bilersiňiz">
+                        <meta name="keywords" content="tigir, awto-ýag, ýangyç, kuzow">
+                    </script>
+                    <p>
+                        Ýene-de <span class="atr">&ltmeta&gt</span> tegiň refresh aýratynlygyny ulanmaklyk bilen web-sahypany belli bir 
+                        wagtdan soňra täzeläp bolýar. Aşakdaky mysalda web-sahypa her 30 sekuntdan täzelener:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <meta http-equiv="refresh" content="30">
+                    </script>
+                    <div class="note">
+                        <span class="atr">&lthead&gt</span> tegiň içinde başga-da <span class="atr">&ltbase&gt</span>, <span
+                            class="atr">&ltlink&gt</span>, <span class="atr">&ltscript&gt</span>, <span class="atr">&ltstyle&gt</span> atly
+                        tegler hem bolup bilýar. Bu tegler hakynda öňümizdäki temalarda içgin aýdylar.
+                    </div>
+                    <p>
+                        Başga-da <span class="atr">&lthead&gt</span> teginiň içinde <span class="atr">&ltlink&gt</span> tegi hem ýazylyp bilner:
+                        <ul>
+                            <li><span class="atr">&ltlink&gt</span> tegi degişli dokument bilen daşky resurslaryň arabaglanşygyny ýola goýýar;</li>
+                            <li><span class="atr">&ltlink&gt</span> tegi köplenç daşky stil faýlyna baglanmaly bolanda ýa-da saýta 
+                            fawikon goşmaly bolan ýagdaýynda ulanylýar. Fawikon – bu brauzeriň sözbaşy setirinde görkezilýän 16×16 ýa-da 32×32 
+                            piksel ölçegindäki logotipi. Fawikon ýörite grafiki redaktorlaryň kömegi bilen taýýarlanylýar. </li>
+                        </ul>  
+                        Mysal üçin:     
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <head>
+                            <link rel="stylesheet" href="/styles.css">
+                            <link rel="icon" href="/favicon.ico" type="image/x-icon">
+                        </head>                        
+                    </script>
+                    <p>
+                        Bu mysalda web-sahypamyz web-saýtyň kök papkasyndaky daşky resurslar bolan stil faýlyna we fawikon faýlyna
+                        baglanýar. <span class="atr">favicon.ico</span> faýly hökman saýtyň kök papkasynda ýerleşen bolmaly. <span
+                            class="atr">rel</span> atributy baglanşygyň görnüşini bildirýär. <span class="atr">href</span> atributy bolsa,
+                        baglanylýan faýlyň ýoluny görkezýär.
+                    </p>
+                </div>
+                <!--style-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky"><span class="atr">&ltstyle&gt</span> tegi <a href="#c-6">#</a></h2>
+                    <p>
+                        <span class="atr">&ltstyle&gt</span> teginiň kömegi bilen HTML teglerine stil berip bolýar, ýagny HTML elementleriň
+                        brauzer tarapyndan nähili görnüşde görkeziljekdigini kesgitläp bolýar. Bu tegiň içinde CSS stilleri ýazylýar. Adatça
+                        <span class="atr">&ltstyle&gt</span> tegi <span class="atr">&lthead&gt</span> teginiň içinde ýazylýar. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                            <head>
+                                <meta charset="utf-8">
+                                <title>Teglere stil bermeklige mysal</title>
+                                <style>
+                                    body {
+                                    /* Web-sahypanyň fon reňki */
+                                    background-color: green;
+                                    /* Fon suraty */
+                                    background-image: url(images/background.jpg);
+                                    /* Tekstiň reňki */
+                                    color: red
+                                    }
+                                    /* Basylmadyk linkleriň reňki */
+                                    a:link { color: #e4e4eb }
+                                    /* Basylan linkleriň reňki */
+                                    a:visited { color: #008000 }
+                                    /* Aktiw linkiň reňki */
+                                    a:active { color: #FF0000 }
+                                </style>
+                            </head>
+                            <body>
+                                <p>Resminamanyň teksti</p>
+                                <p><a href="index.html">Baş sahypa geçmek</a></p>
+                            </body>
+                        </html>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

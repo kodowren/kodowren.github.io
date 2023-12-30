@@ -1,0 +1,45 @@
+table {
+    width: 300px;
+    /* Tablisanyň ini */
+    border: #858282 1px solid;
+    /* Tablisanyň çarçuwasynyň stili */
+    border-spacing: 0;
+    /* Öýjükleriň arasyndaky aralyk */
+    border-collapse: collapse;
+    /* Ýeke çarçuwa */
+    margin: 0 auto 0 auto;
+    /* Tablisanyň merkez boýunça deňlenmegi */
+}
+caption {
+    text-align: center;
+    /* Tablisanyň sözbaşynyň merkez boýunça deňlenmegi */
+    caption-side: top
+    /* Sözbaşyň tablisanyň depesinde ýerleşdirilmegi */
+}
+
+td,
+th {
+    border: #858282 1px solid;
+    /* Öýjükleriň çarçuwasynyň stili */
+    padding: 10px;
+    /* Tablisanyň mazmuny bilen çäginiň arasyndaky boşluk */
+    text-align: center
+    /* Öýjügiň merkez boýunça deňlenmegi */
+}
+tr {
+    text-align: center;
+    /* Merkez boýunça deňlemek */
+    vertical-align: top;
+    /* Dikligine deňlemek */
+}
+
+tr:nth-child(2n) {
+    background: #5c5b5b;
+        /* Zebra */
+    color: white;
+}
+thead,
+tfoot {
+    background: #f5e0cd
+        /* Fonuň reňki */
+}

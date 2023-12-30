@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Freýmler</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Freýmler</a></li>
+                    <li><a class="btn" href="#c-2"><b class="teg">iframe</b> tegi</a></li>
+                    <li><a class="btn" href="#c-3">Dokumentiň kesgitlenen freýme ýüklenmegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 28.11.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Freýmler</li>
+                </ul>
+                <!--Feymler-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Freýmler <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        Freýmler web-brauzeriň penjiresini birnäçe gönüburçluk görnüşindäki meýdançalara bölmäge mümkinçilik berýär.
+                        Freýmler bu meýdançalaryň her birine aýratyn HTML dokumentini ýüklemäge mümkinçilik berýär.
+                    </div>
+                </div>
+                <!--iframe tegi-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky"><span class="teg">iframe</span> tegi <a href="#c-2">#</a></h2>
+                    <p class="note">
+                        <span class="teg">iframe</span> tegi bilen HTML dokumentiň içine freýmleri goşup bolýar. 
+                        Kä halatlarda bu freýmlere “ýüzýän” freýmler hem diýilýär. Bu tegiň aşakdaky ýaly atributlary bar:
+                    </p>
+                    <ul>
+                        <li><span class="atr">src</span> – freýme ýüklenjek dokumentiň URL salgysy. Absolýut ýa-da otnositel URL salgy
+                            berlip bilner:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <iframe src="chapter1.html"></iframe>
+                        </script>
+                        <li><span class="atr">name</span> – freýme unikal (gaýtalanmaz) at bermek:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <iframe src="chapter1.html" name="myframe"></iframe>
+                        </script>
+                        <li><span class="atr">width</span> we <span class="atr">height</span> – freýmiň degişlilikde inini we beýikligini bermek:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <iframe src="chapter1.html" name="myframe" width="700" height="400"></iframe>
+                        </script>
+                        <li><span class="atr">srcdoc</span> – freýmde görkeziljek HTML kody bermek:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <iframe srcdoc="<p>Freýmiň içinde tekst</p>"></iframe>
+                        </script>
+                        <li><span class="atr">sandbox</span> – freýme ýüklenjek kontente çäklendirme bermek. Eger-de atributa baha berilmedik
+                            bolsa, onda freýmiň mazmunyna maksimal çäklendirme berilýär. Atributyň bahasyna aşakda berlen bahalary bermeklik
+                            bilen freýmiň mazmunyna bolan aýratyn çäklendirmleri aýyrmaklyk bolýar. Atributyň bahalary berlende arasy boşluk
+                            bilen bölünmeli:
+                            <ul>
+                                <li><span class="atr-value">allow-forms</span> – formlary ibermäge rugsat bermeklik;</li>
+                                <li><span class="atr-value">allow-modals</span> – modal dialog penjireleri açmaga rugsat bermeklik;</li>
+                                <li><span class="atr-value">allow-popups</span> – ýüzýän penjirelere rugsat bermeklik;</li>
+                                <li><span class="atr-value">allow-scripts</span> – (ýüzýän penjireleriň daşynda) skriptleriň ýerine ýetirilmegine rugsat bermek;</li>
+                                <li><span class="atr-value">allow-top-navigation</span> – düýp dokumente salgy boýunça dokumentleri ýüklemäge rugsat bermeklik;</li>
+                                <li><span class="atr-value">allow-same-origin</span> – freýmiň içindäki gelip çykyşy birmeňzeş bolan dokumentiň düýp dokumente bolan elýeterliligine rugsat bermek;</li>
+                                <li><span class="atr-value">allow-pointer-lock</span> – <i>Pointer Lock API</i> üçin rugsat bermeklik;</li>
+                                <li><span class="atr-value">allow-presentation</span> – <i>Presentation API</i> üçin rugsat bermeklik;</li>
+                                <li><span class="atr-value">allow-orientation-lock</span> – <i>Screen Orientation API</i> üçin rugsat bermeklik.</li>	 
+                            </ul>
+                        </li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <iframe sandbox="allow-forms"></iframe>
+                        </script>
+                    </ul>
+                    <p>Indi bolsa, düzüminde ýüzýän frame bolan web-sahypa taýýarlalyň. Onuň üçin bir papkanyň içinde üç sany faýl döredeliň:</p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Bölüm 1</title>
+                        </head>
+                        <body>
+                            <h1>Bölüm 1</h1>
+                            <p>1-nji bölümiň mazmuny</p>
+                        </body>
+                        </html>
+                    </script>
+                    <figcaption>chapter1.html dokumenti</figcaption>
+                    <br>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Bölüm 2</title>
+                        </head>
+                        <body>
+                            <h1>Bölüm 2</h1>
+                            <p>2-nji bölümiň mazmuny</p>
+                        </body>
+                        </html>
+                    </script>
+                    <figcaption>chapter2.html dokumenti</figcaption><br>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Freýmler</title>
+                        </head>
+                        <body>
+                        <h2>Mazmuny</h2>
+                        <ul>
+                            <li><a href="chapter1.html" target="chapter">Bölüm 1</a></li>
+                            <li><a href="chapter2.html" target="chapter">Bölüm 2</a></li>
+                        </ul>
+                        <iframe src="chapter1.html" name="chapter" width="90%" height="400"></iframe>
+                        </body>
+                        </html>
+                    </script>
+                    <figcaption>index.html dokumenti</figcaption>
+                    <p>
+                        Brauzeri açyp <span class="atr-1">index.html</span> sahypa girip salgylaryň üstüne basanymyzda degişli sahypanyň freýmiň penjiresine
+                        ýüklenýändigini nawigasiýa panelindäki sözbaşylaryň bolsa üýtgemeýändigini görüp bileris:
+                    </p>
+                    <div class="code-run">
+                        <h2>Mazmuny</h2>
+                        <ul>
+                            <li><a href="chapter1.html" target="chapter">Bölüm 1</a></li>
+                            <li><a href="chapter2.html" target="chapter">Bölüm 2</a></li>
+                        </ul>
+                        <iframe src="chapter1.html" name="chapter" width="90%" height="400"></iframe>
+                    </div>
+                </div>
+                <!--Dokumentin kesgitlenen freyme yuklenmegi-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Dokumentiň kesgitlenen freýme ýüklenmegi <a href="#c-3">#</a></h2>
+                    <p>
+                        Dokumentiň kesgitlenen freýme ýüklenmesi üçin <span class="teg">a</span> tegiň <span class="atr">target</span>
+                        atributy ulanylýar. <span class="atr">target</span> atributyň bahasyna freýmiň ady (freýmiň ady <span
+                            class="teg">iframe</span> tegiň <span class="atr">name</span> atributy arkaly berilýär) ýa-da rezerw edilen
+                        bahalaryň biri berlip bilner. Ýönekeý dil bilen aýtsak <span class="atr">target</span> atributy açyljak sahypanyň
+                        nirede açyljakdygyny görkezýär. <span class="atr">target</span> atributynyň rezerw edilen bahalary aşakda
+                        görkezilen:
+                    </p>
+                    <ul>
+                        <li><span class="atr-value">_blank</span> – dokument brauzeriň täze bölmesine ýüklener:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <a href="file1.html" target="_blank">Salgynyň teksti</a>
+                        </script>
+                        <li><span class="atr-value">_self</span> – dokument gipersalgynyň ýerleşýän sahypasyndaky freýme (ýa-da brauzeriň bölmesine) ýüklener. Atributyň bu bahasy <span class="teg">a</span> tegiň kabulgörlen bahasydyr:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <a href="file1.html" target="_self">Salgynyň teksti</a>
+                        </script>
+                        <li><span class="atr-value">_parent</span> – dokument degişli freýmiň ene freýminiň penjiresine ýüklener:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <a href="file1.html" target="_parent">Salgynyň teksti</a>
+                        </script>
+                        <li><span class="atr-value">_top</span> – dokument ähli freýmleriň üstüne ýüklener:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <a href="file1.html" target="_top">Salgynyň teksti</a>
+                        </script>
+                    </ul>
+                    <p>
+                        Eger-de dokumenti <span class="atr-1">chapter</span> atly freýme ýüklemeli bolsa, onda gipersalgy aşakdaky ýaly bolar:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="chapter1.html" target="chapter">Bölüm 1</a>
+                    </script>
+                    <p>
+                        Freýmiň ady <span class="teg">iframe</span> teginiň <span class="atr">name</span> atributy arkaly berilýär:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <iframe src="chapter1.html" name="chapter" width="90%" height="400"></iframe>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

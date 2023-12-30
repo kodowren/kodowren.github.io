@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Tablisalar</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Tablisalar</a></li>
+                    <li><a class="btn" href="#c-2">Tablisanyň sütünleriniň häsiýetini bermek</a></li>
+                    <li><a class="btn" href="#c-3">Tablisanyň öýjükleri</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 21.11.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Tablisalar</li>
+                </ul>
+                <!--Tablisalar-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Tablisalar <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        HTML dokumentinde tablisalar aşakdaky ýagdaýlar üçin ulanylýar:
+                        <ul>
+                            <li>Maglumatlary görkezmeklik serişdesi hökmünde;</li>
+                            <li>Web-sahypanyň belli bir ýerinde teksti we grafikany takyk ýerleşdirmeklik üçin, ýagny sahypanyň bezegi üçin.</li>
+                        </ul>
+                    </div>
+                    <p>Tablisanyň gurluşy aşakda berlen:</p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                    <!DOCTYPE html>
+                    <html lang="tm">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>HTML tablisalaryň gurluşy</title>
+                        <style type="text/css">
+                            table {
+                                width: 300px;
+                                /* Tablisanyň ini */
+                                border: #858282 1px solid;
+                                /* Tablisanyň çarçuwasynyň stili */
+                                border-spacing: 0;
+                                /* Öýjükleriň arasyndaky aralyk */
+                                border-collapse: collapse;
+                                /* Ýeke çarçuwa */
+                                margin: 0 auto 0 auto;
+                                /* Tablisanyň merkez boýunça deňlenmegi */
+                            }
+                            caption {
+                                text-align: center;
+                                /* Tablisanyň sözbaşynyň merkez boýunça deňlenmegi */
+                                caption-side: top
+                                /* Sözbaşyň tablisanyň depesinde ýerleşdirilmegi */
+                            }
+                            td,
+                            th {
+                                border: #858282 1px solid;
+                                /* Öýjükleriň çarçuwasynyň stili */
+                                padding: 10px;
+                                /* Tablisanyň mazmuny bilen çäginiň arasyndaky boşluk */
+                                text-align: center
+                                /* Öýjügiň merkez boýunça deňlenmegi */
+                            }
+                            tr {
+                                text-align: center;
+                                /* Merkez boýunça deňlemek */
+                                vertical-align: top;
+                                /* Dikligine deňlemek */
+                            }
+                            tr:nth-child(2n) {
+                                background: #5c5b5b;
+                                    /* Zebra */
+                                
+                            }
+                            thead,
+                            tfoot {
+                                background: #f5e0cd
+                                    /* Fonuň reňki */
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <table>
+                            <caption>Tablisanyň sözbaşysy</caption>
+                            <thead>
+                                <tr>
+                                    <th>Sütün 1</th>
+                                    <th>Sütün 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Öýjük 1</td>
+                                    <td>Öýjük 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Öýjük 3</td>
+                                    <td>Öýjük 4</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Netije 1</th>
+                                    <th>Netije 2</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </body>
+                    </html>
+                    </script>
+                    <div class="code-run">
+                        <table>
+                            <caption>Tablisanyň sözbaşysy</caption>
+                            <thead>
+                                <tr>
+                                    <th>Sütün 1</th>
+                                    <th>Sütün 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Öýjük 1</td>
+                                    <td>Öýjük 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Öýjük 3</td>
+                                    <td>Öýjük 4</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Netije 1</th>
+                                    <th>Netije 2</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <p>
+                        HTML dokumentiň içine tablisa jübüt teg bolan
+                        <span class="teg">table</span> teginiň kömegi bilen ýerleşdirilýär. Tablisanyň aýratyn öýjügi <span
+                            class="teg">td</span> tegi bilen, öýjükleriň hatary bolsa <span class="teg">tr</span>
+                        teginiň kömegi bilen beýan edilýär. Sütüniň sözbaşysynyň öýjügi <span class="teg">th</span> teginiň kömegi bilen
+                        beýan edilýär.
+                        <span class="teg">caption</span> tegi bolsa tablisa sözbaşy bermäge mümkinçilik berýär.
+                        <span class="teg">thead</span>,
+                        <span class="teg">tbody</span> we <span class="teg">tfooter</span> tegleri tablisanyň logiki formatirlenmegi üçin
+                        niýetlenendir. <span class="teg">thead</span> tegi
+                        tablisanyň sütünleriniň sözbaşylaryny,
+                        <span class="teg">tbody</span> tegi tablisanyň esasy mazmunyny, <span class="teg">tfooter</span> tegi bolsa
+                        tablisanyň düýbüni beýan edýär.
+                    </p>
+                </div>
+                <!--Tablisanyň sütünleriniň häsiýetini bermek-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Tablisanyň sütünleriniň häsiýetini bermek <a href="#c-2">#</a></h2>
+                    <p>
+                        Bir sütüni beýan edýan
+                        <span class="teg">col</span> we sütünleriň toparyny beýan edýan <span class="teg">colgroup</span> tegleriniň kömegi
+                        bilen tablisanyň belli bir sütünine ýa-da
+                        sütünlerine kegitlenen stilleri berip bolýar. Iki tegiň hem stil beriljek sütünleriň sanyny berip bolýan <span
+                            class="atr">span</span>
+                        atributy bar. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <table>
+                            <colgroup style="background: #9b9a99">
+                                <col style="width: 300px">
+                                <col style="width: 100px">
+                            </colgroup>
+                            <tr>
+                                <td>Öýjük 1</td>
+                                <td>Öýjük 2</td>
+                            </tr>
+                            <tr>
+                                <td>Öýjük 3</td>
+                                <td>Öýjük 4</td>
+                            </tr>
+                        </table>                            
+                    </script>
+                    <div class="code-run">
+                        <table>
+                            <colgroup style="background: #757574">
+                                <col style="width: 300px">
+                                <col style="width: 100px">
+                            </colgroup>
+                            <tr>
+                                <td>Öýjük 1</td>
+                                <td>Öýjük 2</td>
+                            </tr>
+                            <tr>
+                                <td>Öýjük 3</td>
+                                <td>Öýjük 4</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>Mysal üçin:</p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <table>
+                            <colgroup>
+                                <col span="2" style="background-color: #9b9a99">
+                            </colgroup>
+                            <tr>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                                <th>SUN</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                        </table>                        
+                    </script>
+                    <div class="code-run">
+                        <table>
+                            <colgroup>
+                                <col span="2" style="background-color: #6e6e6d">
+                            </colgroup>
+                            <tr>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                                <th>SUN</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                        </table>                        
+                    </div>
+                </div>
+                <!--Tablisanyň öýjükleri-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Tablisanyň öýjükleri <a href="#c-3">#</a></h2>
+                    <p>
+                        Tablisanyň öýjügi <span class="teg">td</span> tegi bilen, sütüniň sözbaşysynyň öýjügi
+                        <span class="teg">th</span> teginiň kömegi bilen beýan edilýär diýipdik.
+                        <span class="teg">td</span> tegi bilen
+                        <span class="teg">th</span> teginiň aşakdaky ýaly atributlary bar:
+                    </p>
+                    <ul>
+                        <li><span class="atr">colspan</span> – keseligine birleşdiriljek öýjükleriň mukary;</li>
+                        <li><span class="atr">rowspan</span> – dikligine birleşdiriljek öýjükleriň mukdary.</li>
+                    </ul>
+                    <p>
+                        Aşakdaky mysallarda tablisanyň öýjükleriniň birleşdirilmegine degişli mysallar berlen:
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <h3>Tablisanyň öýjüklerini birleşdirmek-1</h3>
+                        <table>
+                            <tr>
+                                <td colspan="2">1-nji we 2-nji öýjükleri birleşdirmek</td>
+                            </tr>
+                            <tr>
+                                <td>Öýjük 3</td>
+                                <td>Öýjük 4</td>
+                            </tr>
+                        </table>
+                    </script>
+                    <div class="code-run">
+                        <h3>Tablisanyň öýjüklerini birleşdirmek-1</h3>
+                        <table>
+                            <tr>
+                                <td colspan="2">1-nji we 2-nji öýjükleri birleşdirmek</td>
+                            </tr>
+                            <tr>
+                                <td>Öýjük 3</td>
+                                <td>Öýjük 4</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>Mysal üçin:</p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <h3>Tablisanyň öýjüklerini birleşdirmek-2</h3>
+                        <table>
+                            <tr>
+                                <td rowspan="2">1-nji we 3-nji öýjükleri birleşdirmek</td>
+                                <td>Öýjük 2</td>
+                            </tr>
+                            <tr>
+                                <td>Öýjük 4</td>
+                            </tr>
+                        </table>
+                    </script>
+                    <div class="code-run">
+                        <h3>Tablisanyň öýjüklerini birleşdirmek-2</h3>
+                        <table>
+                            <tr>
+                                <td rowspan="2">1-nji we 3-nji öýjükleri birleşdirmek</td>
+                                <td>Öýjük 2</td>
+                            </tr>
+                            <tr>
+                                <td>Öýjük 4</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="note-red">
+                        Eger-de öýjügiň içini boş goýmaly bolsa, onda öýjügiň içine 
+                        <code class="language-markup"><!--<td>&nbsp;</td>--></code> görnüşinde boşluk simwolyny goýmaly.
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

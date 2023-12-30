@@ -1,0 +1,444 @@
+.grid-item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 1.8em;
+            font-family: 'Consolas', monospace;
+            color: black;
+        }
+        .grid-item-1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 1.8em;
+            font-family: 'Consolas', monospace;
+            padding: 0 60px;
+        }
+        .grid-container-0 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-1 {
+            display: grid;
+            grid-template-columns: 150px 60px 200px;
+            grid-template-rows: 70px 80px 4em 90px;
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: [start] 150px [line2] 60px [line3] 200px [end];
+            grid-template-rows: [row1-start] 70px [row1-end] 90px [last];
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .grid-container-3 {
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px; */
+            grid-template-columns: repeat(3, 200px);
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .grid-container-4 { 
+            display: grid; 
+            grid-template-columns: 2fr 3fr 1fr; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-5 { 
+            display: grid; 
+            grid-template-columns: 100px 1fr 3fr; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-6 { 
+            display: grid; 
+            grid-template-rows: 60px 100px;
+            grid-auto-rows: 80px;
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-7 { 
+            display: grid; 
+            grid-template-columns: 30px 50px;
+            grid-auto-columns: 75px 100px 50px;
+            grid-auto-flow: column;
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .grid-container-7-1 { 
+            display: grid; 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            grid-auto-flow: row;
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-7-1-1 {
+            display: grid;
+            grid-template-columns: 90px 90px;
+            grid-template-rows: 80px 80px;
+            grid-auto-columns: 90px;
+            background-color: #353536;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .item7_1_1-a {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: orange;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .item7_1_1-b {
+            grid-column: 5 / 6;
+            grid-row: 2 / 3;
+            background-color: #30ad56;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .grid-container-7-1-2 {
+            display: grid;
+            grid-template-columns: 90px 90px;
+            grid-template-rows: 80px 80px;
+            grid-auto-flow: column;
+            background-color: #353536;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            gap: 8px;
+        }
+        .item7_1_2-a {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            background-color: orange;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .item7_1_2-b {
+            background-color: #305cad;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .item7_1_2-c {
+            background-color: #d43737;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .item7_1_2-d {
+            background-color: #f15ecd;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .item7_1_2-e {
+            grid-column: 5;
+            grid-row: 1 / 3;
+            background-color: #30ad56;
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            font-size: 18px;
+        }
+        .grid-container-7-2 { 
+            display: grid; 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            grid-auto-flow: column;
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-7-3 { 
+            display: grid; 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            grid-auto-flow: row;
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-7-4 { 
+            display: grid; 
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto;
+            grid-auto-flow: column;
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-8 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: 
+                "header header header"
+                "content content 😎"
+                "content content ."
+                "footer footer footer";
+            background-color: #353536;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .item8-1 { 
+            grid-area: header;
+            background-color: red; 
+            color: white; 
+            text-align: center;
+            font-size: 1.8em;
+        }
+        .item8-2 { 
+            grid-area: content;
+            background-color: #30ad56; 
+            color: white;
+            text-align: center;
+            font-size: 1.8em;
+            padding: 16px;
+        }
+        .item8-3 { 
+            grid-area: 😎; 
+            text-align: center;
+            font-size: 1.8em;
+            background-color: #eeeb55;
+        }
+        .item8-4 { 
+            grid-area: footer; 
+            text-align: center;
+            font-size: 1.8em;
+            background-color: #1e90ff;
+            color: white;
+        }
+        .maket {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            padding: 15px;
+            border-radius: 5px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+        .grid-container-9 {
+            display: grid; 
+            grid-template: repeat(3, 70px) / repeat(2, auto);
+            gap: 5px; 
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-10 {
+            display: grid;
+            grid-template: 
+                "header header header header header header"
+                "menu main main main right right"
+                "menu footer footer footer footer footer";
+            background-color: #353536;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .item10-1 { grid-area: header }
+        .item10-2 { grid-area: menu }
+        .item10-3 { grid-area: main }
+        .item10-4 { grid-area: right }
+        .item10-5 { grid-area: footer }
+        .grid-container-11 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 30px;
+            column-gap: 10px;
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-12 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 30px;
+            column-gap: 10px;
+            background-color: #1e90ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-13 {
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            background-color: #353536;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .grid-container-14 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-image: url(../images/shtrih-1.png);
+            margin-bottom: 20px;
+            border-radius: 5px;
+            position: relative;
+            opacity: 0.9;
+            overflow-x: auto;
+        }
+        .grid-container-14 > div { background-color: #1e90ff; color: white; border: none; }
+        .grid-maket {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            position: absolute;
+            background-color: #1e90ff;
+            background-image: url(../images/shtrih-1.png);
+            justify-items: stretch;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .grid-maket > div { background-color: #a3a3a3; border: none; }
+        .grid-container-15 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 60px);
+            gap: 10px;
+            background-image: url(../images/shtrih-1.png);
+            margin-bottom: 20px;
+            border-radius: 5px;
+            position: relative;
+            opacity: 0.9;
+            overflow-x: auto;
+        }
+        .grid-container-15 > div { background-color: #1e90ff; color: white; border: none; }
+        .grid-maket-1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 60px);
+            gap: 10px;
+            position: absolute;
+            background-color: #1e90ff;
+            background-image: url(../images/shtrih-1.png);
+            justify-items: stretch;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .grid-maket-1 > div { background-color: #a3a3a3; border: none; }
+        .grid-container-16 {
+            display: grid;
+            grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+            grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+            background-color: #353536;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            height: 210px;
+        }
+        .item16-1 {
+            grid-column-start: 2;
+            grid-column-end: five;
+            grid-row-start: row1-start;
+            grid-row-end: 3;
+            background-color: #1e90ff;
+            border-radius: 12px;
+        }
+        .item16-2 {
+            grid-column-start: 1;
+            grid-column-end: four;
+            grid-row-start: 2;
+            grid-row-end: span 2;
+            background-color: #1e90ff;
+            border-radius: 12px;
+        }
+        .item16-11 {
+            grid-column: 2 / five;
+            grid-row: row1-start / 3;
+            background-color: #1e90ff;
+            border-radius: 12px;
+        }
+        .item16-21 {
+            grid-column: 1 / four;
+            grid-row: 2 / span 2;
+            background-color: #1e90ff;
+            border-radius: 12px;
+        }
+        .item16-31 {
+            grid-area: 2 / 2 / 3 / five;
+            background-color: #1e90ff;
+            border-radius: 12px;
+        }
+        .grid-container-17 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            border: 1px solid var(--text-color);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow:auto; 
+            resize: horizontal;
+            gap: 5px;
+        }
+        .flex-container-1 {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 4rem;
+            overflow: auto;
+        }
+        .flex-container-1 > div { border:1px solid #f15ecd; padding: 8px }
+        .grid-container-18 {
+            display: grid;
+            grid-template-columns: minmax(min-content, min-content) 2fr 1fr;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            gap: 5px;
+            border: var(--text-color) 1px solid;
+            overflow:auto; 
+            resize: horizontal;
+        }
+        .grid-container-18 > div { border:1px solid #f15ecd; padding: 8px }

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Gipersalgylar</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Gipersalgylar</a></li>
+                    <li><a class="btn" href="#c-2">Daşky gipersalgylar</a></li>
+                    <li><a class="btn" href="#c-3">Absolýut URL salgylar</a></li>
+                    <li><a class="btn" href="#c-4">Otnositel URL salgylar</a></li>
+                    <li><a class="btn" href="#c-5">Içki gipersalgylar</a></li>
+                    <li><a class="btn" href="#c-6">Elektron poçtanyň salgysyna gipersalgy</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 19.08.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Gipersalgylar</li>
+                </ul>
+                <!--Gipersalgylar-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Gipersalgylar <a href="#c-1">#</a></h2>
+                    <p>
+                        Gipersalgylaryň üstüne basmaklyk bilen bir dokumentden beýleki dokumente geçmeklik mümkinçiligi bar. Internet
+                        torunyň ähli web-sahypalaryny gipersalgylar biri-birine baglaýar.
+                    </p>
+                </div>
+                <!--Daşky gipersalgylar-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Daşky gipersalgylar <a href="#c-2">#</a></h2>
+                    <p>
+                        <span class="teg">a</span> tegiň kömegi bilen HTML dokumentine daşky gipersalgylary goýup bolýar. Bu tegiň özi <span
+                            class="teg">p</span>, <span class="teg">div</span> we ş.m. blok elementleriň içine ýerleşdirilen bolmaly.
+                        <span class="teg">a</span> tegiň esasy atributy <span class="atr">href</span> atributydyr. Bu atributyň bahasyna
+                        gipersalgyň görkezijisiniň üstüne basylanda geçiljek web-sahypanyň URL salgysy berilýär. Gipersalgyň görkezijisi
+                        tekst ýa-da surat görnüşinde berlip bilner:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="http://www.mysite.com/file.html">Gipersalgyň teksti</a>
+                        <a href="http://www.mysite.com/file.html">
+                        <img src="foto.gif" alt="Surat barada goşmaça tekst maglumat"></a>
+                    </script>
+                    <p>
+                        Gipersalgylara HTML dokumentlerinden başga-da dürli görnüşdäki faýllaryň salgylaryny berip bolýar. Salga basylanda
+                        kabulgörlen baha hökmünde şol salgydaky sahypa geçilýär we salgydaky faýl web-brauzeriň penjiresinde görkezilýär.
+                        Eger-de web-brauzer penjiresinde faýly görkezip bilmese, onda faýly ýatda saklamaklygy teklip eder. <span
+                            class="teg">a</span> tegiň başga-da <span class="atr">download</span> atributy hem bardyr. Bu atribut
+                        web-brauzere faýly açmaly däl-de ýüklenip alynmalydygyny aýdýar. <span class="atr">download</span> atributy ýatda
+                        saklanjak faýl üçin at teklibini hem berip biler. Ýüklenip alynjak faýlyň <em>MIME tipi</em> <span
+                            class="atr">type</span> atributynda görkezilmeli:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="foto.gif">Aç</a>
+                        <a href="foto.gif" download type="image/gif">Ýükläp al</a>
+                        <a href="foto.gif" download="test.gif" type="image/gif">
+                            Faýly test.gif ady bilen ýükläp almak</a>
+                    </script>
+                    <p>
+                        Eger-de URL salgynyň düzüminde <span class="atr">&</span> simwoly bar bolsa, onda oňa derek <span
+                            class="atr">&amp;amp;</span> HTML ekwiwalentini goýmaly. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="index.php?id=5&amp;name=Nik">Salgynyň teksti</a>
+                    </script>
+                    <p>
+                        URL salgylar absolýut ýa-da otnositel görnüşde bolup bilerler.
+                    </p>
+                </div>
+                <!--Absolýut URL salgylar-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Absolýut URL salgylar <a href="#c-3">#</a></h2>
+                    <p>
+                        Absolýut URL salgynyň düzümine protokolyň görnüşi, kompýuteriň domen ady ýa-da IP salgysy, faýlyň ýoly, şeýle hem
+                        faýlyň ady girýär:
+                    </p>
+                    <div class="note"><span class="atr-1">http://www.mysite.com/folder/file.html</span></div>
+                    <p>
+                        Eger-de faýl kök papkada ýerleşýän bolsa, onda faýlyň ýoly bolman hem biler:
+                    </p>
+                    <div class="note"><span class="atr-1">http://www.mysite.com/file.html</span></div>
+                    <p>
+                        Absolýut salgynyň düzüminde faýlyň ady bolman hem biler. Bu ýagdaýda brauzere web-serweriň sazlamalarynda
+                        kabulgörlen faýl ýüklener (köplenç <span class="atr-1">index.html</span> ýa-da <span class="atr-1">index.php</span> faýllary).
+                    </p>
+                    <div class="note">
+                        <div class="atr-1">http://www.mysite.com/</div>
+                        <div class="atr-1">http://www.mysite.com/folder/</div>
+                    </div>
+                </div>
+                <!--Otnositel URL salgylar-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">Otnositel URL salgylar <a href="#c-4">#</a></h2>
+                    <p>
+                        Otnositel URL salgylar gipersalgynyň ýerleşýän web-sahypasyna görä ýazylýar. Aşakdaky wariantlar bolup biler:
+                    </p>
+                    <ul>
+                        <li>
+                            Eger-de <span class="atr-link">http://www.mysite.com/folder1/folder2/file1.html</span> salgysyndan <span
+                                class="atr-link">http://www.mysite.com/folder1/folder2/file2.html</span> salga geçilmeli bolsa, onda gipersalgy
+                            aşakdaky ýaly bolar:
+                        </li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <a href="file2.html">Salgynyň teksti</a>
+                        </script>
+                        <li>
+                            Eger-de <span class="atr-link">http://www.mysite.com/folder1/folder2/file1.html</span> salgysyndan <span
+                                class="atr-link">http://www.mysite.com/folder1/folder2/folder3/file2.html</span> salga geçilmeli bolsa, onda
+                            gipersalgy aşakdaky ýaly bolar:
+                        </li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <a href="folder3/file2.html">Salgynyň teksti</a>
+                        </script>
+                        <li>
+                            Eger-de <span class="atr-link">http://www.mysite.com/folder1/folder2/file1.html</span> salgysyndan <span
+                                class="atr-link">http://www.mysite.com/folder1/file2.html</span> salga geçilmeli bolsa, onda
+                            gipersalgy aşakdaky ýaly bolar:
+                        </li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <a href="../file2.html">Salgynyň teksti</a>
+                        </script>
+                        <li>
+                            Eger-de <span class="atr-link">http://www.mysite.com/folder1/folder2/folder3/file1.html</span> salgysyndan <span
+                                class="atr-link">http://www.mysite.com/folder1/file2.html</span> salga geçilmeli bolsa, onda
+                            gipersalgy aşakdaky ýaly bolar:
+                        </li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <a href="../../file2.html">Salgynyň teksti</a>
+                        </script>
+                        <li>
+                            Eger-de <span class="teg">head</span> tegiň arasynda <span class="atr">href</span> atributyna eýe <span
+                                class="teg">base</span> tegi bar bolsa, onda şol sahypadaky ähli otnositel URL salgylar gipersalgynyň ýerleşýän
+                            sahypasyna görä däl-de, <span class="atr">href</span> atributynyň bahasynda görkezilen gipersalgynyň ýerleşýän
+                            sahypasyna görä ýazylyp bilner:
+                        </li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <head>
+                                <base href="http://www.mysite.com/folder1/">
+                            </head>
+                        </script>
+                        <p>
+                            Bu ýagdaýda eger <span class="atr-link">http://www.mysite.com/folder1/folder2/folder3/file1.html</span> salgysyndan
+                            <span class="atr-link">http://www.mysite.com/folder1/file2.html</span> salga geçilmeli bolsa, onda gipersalgy
+                            aşakdaky ýaly bolar:
+                        </p>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <a href="file2.html">Salgynyň teksti</a>
+                        </script> 
+                        <li>
+                            Eger-de gipersalgynyň başlangyjynda <span class="atr">/</span> (şleş) simwoly bar bolsa, onda faýlyň ýoly kök papka görä ýazylýar.
+                        </li>      
+                    </ul>
+                    <div class="note-red">
+                        Saýtyň faýllary web-serwere ýüklenmedik ýagdaýynda gipersalgynyň başlangyjyna / (sleş) simwoly goýulsa faýlyň ýoly ýalňyş bolar we web-sahypa açylmaz. Çünki, operasion sistema faýlyň kök papkasynyň haýsydygyny bilmeýänligi üçin faýly açyp bilmez. Şonuň üçin bu faýlyň açylmasy üçin bu faýlyň operasion sistemadaky doly ýoly görkezilmeli.
+                    </div>
+                    <p>
+                        Köplenç ýagdaýda gipersalga basylanda açyljak sahypany brauzeriň başga bölmesinden açmaklyk zerurlygy ýüze çykýar.
+                        Bu ýagdaýda <span class="teg">a</span> tegiň <span class="atr">target</span> atributynyň bahasy <span
+                            class="atr">_blank</span> görnüşinde berilmeli:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="file.html" target="_blank">Gipersalgyň teksti</a>
+                    </script>
+                    <p>
+                        Eger-de sahypadaky ähli gipersalgylaryň brauzeriň täze bölmesinde açylmasy islense, onda <span
+                            class="teg">head</span> tegiň arasyna ýazyljak <span class="teg">base</span> teginiň <span
+                            class="atr">target</span> atributynyň bahasyna <span class="atr">_blank</span> görnüşinde berilmeli:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <head>
+                            <base target="_blank">
+                        </head>
+                    </script>
+                    <p>
+                        <span class="atr">target</span> atributynyň alyp biljek beýleki bahalaryna freýmler temasynda serediler. 
+                    </p>
+                </div>
+                <!--Içki gipersalgylar-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky">Içki gipersalgylar <a href="#c-5">#</a></h2>
+                    <p>
+                        Içki gipersalgylaryň kömegi bilen degişli web-sahypanyň dürli ýerlerine geçilip bilner. Eger-de web-sahypanyň
+                        mazmuny örän uly bolsa, onda içki gipersalgylar aňsatlyk bilen sahypanyň bölümlerine geçmäge mümkinçilik berer.
+                    </p>
+                    <p>
+                        Içki gipersalgylar hem <span class="teg">a</span> teginiň kömegi bilen döredilýär. Ýöne <span
+                            class="atr">href</span> atributynyň bahasy URL salgy görnüşinde berilmän, <em>labyryň</em> ady görnüşinde
+                        berilýär. Labyryň adynyň öňüne <span class="atr">#</span> belgisi goýulýar. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="#bolum1">Gipersalgynyň teksti</a>
+                    </script>
+                    <p>
+                        Aşakdaky ýaly başga dokumentde ýerleşýän labyra hem salgylanyp bolýar:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="http://www.mysite.com/file.html#bolum1">Gipersalgynyň teksti</a>
+                    </script>
+                    <p>
+                        Labyrlar elemente unikal (gaýtalanmaz) at berýän <span class="atr">id</span> atributynyň kömegi bilen döredilýär. Bu
+                        atribut ähli teglerde hem bar diýen ýaly. Aşakdaky kodda içki salgylara eýe dokumentiň gurluşy berlen.
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Içki salgylaryň gurluşy</title>
+                        </head>
+                        <body>
+                            <h1>Temanyň ady</h1>
+                            <h2>Mazmuny</h2>
+                            <ul>
+                                <li><a href="#chapter1">Bölüm 1</a>
+                                <li><a href="#chapter2">Bölüm 2</a>
+                                <li><a href="#chapter3">Bölüm 3</a>
+                                <li><a href="#chapter4">Bölüm 4</a>
+                            </ul>
+                            <h2 id="chapter1">Bölüm 1</h2>
+                            <p>Bölüm 1-iň mazmuny</p>
+                            <h2 id="chapter2">Bölüm 2</h2>
+                            <p>Bölüm 2-iň mazmuny</p>
+                            <h2 id="chapter3">Bölüm 3</h2>
+                            <p>Bölüm 3-üň mazmuny</p>
+                            <h2 id="chapter4">Bölüm 4</h2>
+                            <p>Bölüm 4-üň mazmuny</p>
+                        </body>
+                        </html>
+
+                    </script>
+                    <div class="code-run">
+                        <h1>Temanyň ady</h1>
+                        <h2>Mazmuny</h2>
+                        <ul>
+                            <li><a href="#chapter1">Bölüm 1</a>
+                            <li><a href="#chapter2">Bölüm 2</a>
+                            <li><a href="#chapter3">Bölüm 3</a>
+                            <li><a href="#chapter4">Bölüm 4</a>
+                        </ul>
+                        <h2 id="chapter1">Bölüm 1</h2>
+                        <p>Bölüm 1-iň mazmuny</p>
+                        <h2 id="chapter2">Bölüm 2</h2>
+                        <p>Bölüm 2-iň mazmuny</p>
+                        <h2 id="chapter3">Bölüm 3</h2>
+                        <p>Bölüm 3-üň mazmuny</p>
+                        <h2 id="chapter4">Bölüm 4</h2>
+                        <p>Bölüm 4-üň mazmuny</p>
+                    </div>
+                </div>
+                <!--Elektron poçtanyň salgysyna gipersalgy-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky">Elektron poçtanyň salgysyna gipersalgy <a href="#c-6">#</a></h2>
+                    <P>
+                        Elektron poçtanyň salgysyna bolan gipersalgy aşakdaky ýaly ýazylýar:
+                    </P>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <a href="mailto:mail@mysite.com">Tekst</a>
+                    </script>
+                    <P>
+                        URL salgynyň deregine <span class="atr">mailto:</span> sözünden soňra elektron poçtanyň salgysy ýazylýar.
+                    </P>
+                    <div class="note-red">
+                        Web-saýtda hemme kişä görünjek görnüşde elektron poçtanyň salgysyna bolan gipersalgyny neşir etmäň. Beýle salgylar
+                        gözleg motorlarynyň botlary tarapyndan awtomatiki ýygnalýar. Munuň netijesinde bu elektron poçta köp mukdarda <span class="atr">spam</span>
+                        hatlary gelip biler.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

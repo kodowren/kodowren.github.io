@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - HTML giriş</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Frontend kämilleşdiriji hünäri</a></li>
+                    <li><a class="btn" href="#c-2">Web-saýt, web-sahypa we brauzer barada düşünje</a></li>
+                    <li><a class="btn" href="#c-3">Web-saýty işläp taýýarlamagyň ädimleri</a></li>
+                    <li><a class="btn" href="#c-4">Statiki web-sahypalar we web-saýtlar</a></li>
+                    <li><a class="btn" href="#c-5">Web-serwerler</a></li>
+                    <li><a class="btn" href="#c-6">Domen atlaryň ulgamy (DNS — Domain Name System)</a></li>
+                    <li><a class="btn" href="#c-7">Hosting</a></li>
+                    <li><a class="btn" href="#c-8">Internet salgylar</a></li>
+                    <li><a class="btn" href="#c-9">IP salgy</a></li>
+                    <li><a class="btn" href="#c-10">WWW (World Wide Web)</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 22.07.2023</div>
+                
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Giriş</li>
+                </ul>
+                <!--frontend developer-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Frontend kämilleşdiriji hünäri <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        Frontend kämilleşdiriji (frontend developer) web-sahypanyň ulanyjy üçin görünýän (müşderi) tarapyny döredýär we onuň
+                        esasy wezipesi – dizaýneriň döreden dizaýnyny <em>sahyplandyrmakdyr</em>, ýagny web-sahypa öwürmekdir. Frontend hünärmenine
+                        bolan talap gün geçdikçe artýar.
+                    </div>
+                    <h2 class="sticky">Frontend kämilleşdiriji kim?</h2>
+                    <div class="note">
+                        Frontend kämilleşdiriji – bu web-sahypalary sahyplandyrmagy başarýan hünärmendir. Birnäçe web-tehnologiýalary (HTML,
+                        CSS), başga-da JavaScript programmalaşdyrma dilini, bir ýa-da birnäçe JavaScript-freýmworklary (React, Angular,
+                        Vue.js, Node.js we ş.m.) oňat derejede bilýän hünärmendir. Frontend kämilleşdiriji esasan web-saýtyň <em>müşderi
+                        tarapyny</em> işläp taýýarlaýar. Frontend kämilleşdirijiniň esasy wezipesi web-saýtyň ýa-da web-goşundynyň ulanyjy
+                        interfeýsiniň funksionallygyny işläp taýýarlamakdyr.
+                    </div>
+                    <h2 class="sticky">Frontend kämilleşdiriji näme işi ýerine ýetirýär?</h2>
+                    <div class="note">
+                        Başlangyçda maketa laýyklykda berlen sahypany sahypalandyrýar. Ondan soňra web-sahypanyň funksionallygyny işläp
+                        taýýarlaýar: düwmeleriň işleýiş logikasyny taýýarlaýar, ulanyjy formlaryndaky maglumatlaryň işläp taýýarlanyşyny
+                        başga-da ulanyjy bilen saýtyň içindäki elementleriň özara aragatnaşygyny gurnaýar.
+                    </div>
+                    <h2 class="sticky">Frontend kämilleşdirijiniň möhüm bilmeli zatlary</h2>
+                    <div class="note">
+                        <ul>
+                            <li>Web-sahypany sahypalandyrma dillerini: HTML we CSS;</li>
+                            <li>JavaScript programmalaşdyrma dilini kämil derejede;</li>
+                            <li>CSS öňprosessorlaryndan haýsy hem bolsa birini;</li>
+                            <li>JavaScript freýmworklaryndan we kitaphanalaryndan haýsy hem bolsa birini;</li>
+                            <li>Iň azyndan iňlis dilini orta (intermediate) derejede.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Web-saýt, web-sahypa we brauzer barada düşünje-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Web-saýt, web-sahypa we brauzer barada düşünje <a href="#c-2">#</a></h2>
+                    <div class="note">
+                        Web-sahypa – bu içinde dürli informasiýalary (tekst, şekil, ses, wideo) saklaýan faýldyr. Adatdça <em>.html</em> giňeltmesine
+                        eýedir. Bir web-sahypadan beýleki web-sahypa <b>gipertekstiň</b>, <b>baglanşygyň</b> kömegi bilen geçip bolýar. Başga-ça aýdylanda
+                        web-sahypalar gipertekstleriň kömegi bilen biri-birine baglanyp bilýärler.
+                        <p>Web-saýt – bu birmeňzeş domen adyna eýe web-sahypalaryň toplumydyr.</p>
+                    </div>
+                    <h2 class="sticky">Web-brauzer näme?</h2>
+                    <div class="note">
+                        Web-sahypalaryny görkezmäge kömek edýän ýörite programmalardyr. Mysal üçin: Google Chrome, Firefox, Safari,
+                        Microsoft Edge we ş.m.
+                    </div>
+                    <figure>
+                        <img src="../../images/web-browsers.webp" alt="Web-brauzerler">
+                        <figcaption>Web-brauzerleriň görnüşleri</figcaption>
+                    </figure>
+                </div>
+                <!--Web-saýty işläp taýýarlamagyň ädimleri-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Web-saýty işläp taýýarlamagyň ädimleri <a href="#c-3">#</a></h2>
+                    <div class="note">
+                        <ul>
+                            <li><b>1-nji ädim:</b> Web-saýtyň sahypalarynyň maketini çyzmak. Muny adatça Adobe Photoshop we ş.m. programmalaryň kömegi
+                                bilen ýerine ýetirýärler; </li>
+                            <li><b>2-nji ädim:</b> Çyzylan maketiň esasynda web-sahypalary sahypalandyrmak, ýagny maketi web-sahypa öwürmek. (Ulanylýan
+                                tehnologiýalar: HTML, CSS);</li>
+                            <li><b>3-nji ädim:</b> Web-ssenariýalary ýazmak – ulanyjynyň hereketlerine görä sahypanyň elementlerinde haýsy hem bolsa
+                                bir amalyň ýerine ýetirilmegi. (Ulanylýan tehnologiýalar: JavaScript);</li>
+                            <li><b>4-nji ädim:</b> Maglumat bazasynyň strukturasyny işläp taýýarlamak. Maglumat bazasynda saýtyň içki maglumatlary
+                                saklanýar. Meselem, sanawlar, kategoriýalar, aşaky kategoriýalar, makalalar, teswirler, ulanyjylaryň sanawy we
+                                ş.m. Maglumat bazasyny döretmek. (Ulanylýan tehnologiýalar: MySQL, MS SQL, Oracle, MariaDB, PostgreSQL we ş.m.);
+                            </li>
+                            <li><b>5-nji ädim:</b> Web-serwer programmasy (Apache we ş.m.) bilen bilelikde işlejek serwer programmalaryň (.php, .apsx
+                                we ş.m.) ýazylmagy, maglumat bazasyndan maglumatlaryň alynmagy we olaryň web-sahypa görnüşine özgerdilmegi.
+                                Serwer programmalary adatça bekend (backend) kämilleşdiriji tarapyndan ýazylýar. (Ulanylýan tehnologiýalar:
+                                Java, C#, PHP, JavaScript, Python, Ruby, Rust, Go we ş.m.);</li>
+                            <li><b>6-njy ädim:</b> elýeterlilik çäklendirmesini, jenaýatçylardan goragy we ş.m. amala aşyrýan serwer programmalaryň
+                                ýazylmagy; </li>
+                            <li><b>7-nji ädim:</b> Web-saýtyň ýa-da web-goşundynyň ýalňyşsyz işleýşini barlamak, test etmek;</li>
+                            <li><b>8-nji ädim:</b> Web-saýty Internetde neşir etmek.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Statiki web-sahypalar we web-saýtlar-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">Statiki web-sahypalar we web-saýtlar <a href="#c-4">#</a></h2>
+                    <div class="note">
+                        Serwer programmalary tarapyndan generirlenmeýän sahypalara statiki web-sahypalar diýilýär. Web-dizaýneriň taýýarlan
+                        maketiniň esasynda Frontend kämilleşdiriji tarapyndan sahypalandyrylýar we faýl görnüşinde serwer kompýuteriň
+                        diskine ýerleşdirilýär. Özara baglanşykly statiki web-sahypalar statiki web-saýty emele getirýär. Statiki saýtlary
+                        döretmeklik aňsat we bahasy arzan, islendik <b>hosting-prowaýder</b> firmasynda neşir etmeklik mümkin. Dinamiki saýtlaryň
+                        müşderi tarapyna degişli sahypalary statiki sahypalar görnüşinde taýýarlanylýar. (Hosting-prowaýder: Internet
+                        torunda saýty neşir etmeklik boýunça hyzmatlary berýän gurama, firma).
+                    </div>
+                </div>
+                <!--Web-serwerler-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky">Web-serwerler <a href="#c-5">#</a></h2>
+                    <figure>
+                        <img src="../../images/servers.jpg" alt="Serwer">
+                        <figcaption>Maglumat merkezindäki (Datacenter) serwerler</figcaption>
+                    </figure>
+                    <div class="note">
+                        Saýta degişli faýllar Internet toruna birikdirilen serwer kompýuteriň diskinde saklanýar. Her bir serwer kompýuteriň
+                        Internet torunda özüniň gaýtalanmaz IP salgysy bolýar. Bu kompýuter saýtyň eýesine ýa-da hosting prowaýder firmasyna
+                        degişli bolup biler we hemişe işjeň ýagdaýda bolmaly. Serwer kompýuteriň içindäki web-serwer programmasy Internet
+                        toruna birikdirilen Müşderi kompýuterleriň ýüztutmalaryna jogap berip durýar. Internet ulanyjysy web-brauzeriň salgy
+                        gutujygyna gerekli saýtyň salgysyny ýazyp <em>Enter</em> klawişasyna basanda arka tarapda birnäçe amal bolup geçýär:
+                        <ol>
+                            <li>Web-brauzer programmasy salgy gutujygyna girizilen saýtyň salgysyndan domen adyndan bu saýtyň faýllarynyň
+                                (Internet toruna birikdirilen) haýsy kompýuterdedigini anyklaýar, ýagny serwer kompýuteriň IP salgysyny
+                                kesgitleýär we bu kompýuterde işleýän web-serwer programmasyna ýüztutma iberýär. Ýüztutmanyň düzümine saýtyň
+                                salgysy bütinleýin ýerleşdirilýär;</li>
+                            <li>Web-serwer programmasy brauzer tarapyndan iberilen ýüztutmany kabul edýär we bu ýüztutmanyň içindäki internet
+                                salgydan soralýan faýlyň ýoluny çykaryp alýar we bu faýly serwer kompýuteriň içinden tapyp müşderi kompýuterde
+                                işleýän brauzer programmasyna iberýär. Eger-de faýlyň ýolunda görkezilen faýl serwerde ýok bolsa ýa-da haýsam
+                                bolsa bir sebäpden açylmasa, onda web-serwer brauzere ýalňyşlyk sahypasyny iberýär;</li>
+                            <li>Brauzer web-serweriň iberen sahypasyny kabul edip alýar we görkezýär.</li>
+                        </ol>
+                    </div>
+                </div>
+                <!--Domen atlaryň ulgamy-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky">Domen atlaryň ulgamy (DNS — Domain Name System) <a href="#c-6">#</a></h2>
+                    <div class="note">
+                        Eger-de brauzeriň salgy gutujygyna saýtyň domen ady ýazylman bu saýtyň ýerleşdirilen serweriniň IP salgysy ýazylsa
+                        brauzer programmasy ýene-de şol saýtyň sahypasyny görkezer. Adamlaryň IP salgylary ýat tutmasy kyn bolanlygy üçin
+                        her saýta domen ady berilýär. Haçan-da brauzeriň gutujygyna domen salgyny ýazyp <em>Enter</em> düwmesine basanymyzda ilki
+                        bilen DNS serwere ýüztutma iberilýär, DNS serwer bolsa domen salgynyň IP salgysyny iberýär.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/dns.jpg" alt="Serwer">
+                        <figcaption>DNS serweriň işleýiş prinsipi</figcaption>
+                    </figure>
+                    <div class="note">
+                        Internetiň domen atlarynyň ulgamy berk iýerarhiki gurluşa eýe. Islendik saýtyň ady haýsy hem bolsa bir (birinji
+                        derejeli) domen zonasyna degişlidir. Mysal üçin, <b>tm</b>, <b>com</b>, <b>org</b>, <b>info</b> we ş.m. Her bir domen zonasynda saýtyň eýesi
+                        tarapyndan saýlanan ada eýe müňlerçe 2-nji derejeli domen atlary bardyr.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/domen-dereje.JPG" alt="Serwer">
+                        <figcaption>Domen adyň iýerarhiki gurluşy</figcaption>
+                    </figure>
+                    <div class="note">
+                        Adatça köplenç 2-nji derejeli domenler ulanylýar. Saýt açmak isleýän adamlar (başga biri tarapyndan öň alynmadyk)
+                        2-nji derejeli domen adyny almasy üçin aýlyk belli bir mukdarda töleg tölemeli bolýar. Tejribede 3-nji derejeli
+                        domenler hem giňden ulanylýar. Beýle domenlere <b>subdomen</b> hem diýilýär. Subdomenler saýtyň dürli bölümlerine
+                        gaýtalanmaz at dakylmak islenende ulanylýar. Meselem, <span class="atr">kitaphana.mekdep.tm</span>.
+                    </div>
+                </div>
+                <!--Hosting-->
+                <div class="item-container" id="c-7">
+                    <h2 class="sticky">Hosting <a href="#c-7">#</a></h2>
+                    <div class="note">
+                        Saýta degişli faýllar Internet toruna birikdirilen serwer kompýuteriň diskinde saklanýar we bu kompýuter saýtyň
+                        eýesine ýa-da hosting prowaýder firmasyna degişli bolup biler we hemişe işjeň ýagdaýda bolmaly diýipdik. Eger-de
+                        saýta köp mukdarda ulanyjy girýän bolsa, serwer kompýuteriň şonça köp resursy ulanylýar. Hosting – bu tölegli hyzmat
+                        bolup onuň düzümine serwer kompýuteriň diskinde saýtyň faýllarynyň saklanjak ýeri we serweriň kuwwatlylygy girýär.
+                        Hosting hyzmatyny berýän firma hosting prowaýder diýip at berilýär. Bu firmalaryň esasy maksady siziň saýtyňyzyň
+                        ulanyjylar üçin 24/7 elýeterli bolmagydyr.
+                    </div>
+                    <figure class="big">
+                        <img src="../../images/hosting.jpg" alt="Hosting">
+                        <figcaption>Hosting</figcaption>
+                    </figure>
+                    <div class="note">
+                        Hosting prowaýderler saýty dolandyrmaklyk üçin ýörite dolandyryş panellerini hödürleýärler. Dolandyryş paneliň käbir
+                        mümkinçilikleri aşakdaky ýalydyr:
+                        <ul>
+                            <li>Dolandyryş panelinde saýtyň eýesi, saýta faýllary ýükläp, pozup bilýär, onuň işjeňligine gözegçilik edip
+                                bilýär;</li>
+                            <li>Dolandyryş panelinde saýtyň elektron poçtasyny dolandyryp bolýar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Internet salgylar-->
+                <div class="item-container" id="c-8">
+                    <h2 class="sticky">Internet salgylar <a href="#c-8">#</a></h2>
+                    <div class="note">
+                        Brauzer tarapyndan web-serwere iberilýän internet (URL) salgynyň formaty (hökmany parametr diňe internet salgysy):
+                        <p>
+                            <span class="atr">
+                                &ltprotokol&gt://&ltinternet-salgy&gt:&ltportuň belgisi&gt/&ltfaýlyň ýoly&gt?&ltGET-parametr&gt#&ltlabyryň ady&gt
+                            </span>
+                        </p>
+                        Mysal üçin:
+                        <span class="atr">http://www.somesite.com:8000/apps/app.php?page=1#chapter2</span>
+                        <ul>
+                            <li>Protokol – bu müşderi programma bilen serwer programmanyň habarlaşmagyny ýola goýýan buýruklaryň sistemasydyr.
+                                Eger-de internet salgysynda protokol hökmünde http görkezilse, onda web-serwer programmasyna bolan ýüztutma
+                                <b>HTTP (HyperText Transfer Protocol)</b> protokoly boýunça amala aşyrylar. Brauzer bilen web-serwer programmasy
+                                habarlaşmak üçin bu protokoly ulanýar. Salgy gutujygynda protokol görkezilmedik ýagdaýynda hem kabulgörlen
+                                protokol hökmünde bu protokol ulanylar;</li>
+                            <li>
+                                Internet salgy – neşir edilen saýtyň adyny ýa-da has dogrusy domen adyny görkezýär. Mysal üçin: <span class="atr">www.google.com</span>.
+                                Domen adyň deregine IP salgy hem bolup biler. Mysal üçin: 186.143.27.9. IP salgylar domen atlaryna görä has seýrek
+                                ulanylýar;
+                            </li>
+                            <li>
+                                Portuň belgisi – bu müşderi programmalaryň biri-birine päsgel bermezden özleriniň serwer programmalary bilen
+                                habarlaşmagyny ýola goýýan wirtual kanaldyr. Portuň belgisi TCP portuň belgisini görkezýär. Serwer programmalaryň
+                                her bir görnüşi özlerine aýrylan TCP porty ulanýar, mysal üçin web-serwer programmasy 80-nji porty ulanýar. Ýöne
+                                käbir sebäplere görä web-serwer programmasy başga porty ulanyp biler. Bu ýagdaýda portuň belgisi internet salgysynda
+                                aýdyň görkezilmeli. Eger-de internet salgysynda port görkezilmese, onda brauzer kabulgörlen TCP port hökmünde 80-nji
+                                porty ulanar;
+                            </li>
+                            <li>
+                                Faýlyň ýoly – saýt Internet torunda neşir edilende saýtyň faýllary serwer kompýuteriň ýörite kök papkasy atly
+                                papkasyna ýerleşdirilýär. Web-serwer programmasy bu papkany tapmasy üçin onuň sazlamalarynda bu papkanyň ýoly
+                                görkezilýär. Web-serwer programmasy web-salgydaky faýlyň ýoluny ulanyp kök papkadan gerekli faýly gözläp tapýar.
+                                Eger-de faýlyň ýolunda diňe papka bolan ýol görkezilen bolsa, onda web-serwer bu papkanyň içinden kabulgörlen
+                                (default) faýly brauzere iberer. Kabulgörlen faýlyň ady adatça index.html, index.php, default.aspx görnüşde bolmaly.
+                                Eger-de faýlyň ady görkezilmedik ýagdaýynda, onda kök papkadaky kabulgörlen faýl iberiler. Adatça bu iberiljek
+                                sahypa saýtyň baş sahypasydyr;
+                            </li>
+                            <li>Get parametr – web-serwere iberilýän maglumatlaryň toplumy;</li>
+                            <li>Labyryň ady – sahypanyň bölegini görkezýär. Brauzer sahypanyň labyrda görkezilen bölegini görkezer.</li>
+                        </ul>
+                        <p>Internet salgysyna mysallar:</p>
+                        <p><span class="atr">www.othersite.tm/folder/page1.html</span></p>
+                        <p><span class="atr">www.anothersite.com/papka1/papka2/okuwcylar.html</span></p>
+                    </div>
+                </div>
+                <!--IP salgy-->
+                <div class="item-container" id="c-9">
+                    <h2 class="sticky">IP salgy <a href="#c-9">#</a></h2>
+                    <div class="note">
+                        <p>IP protokolynyň kömegi bilen kompýuter torlaryny bir bitewi bütindünýä toruna birikdirmeklik mümkinçiligi ýüze
+                            çykdy. IP protokoly tora baglanýan her bir enjama gaýtalanmaz adres berýär. IP salga mysal: 186.143.27.9</p>
+                        <p>Internetiň düzümine girýän her bir kompýuter tory bitewi gurluşa ugrukdyryjynyň (routeriň) kömegi bilen
+                            birikdirilýär. Ugrukdyryjy – bu kompýuterleriň IP salgylaryny nazara almaklyk bilen maglumat bukjalaryny
+                            (paketlerini) süzýän (filtrleýän), tertipleşdirýän we täzeden iberýän ýörite apparat we programmalaýyn
+                            gurluşdyr.</p>
+                    </div>
+                    <figure>
+                        <img src="../../images/IPv4.jpg" alt="IPv4">
+                        <figcaption>IPv4 gurluşy</figcaption>
+                    </figure>
+                    <div class="note">
+                        IP salgy arasy nokat bilen bölünen dört sany (0-255 aralygyndaky) sanlardan ybaratdyr. Eger-de kompýuter açylyp
+                        ýapylandan soňra IP salgy üýtgemeýän bolsa, onda statiki IP, üýtgeýän bolsa, dinamiki IP salgy bolýar. Häzirki
+                        wagtda IPv4 bilen 4 milliard töweregi enjama gaýtalanmaz IP salgysyny berip bolýär we gün geçdigiçe Internet toruna
+                        birikýän enjamlaryň sany artýanlygy üçin IPv4 protokoly ýetersiz hasaplanýar. Şonuň üçin, IPv4 deregine IPv6
+                        protokoly ulanylmaga başlandy. IPv6 protokolynda gaýtalanmaz salgy, arasy iki nokat bilen bölünen iki baýtlyk sekiz
+                        sany onaltylyk sanyň kömegi bilen ýazylýar. IPv6 protokolynda IP salgy üçin 128 bit ulanylýanlygy üçin jemi
+                        3,4×10<sup>38</sup> sany salgy alyp bolýar. Aşakda IPv6 salgysyna mysal berlen:
+                        <p><span class="atr">2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d</span></p>
+                    </div>
+                </div>
+                <!--WWW-->
+                <div class="item-container" id="c-10">
+                    <h2 class="sticky">WWW (World Wide Web) <a href="#c-10">#</a></h2>
+                    <div class="note">
+                        Internetdäki ähli web-saýtlaryň jemine <b>bütindünýä kerebi</b> ýa-da World Wide Web diýilýär. Bütindünýä toruna gysgaça
+                        Web hem diýilýär. Internet torundaky ýüz millionlarça web-serwer programmalary bütindünýä kerebeni emele getirýär.
+                        Bütindünýä kerebiniň ýa-da başga-ça aýtsak Webiň esasy tehnologiýasy gipertekste daýanýar. Gipertekst – bu düzüminde
+                        gipersalgylary saklaýan tekstdir. Gipersalgy – dokumentdäki sözüň ýa-da suratyň başga bir dokument ýa-da şol bir
+                        dokumentiň içindäki başga bir ýer bilen baglanşygydyr. Adatça web-sahypada gipersalgylar başga reňkde bolup aşagy
+                        çyzylan bolýar.
+                    </div>
+                    <figure>
+                        <img src="../../images/web-illustration.jpg" alt="Webiň illýustrasiýasy">
+                        <figcaption>Webiň illýustrasiýasy</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

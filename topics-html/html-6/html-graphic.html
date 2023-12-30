@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Grafika</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Grafika</a></li>
+                    <li><a class="btn" href="#c-2">Web-sahypa grafiki şekilleri goşmak</a></li>
+                    <li><a class="btn" href="#c-3"><b>&ltpicture&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-4">SVG grafika</a></li>
+                    <li><a class="btn" href="#c-5"><b>&ltcanvas&gt</b> tegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 19.08.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Grafika</li>
+                </ul>
+                <!--Grafika-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Grafika <a href="#c-1">#</a></h2>
+                    <p>
+                        Web-sahypa grafiki elementleriň goşulmagy onuň özüne çekijiligini we owadanlygyny artdyrýar, çünki grafiki şekiller
+                        web-sahypanyň mazmunyny baýlaşdyrýar. Internet torunda aşakdaky grafiki formatlar giňden ulanylýar:
+                    </p>
+                    <ul>
+                        <li>
+                            GIF – grafikde diňe 256 sany reňk ulanylýar we durulyk aýratynlygy hem bar. Ondan başga-da bu görnüşdäki faýllar
+                            animasiýalary hem düzüminde saklap bilýär;
+                        </li>
+                        <li>
+                            JPEG – suratyň informasion göwrüminiň gysylmagy bilen hil ýitgisne eýe grafiki şekil. Suratlarda duruluk we
+                            animasiýa ýok;
+                        </li>
+                        <li>
+                            PNG – suratyň informasion göwrümi üçin ýitgisiz gysma usulynyň ulanylmagy bilen alnan grafiki şekil we suratlarda
+                            durulyk aýratynlygyny alyp bolýar. GIF formatynyň deregine işlenilip taýýarlanan.
+                        </li>
+                    </ul>
+                </div>
+                <!--Web-sahypa grafiki şekilleri goşmak-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Web-sahypa grafiki şekilleri goşmak <a href="#c-2">#</a></h2>
+                    <p>
+                        Web-sahypanyň içine şekiller ýeke teg bolan <span class="atr">&ltimg&gt</span> teginiň kömegi bilen goýulýar. <span
+                            class="atr">&ltimg&gt</span> tegi setir elementi bolanlygy üçin blok teginiň (<span class="atr">&ltp&gt</span>,
+                        <span class="atr">&ltdiv&gt</span> we ş.m.) içinde ýerleşdirilen bolmaly. Bu tegiň aşakdaky ýaly atributlary bar:
+                    </p>
+                    <ul>
+                        <li><span class="atr">src</span> – grafiki faýlyň URL salgysy:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <img src="images/surat.png" alt="Surat barada goşmaça tekst maglumat">
+                            <img src=" http://www.mysite.com ">
+                        </script>
+                        <li><span class="atr">alt</span> – surat ýüklenmänkä ýa-da suraty ýükläp bolmasa onuň deregine çykaryljak tekst:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <img src="surat.png" alt="Surat barada goşmaça tekst maglumat">
+                        </script>
+                        <li><span class="atr">width</span> – piksel ölçeg birliginde berlen suratyň ini:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <img src="surat.png" width="480">
+                        </script>
+                        <li><span class="atr">height</span> – piksel ölçeg birliginde berlen suratyň beýikligi:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <img src="surat.png" width="480" height="60">
+                        </script>
+                    </ul>
+                    <div class="note-red">
+                        <span class="atr">width</span> we <span class="atr">height</span> atritbutlaryň beriljek bahalary suratyň hakyky
+                        ölçegine gabat gelmän biler. Bu ýagdaýda brauzer şekili berlen ölçeglere görä görkezer, eger-de berlen ölçegler
+                        hakyky ölçegler bilen gabat gelmese, onda şekil proporsional görkezilmez, ýagny ýoýulup görkeziler.
+                    </div>
+                    <div class="note-red">
+                        Hemişe <span class="atr">width</span> we <span class="atr">height</span> atritbutlaryň bahalaryny beriň. Çünki
+                        bahalar berlen ýagdaýynda brauzer şekil ýüklenmänkä web-sahypany öňünden formatlap biler.
+                    </div>
+                </div>
+                <!--Picture tegi-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky"><span class="atr">&ltpicture&gt</span> tegi <a href="#c-3">#</a></h2>
+                    <p>
+                        <span class="atr">&ltpicture&gt</span> tegiň içindäki birden köp <span class="atr">&ltsource&gt</span> tegleriň
+                        kömegi bilen dürli ölçegdäki ekranlar üçin dürli şekilleri berip bolýar. Dürli ölçegdäki ekranlara degişli her
+                        şekiliň ýoly <span class="atr">&ltsource&gt</span> tegiň <span class="atr">srcset</span> atributynyň kömegi bilen
+                        berilýär. <span class="atr">&ltsource&gt</span> tegiň <span class="atr">media</span> atributy bolsa görkezilen şekil
+                        üçin ekranyň ölçegini görkezmäge kömek edýär. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <source media="(min-width: 650px)" srcset="img_food.jpg">
+                            <source media="(min-width: 465px)" srcset="img_car.jpg">
+                            <img src="img_phone.jpg">                        
+                    </script>
+                    <p>
+                        Eger-de brauzer <span class="atr">&ltpicture&gt</span> tegini gollamaýan bolsa, onda <span
+                            class="atr">&ltimg&gt</span> tegiň <span class="atr">src</span> atributynda görkezilen şekil ulanylar.
+                    </p>
+                </div>
+                <!--SVG grafika-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">SVG grafika <a href="#c-4">#</a></h2>
+                    <p>
+                        HTML 5 dilinde rastr şekillerden başga-da wektor format bolan SVG formatyny hem ulanyp bolýar. Wektor formatdaky
+                        şekiller gönilerden, egrilerden, köpburçluklardan we ş.m. emele gelýär. Wektor formatdaky şekillerde hil ýitgisi
+                        bolmaýar. Ondan başga SVG formatynda animirlenen şekilleri, hatda interaktiw şekilleri hem döredip bolýar.
+                    </p>
+                    <p>
+                        HTML 5 dilinde <span class="atr">&ltsvg&gt</span> tegiň kömegi bilen wektor şekilleri döredip bolýar. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <svg width="100" height="100">
+                                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                            </svg>
+                            <svg width="400" height="100">
+                               <rect width="400" height="100" style="fill:rgb(0,0,255); stroke-width:10; 
+                                stroke:rgb (0,0,0)" />
+                            </svg>                                                    
+                    </script>
+                    <div class="code-run">
+                        <svg width="100" height="100">
+                            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                        </svg>
+                        <svg width="400" height="100">
+                           <rect width="400" height="100" style="fill:rgb(0,0,255); stroke-width:10; 
+                            stroke:rgb (0,0,0)" />
+                        </svg>
+                    </div>
+                </div>
+                <!--Canvas tegi-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky"><span class="atr">&ltcanvas&gt</span> tegi <a href="#c-5">#</a></h2>
+                    <p>
+                        HTML 5 dilinde kendirde rastr grafiki şekilleri ýerine ýetirmeklik mümkinçiligi bar. Kendiri döretmeklik üçin <span
+                            class="atr">&ltcanvas&gt</span> tegi ulanylýar. Bu tegiň iki sany atributyny aýdyp geçeliň: 
+                    </p>
+                    <ul>
+                        <li><span class="atr">width</span> – kendiriň ini;</li>
+                        <li><span class="atr">height</span> – kendiriň beýikligi.</li>
+                    </ul>
+                    <p>Mysal üçin:</p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <canvas id="myCanvas">
+                                Siziň brauzeriňiz "canvas" tegini gollamaýar.
+                            </canvas>                                
+                    </script>
+                    <pre>
+                        <code class="language-javascript" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            var c = document.getElementById("myCanvas");
+                            var ctx = c.getContext("2d");
+                            ctx.fillStyle = "red";
+                            ctx.fillRect(20, 20, 75, 50);
+                            //Durulygy aktiw etmeklik
+                            ctx.globalAlpha = 0.2;
+                            ctx.fillStyle = "blue";
+                            ctx.fillRect(50, 50, 75, 50);
+                            ctx.fillStyle = "green";
+                            ctx.fillRect(80, 80, 75, 50);
+                        </code>
+                    </pre>
+                    <div class="code-run">
+                        <canvas id="myCanvas">
+                            Siziň brauzeriňiz "canvas" tegini gollamaýar.
+                        </canvas>
+                        <script>
+                            var c = document.getElementById("myCanvas");
+                            var ctx = c.getContext("2d");
+                            ctx.fillStyle = "red";
+                            ctx.fillRect(20, 20, 75, 50);
+                            //Durulygy aktiw etmeklik
+                            ctx.globalAlpha = 0.2;
+                            ctx.fillStyle = "blue";
+                            ctx.fillRect(50, 50, 75, 50);
+                            ctx.fillStyle = "green";
+                            ctx.fillRect(80, 80, 75, 50);
+                        </script>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="teg">canvas</span> tegi skript koduny (adatça JavaScript koduny) ýazmaklyk bilen ýolugra grafiki
+                            şekilleri çyzmaklyk üçin ulanylýar;
+                        </li>
+                        <li>
+                            <span class="teg">canvas</span> tegi brauzerde görünmez we diňe grafiki şekiller üçin konteýner hökmünde ulanylýar.
+                            Grafiki şekilleriň görünmesi üçin bu tegiň içinde skript koduny ýazmaly;
+                        </li>
+                        <li>
+                            JavaScript aýratynlygy öçürilen brauzerde we <span class="teg">canvas</span> elementini gollamaýan brauzerlerde bu
+                            tegiň içine ýazylan tekst görkeziler.
+                        </li>
+                    </ul>
+                    <p>
+                        Eger-de bu tegiň <span class="atr">width</span> we <span class="atr">height</span> atributlarynyň bahalary
+                        berilmedik bolsa, onda 300×150 piksel ölçeginde kendir dörediler.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

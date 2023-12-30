@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>KodÖwren - Taýýarlyk tapgyrynda</title>
+    <style>
+        .main {
+            justify-content: center;
+            align-items: center;
+        }
+        .coming-soon {
+            text-align: center;
+        }
+        .coming-soon h1 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+        .coming-soon img {
+            width: 40%;
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="contents-html.html">HTML</a>
+                <a href="contents-css.html">CSS</a>
+                <a href="contents-javascript.html">JavaScript</a>
+                <a href="glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="contents-html.html">HTML</a>
+                    <a href="contents-css.html">CSS</a>
+                    <a href="contents-javascript.html">JavaScript</a>
+                    <a href="glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="coming-soon">
+                <img src="images/under-construction.jpg" alt="Taýýarlyk tapgyrynda">
+                <h1>Bölüm taýýarlyk tapgyrynda</h1>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="about-project.html">Proýekt barada</a> |
+                <a href="glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Hide navbar on scroll//
+        /////////////////////////
+        var lastScrollTop; // This Varibale will store the top position
+        navbar = document.getElementById("header"); // Get The NavBar
+        window.addEventListener("scroll", function () {
+            //on every scroll this funtion will be called
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            //This line will get the location on scroll
+            if (scrollTop > lastScrollTop) { //if it will be greater than the previous
+                navbar.style.top = "-6rem";
+                //set the value to the negetive of height of navbar 
+            }
+            if (scrollTop > lastScrollTop && screen.width >= 3200) {
+                navbar.style.top = "-10rem";
+            }
+            else {
+                navbar.style.top = '0';
+            }
+            lastScrollTop = scrollTop; //New Position Stored
+        });
+
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="js/dark-theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - CSS öwren</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="contents-html.html">HTML</a>
+                <a class="active-top" href="contents-css.html">CSS</a>
+                <a href="contents-javascript.html">JavaScript</a>
+                <a href="glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="contents-html.html">HTML</a>
+                    <a href="contents-css.html">CSS</a>
+                    <a href="contents-javascript.html">JavaScript</a>
+                    <a href="glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main-1">
+            <div class="sidenav-1" id="mySidenav">
+                <p>
+                    CSS — bu HTML, SVG we beýleki <em>belgileme</em> dilleriniň 
+                    elementlerine wizual bezeg bermekligi ýola goýýan stil 
+                    tablisalaryny döretmek üçin niýetlenen dildir.  
+                </p>
+            </div>
+            <div class="topics-1" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="index.html">Esasy</a><span>/</span></li>
+                    <li class="active">CSS</li>
+                </ul>
+                <!--contents-->
+                <p id="t-desc">
+                    CSS — bu HTML, SVG we beýleki <em>belgileme</em> dilleriniň 
+                    elementlerine wizual bezeg bermekligi ýola goýýan stil 
+                    tablisalaryny döretmek üçin niýetlenen dildir.
+                </p>
+                <ul class="contents">
+                    <li><a href="#">CSS (Cascading Style Sheets - Basgançakly stil tablisalary)</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Stilleriň beýanyny tege ýerleşdirmek</a></li>
+                            <li><a href="#" target="_blank">Stilleriň beýanyny HTML dokumentiň sözbaşysyna ýerleşdirmek</a></li>
+                            <li><a href="#" target="_blank">Stilleriň beýanyny aýratyn faýla ýerleşdirmek</a></li>
+                            <li><a href="#" target="_blank">Stilleriň ulanylyşynyň prioriteti (öňürtiligi)</a></li>
+                        </ul>  
+                    </li>
+                    <li><a href="#" target="_blank">Stil atributlaryň bahalarynyň berilişi</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Sanlar</a></li>
+                            <li><a href="#" target="_blank">Ölçegler</a></li>
+                            <li><a href="#" target="_blank">Reňkler</a></li>
+                            <li><a href="#" target="_blank">Setirler</a></li>
+                            <li><a href="#" target="_blank">Burçlar</a></li>
+                            <li><a href="#" target="_blank">Uniwersal bahalar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">CSS seleketorlar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Esasy selektorlar</a></li>
+                            <li><a href="#" target="_blank">Ölçegler</a></li>
+                            <li><a href="#" target="_blank">Elementiň atributyna görä stil bermeklik</a></li>
+                            <li><a href="#" target="_blank">Psewdo-elementler</a></li>
+                            <li><a href="#" target="_blank">Psewdo-synplar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Şriftleriň formatirlenmegi</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Şriftiň ady</a></li>
+                            <li><a href="#" target="_blank">Şriftiň stili</a></li>
+                            <li><a href="#" target="_blank">Şriftiň ölçegi</a></li>
+                            <li><a href="#" target="_blank">Şriftiň reňki</a></li>
+                            <li><a href="#" target="_blank">Şriftiň galyňlygy</a></li>
+                            <li><a href="#" target="_blank">Setir harplaryň görnüşleri</a></li>
+                            <li><a href="#" target="_blank">Şriftiň häsiýetleriniň birwagtda berilmegi</a></li>
+                            <li><a href="#" target="_blank">Şriftiň ýüklenmegi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Tekstiň formatirlenmegi</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Sözdäki simwollaryň aralygy</a></li>
+                            <li><a href="#" target="_blank">Sözleriň aralygy</a></li>
+                            <li><a href="#" target="_blank">Birinji setiriň öňüne goýulýan boşluk</a></li>
+                            <li><a href="#" target="_blank">Setirleriň arasyndaky uzaklyk</a></li>
+                            <li><a href="#" target="_blank">Tekstiň keseligine deňlenmegi</a></li>
+                            <li><a href="#" target="_blank">Tekstiň dikligine deňlenmegi</a></li>
+                            <li><a href="#" target="_blank">Tekstiň aşagynyň, ýokarsynyň we üstüniň çyzylmagy</a></li>
+                            <li><a href="#" target="_blank">Simwollaryň registriniň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Sözleriň arasyndaky boşluklaryň (probellaryň) berilmegi</a></li>
+                            <li><a href="#" target="_blank">Sözleriň täze setire geçirilmegi</a></li>
+                            <li><a href="#" target="_blank">Tekstiň ugrunyň berilmegi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Sahypalandyrmagyň blok modeli</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Daşky boşluklar</a></li>
+                            <li><a href="#" target="_blank">Içki boşluklar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Ramkalar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Ramkanyň liniýasynyň stili</a></li>
+                            <li><a href="#" target="_blank">Ramkanyň liniýasynyň galyňlygy</a></li>
+                            <li><a href="#" target="_blank">Ramkanyň liniýasynyň reňki</a></li>
+                            <li><a href="#" target="_blank">Ramkanyň häsiýetleriniň birwagtda berilmegi</a></li>
+                            <li><a href="#" target="_blank">Ramkanyň burçlarynyň radiusynyň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Goşmaça ramka</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Elementiň fony</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Fonuň reňki</a></li>
+                            <li><a href="#" target="_blank">Suratyň fon hökmünde berilmegi</a></li>
+                            <li><a href="#" target="_blank">Fon suratyň gaýtalanmagy</a></li>
+                            <li><a href="#" target="_blank">Fon suratyň towlanmasy</a></li>
+                            <li><a href="#" target="_blank">Fon suratyň ýerleşişi</a></li>
+                            <li><a href="#" target="_blank">Fon suratyň ölçegi</a></li>
+                            <li><a href="#" target="_blank">Fon suratyň başlangyç pozisiýasynyň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Fon bilen doldurmagyň kadasy</a></li>
+                            <li><a href="#" target="_blank">Fon suratyň häsiýetleriniň birwagtda berilmegi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Gradient fonlar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Çyzykly gradient</a></li>
+                            <li><a href="#" target="_blank">Radial gradient</a></li>
+                            <li><a href="#" target="_blank">Konik gradient</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Sanawlar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Sanawyň markeriniň görnüşi</a></li>
+                            <li><a href="#" target="_blank">Suratyň fon hökmünde berilmegi</a></li>
+                            <li><a href="#" target="_blank">Suratyň marker hökmünde berilmegi</a></li>
+                            <li><a href="#" target="_blank">Sanawyň markerleriniň ornunyň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Sanawyň häsiýetleriniň birwagtda berilmegi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Tablisalar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Tablisanyň we öýjükleriniň ramkasy</a></li>
+                            <li><a href="#" target="_blank">Tablisanyň ölçegi</a></li>
+                            <li><a href="#" target="_blank">Tablisanyň sözbaşysynyň ýerleşýän ýeri</a></li>
+                            <li><a href="#" target="_blank">Tablisanyň öýjüginiň häsiýetleriniň berilmegi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Kursoryň şeklini bermeklik</a></li>
+                    <li><a href="#" target="_blank">Gipersalgylaryň psewdo-synplary</a></li>
+                    <li><a href="#" target="_blank">Elementiň brauzerde görkezilme usulynyň berilmegi</a></li>
+                    <li><a href="#" target="_blank">Bloguň ölçeginiň bermekligiň kadasy</a></li>
+                    <li><a href="#" target="_blank"><span class="atr">overflow</span> atributy</a></li>
+                    <li><a href="#" target="_blank"><span class="atr">float</span> atributy</a></li>
+                    <li><a href="#" target="_blank"><span class="atr">position</span> atributy</a></li>
+                    <li><a href="#" target="_blank">Gatlaklary görkezmekligiň tertibi</a></li>
+                    <li><a href="#" target="_blank">Elementiň görkezilmesiniň dolandyrylmagy</a></li>
+                    <li><a href="#" target="_blank">Fleksboks modeli</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Konteýneriň içindäki elementleriň düzülişi we ugry</a></li>
+                            <li><a href="#" target="_blank">Elementleriň täze setire geçirilmegi</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">flex-flow</span> atributy</a></li>
+                            <li><a href="#" target="_blank">Konteýneriň içindäki elementleriň esasy ok boýunça deňlenmegi</a></li>
+                            <li><a href="#" target="_blank">Konteýneriň içindäki elementleriň perpendikulýar ok boýunça deňlenmegi</a></li>
+                            <li><a href="#" target="_blank">Konteýneriň içindäki element hatarlarynyň arasyndaky boşlugyň perpendikulýar ok boýunça sazlanmagy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">gap</span> atributy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">order</span> atributy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">flex-grow</span> atributy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">flex-shrink</span> atributy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">flex-basis</span> atributy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">flex</span> atributy</a></li>
+                            <li><a href="#" target="_blank"><span class="atr">align-self</span> atributy</a></li>
+                            <li><a href="#" target="_blank">Fleksboks modeli boýunça umumy gollanma (guide)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Media-ýüztutmalar we adaptiw web-dizaýn</a></li>
+                    <li><a href="topics-css/css-23/grid-1.html" target="_blank">Grid modeli boýunça umumy gollanma</a></li>
+                    <li><a href="#" target="_blank">Köpkolonkaly tekst</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Kolonkalaryň mukdary</a></li>
+                            <li><a href="#" target="_blank">Kolonkalaryň ölçegi</a></li>
+                            <li><a href="#" target="_blank">Kolonkalaryň arasyndaky uzaklyk</a></li>
+                            <li><a href="#" target="_blank">Kolonkalaryň arasyndaky liniýalar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Filtrler we effektler</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Durulygyň üýtgedilmegi</a></li>
+                            <li><a href="#" target="_blank">Bulanyklyk</a></li>
+                            <li><a href="#" target="_blank">Ýagtylygyň, doýgunlygyň we kontrastyň ütgedilmegi</a></li>
+                            <li><a href="#" target="_blank">Reňkiň üýtgedilmegi</a></li>
+                            <li><a href="#" target="_blank">Kölegäniň döredilmegi</a>
+                                <ul>
+                                    <li><a href="#" target="_blank"><span class="atr">drop-shadow()</span> funksiýasy</a></li>
+                                    <li><a href="#" target="_blank">Tekst üçin kölegäniň döredilmegi</a></li>
+                                    <li><a href="#" target="_blank">Blok üçin kölegäniň döredilmegi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Iki ýagdaýly animasiýalar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Animasiýanyň dowamlylygy</a></li>
+                            <li><a href="#" target="_blank">Animasiýa başlanmanka säginme</a></li>
+                            <li><a href="#" target="_blank">Animirlenen atributlaryň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň kanuny</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň parametrleriniň ählisiniň birwagtda berilmegi</a></li>
+                            <li><a href="#" target="_blank">Çylşyrymly animasiýa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Birnäçe ýagdaýly animasiýalar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Wagt şkalasy</a></li>
+                            <li><a href="#" target="_blank">Wagt şkalasynyň adynyň görkezilmegi</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň dowamlylygy</a></li>
+                            <li><a href="#" target="_blank">Animasiýa başlanmanka säginme</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň kanuny</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň gaýtalanma mukdary</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň ugry</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň häzirki ýagdaýy</a></li>
+                            <li><a href="#" target="_blank">Animasiýa başlanmazyndan öň we soň elementiň ýagdaýy</a></li>
+                            <li><a href="#" target="_blank">Animasiýanyň parametrleriniň ählisiniň birwagtda berilmegi</a></li>
+                            <li><a href="#" target="_blank">Çylşyrymly animasiýa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Ikiölçegli transformasiýalar</a>
+                        <ul>
+                            <li><a href="#" target="_blank"><span class="atr">transform</span> atributy</a></li>
+                            <li><a href="#" target="_blank">Süýşme</a></li>
+                            <li><a href="#" target="_blank">Masştabyň üýtgedilmegi</a></li>
+                            <li><a href="#" target="_blank">Egim</a></li>
+                            <li><a href="#" target="_blank">Aýlanma</a></li>
+                            <li><a href="#" target="_blank">Transformasiýa matrisasynyň ulanylmagy</a></li>
+                            <li><a href="#" target="_blank">Ikiölçegli tranformasiýa üçin koordinatanyň başlangyç nokadynyň ornunyň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Çylşyrymly Ikiölçegli transformasiýalar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">Üçölçegli transformasiýalar</a>
+                        <ul>
+                            <li><a href="#" target="_blank">Perspektiwa</a></li>
+                            <li><a href="#" target="_blank">Üçölçegli transformasiýalaryň ýerine ýetirilmegi</a></li>
+                            <li><a href="#" target="_blank">Görüş nokadynyň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Elementiň arka tarapynyň gizlenmegi</a></li>
+                            <li><a href="#" target="_blank">Elementleriň konteýnere proýesirleme kadasy</a></li>
+                            <li><a href="#" target="_blank">Üçölçegli tranformasiýa üçin koordinatanyň başlangyç nokadynyň ornunyň berilmegi</a></li>
+                            <li><a href="#" target="_blank">Çylşyrymly üçölçegli animasiýalar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">CSS koduň standartlara laýyklygynyň barlagy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="about-project.html">Proýekt barada</a> |
+                <a href="glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-theme.js"></script>
+</body>
+
+</html>

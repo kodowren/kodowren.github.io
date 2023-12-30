@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Formlar</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Formlar</a></li>
+                    <li><a class="btn" href="#c-2">Formuň gurluşy</a></li>
+                    <li><a class="btn" href="#c-3"><b class="teg">form</b> tegi</a></li>
+                    <li><a class="btn" href="#c-4"><b class="teg">input</b> tegi</a>
+                        <ul id="sublist">
+                            <li><a class="btn" href="#c-5"><b class="atr">text</b> we <b class="atr">password</b> gutujyklary</a></li>
+                            <li><a class="btn" href="#c-6"><b class="atr">reset</b>, <b class="atr">submit</b> we <b class="atr">button</b> düwmeleri</a></li>
+                            <li><a class="btn" href="#c-7"><b class="atr">hidden</b> gizlin elementi</a></li>
+                            <li><a class="btn" href="#c-8"><b class="atr">checkbox</b> "bellijek" gutujygy</a></li>
+                            <li><a class="btn" href="#c-9"><b class="atr">radio</b> radiodüwmejigi</a></li>
+                            <li><a class="btn" href="#c-10"><b class="atr">file</b> faýl saýlamak düwmejigi</a></li>
+                            <li><a class="btn" href="#c-11"><b class="atr">number</b> we <b class="atr">range</b> elementleri</a></li>
+                            <li><a class="btn" href="#c-12"><b class="atr">date</b> senäni girizmek elementi</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="btn" href="#c-13">Awtotamamlama sanawlary</a></li>
+                    <li><a class="btn" href="#c-14"><b class="teg">textarea</b> (tekst meýdançasy) tegi</a></li>
+                    <li><a class="btn" href="#c-15"><b class="teg">select</b> tegi</a></li>
+                    <li><a class="btn" href="#c-16"><b class="teg">button</b> tegi</a></li>
+                    <li><a class="btn" href="#c-17"><b class="teg">label</b> tegi</a></li>
+                    <li><a class="btn" href="#c-18"><b class="teg">fieldset</b> tegi. Formuň elementleriniň toparlaşdyrylmagy</a></li>
+                    <li><a class="btn" href="#c-19"><b class="teg">meter</b> tegi</a></li>
+                    <li><a class="btn" href="#c-20"><b class="teg">progress</b> tegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 26.12.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Formlar</li>
+                </ul>
+                <!--Formlar-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Formlar <a href="#c-1">#</a></h2>
+                    <p class="note">
+                        Formlar ulanyjydan alnan maglumatlary web-serwere ibermeklik üçin ulanylýar. Iberilen maglumatlaryň serwer tarapda
+                        nähili görnüşde işlenip taýýarlanjagyny Backend kämilleşdiriji serwer taraply (PHP, C#, Python, Java, Node.js we
+                        ş.m. dillerde) kod ýazmak bilen ýerine ýetirýär. Frontend kämilleşdiriji formlaryň daşky görnüşini taýýarlaýar.
+                        Aşakdaky formuň kömegi bilen web-saýtyň hasaba alynmagy ýola goýulýar:
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Formlary ulanmaklyk</title>
+                        </head>
+                        <body>
+                            <h1>Saýtyň hasaba alynmagy (registrasiýasy)</h1>
+                            <form action="file.php" method="POST" enctype="multipart/form-data">
+                                <div>
+                                    Ulanyjy ady:<br>
+                                    <input type="text" name="user"><br>
+                                    Parol:<br>
+                                    <input type="password" name="passw" value="Parol"><br>
+                                    Saýtyň URL salgysy:<br>
+                                    <input type="text" name="url" value="http://" size="20"><br>
+                                    Saýtyň atlandyrylyşy:<br>
+                                    <input type="text" name="name_site" size="20"><br>
+                                    Saýtyň beýany:<br>
+                                    <textarea name="descr" rows="10" cols="15"></textarea><br>
+                                    Saýtyň temasy:<br>
+                                    <select name="theme">
+                                        <option value="0" selected>Tema saýlanmadyk</option>
+                                        <option value="1">Tema1</option>
+                                        <option value="2">Tema1</option>
+                                        <option value="3">Tema1</option>
+                                    </select><br>
+                                    Banner 88*31:<br>
+                                    <input type="file" name="banner" size="20"><br><br>
+                                    <input type="reset" value="Poz">
+                                    <input type="submit" value="Iber">
+                                </div>
+                            </form>
+                        </body>
+
+                    </script>
+                    <figcaption>Formuň kömegi bilen web-saýty hasaba almaklyk</figcaption>
+                    <div class="code-run">
+                        <h1>Saýtyň hasaba alynmagy (registrasiýasy)</h1>
+                            <form action="file.php" method="POST" enctype="multipart/form-data">
+                                <div>
+                                    Ulanyjy ady:<br>
+                                    <input type="text" name="user"><br>
+                                    Parol:<br>
+                                    <input type="password" name="passw" value="Parol"><br>
+                                    Saýtyň URL salgysy:<br>
+                                    <input type="text" name="url" value="http://" size="20"><br>
+                                    Saýtyň atlandyrylyşy:<br>
+                                    <input type="text" name="name_site" size="20"><br>
+                                    Saýtyň beýany:<br>
+                                    <textarea name="descr" rows="10" cols="15"></textarea><br>
+                                    Saýtyň temasy:<br>
+                                    <select name="theme">
+                                        <option value="0" selected>Tema saýlanmadyk</option>
+                                        <option value="1">Tema1</option>
+                                        <option value="2">Tema1</option>
+                                        <option value="3">Tema1</option>
+                                    </select><br>
+                                    Banner 88*31:<br>
+                                    <input type="file" name="banner" size="20"><br><br>
+                                    <input type="reset" value="Poz">
+                                    <input type="submit" value="Iber">
+                                </div>
+                            </form>
+                    </div>
+                    <p>
+                        Ýokardaky formy "form.html" ady bilen ýatda saklap brauzerde açanymyzda: "Ulanyjy ady", "Parol", "Saýtyň URL salgysy",
+                        "Saýtyň beýany" we "Bahalaryň sanawy" ady bilen bäş sany tekst polýasyny, "Saýtyň temasy" ady blen bir sany bahalaryň
+                        sanawyny we üç sany düwmani görüp bileris.
+                    </p>
+                    <p>
+                        "Faýl saýla" düwmesi saýtyň bannerini faýl görnüşinde kompýuteriň diskinden saýlamaga mümkinçilik berýär. "Poz" düwmesi
+                        formuň elementleriniň başlangyç bahalaryny berýär. "Iber" düwmesi formuň elementlerine ulanyjy tarapyndan girizilen
+                        maglumatlary
+                        <span class="teg">form</span> teginiň <span class="atr">action</span> atributynda görkezilen web-serwerdaky "file.php" programmasyna iberýär. "file.php" programmasy
+                        maglumatlary işläp taýýarlar we saýtyň üstünlikli ýagdaýda hasaba alnandygy hakynda habar berer. Eger-de ulanyjy
+                        hökmany gutujyklary doldurmadyk bolsa ýa-da ýalňyş dolduran bolsa ýalňyşlyk habarnamasy çykarylar. Biziň mysalymyzda
+                        ulanyjynyň girizen maglumatlaryny işläp taýýarlajak "file.php" programmasy ýazylmadyk. Şonuň üçin maglumatlary iberip
+                        bolmaz we ibermäge synanyşan ýagdaýymyzda brauzer "Faýl tapylmady" ýalňyşlyk habarnamasyny görkezer.
+                        </p>
+                </div>
+                <!--Formuň gurluşy-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Formuň gurluşy <a href="#c-2">#</a></h2>
+                    <div class="note">
+                        HTML dokumentiň içine <span class="teg">form</span> teginiň kömegi bilen formy goşup bolýar. <span
+                            class="teg">form</span> teginiň içinde dolandyryş elementleri bolan <span class="teg">input</span>, <span
+                            class="teg">textarea</span> we <span class="teg">select</span> elementleri bolup biler:
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <form action="file.php">
+                            <input type="text">
+                            <textarea></textarea>
+                            <select>
+                                <option></option>
+                            </select>
+                            <input type="file">
+                            <input type="reset">
+                            <input type="submit">
+                        </form>                        
+                    </script>
+                    <p>Bu tegleriň her birine aýratynlykda seredip geçeliň.</p>
+                </div>
+                <!--form tegi-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky"><span class="teg">form</span> tegi <a href="#c-3">#</a></h2>
+                    <div class="note">
+                        HTML dokumentiň içine <span class="teg">form</span> teginiň kömegi bilen formy goşup bolýar. <span
+                            class="teg">form</span> teginiň aşakdaky ýaly atributlary bar:
+                    </div>
+                    <ul>
+                        <li><span class="atr">action</span> – formuň iberen maglumatlaryny işläp taýýarlajak programmanyň URL salgysyny bermek.
+                            URL salgy absolýut ýa-da otnositel görnüşde berlip bilner:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <form action="file.php">
+                        </script>
+                        <li><span class="atr">method</span> – formuň maglumatlarynyň web-serwere nähili usulda iberiljekdigini kesgitleýär. "GET" ýa-da "POST" bahany alyp biler:
+                            <ul>
+                                <li><span class="atr-value">GET</span> – iberiljek maglumatlar URL salgynyň soňuna ? belgisiniň yzyndan goşulyp
+                                    iberilýär. Ýazylyş formaty: <b>[elementiň ady]=[elementiň bahasy]</b>. Bu usulda birden köp elementiň bahasy
+                                    iberilýän
+                                    bolsa, onda <b>element=baha</b> jübütleriniň arasyna &amp; (ampersand) belgisi goýulýar. Mysal üçin:
+                                <span class="atr-link">http://www.mysite.com/file.php?user_id=1578&age=18</span>
+                                <p>
+                                    Ýörite simwollar we türkmen diliniň elipbiýiniň latyn elipbiýinde bolmaýan harplary "%nn" formatynda kodlanýar,
+                                boşluklaryň deregine bolsa "+" belgisi goýulýar.
+                                <span class="teg">form</span> teginde <span class="atr">method</span> atributy üçin "GET" baha aşakdaky ýaly
+                                berilýär:
+                                </p>
+                                <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action=http://www.mysite.com/file.php method="GET">
+                                </script>
+                                <p>
+                                    URL salgylaryň uzynlygynyň belli bir çägi bolandygy üçin "GET" usuly iberiljek maglumatlaryň göwrümi uly bolmadyk ýagdaýlarda ulanylýar;
+                                </p>
+                                </li>
+                                <li><span class="atr-value">POST</span> – uly göwrümli maglumatlary, faýllary we gizlin maglumatlary (mysal üçin parollary) ibermeklik üçin niýetlenendir:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                        <form action=http://www.mysite.com/file.php method="POST">
+                                    </script>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="atr">enctype</span> – iberilýän maglumatlaryň kodlama usulyny berýär. Aşakdaky bahalary alyp biler:
+                            <ul>
+                                <li><span class="atr-value">application/x-www-form-urlencoded</span> – kabulgörlen baha hökmünde ulanylýar. Mysal üçin:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="http://www.mysite.com/file.php" method="POST"
+                                    enctype="application/x-www-form-urlencoded">                                    
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">multipart/form-data</span> – web-serwere faýllar iberilende ulanylýar. Mysal üçin:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="http://www.mysite.com/file.php" method="POST"
+                                    enctype="multipart/form-data">
+                                    </script>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="atr">name</span> – formuň adyny bermeklik üçin ulanylýar. Mysal üçin:
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="file.php" name="form1">
+                            </script>
+                        </li>
+                        <li><span class="atr">autocomplete</span> – formuň içindäki girizme polýalaryna girizilen bahalaryň awtotamamlamasyny açmak ýa-da ýapmak üçin ulanylýar. Bahasyny "on" berenimizde awtotamamlama açylýar, bahasyny "off" berenimizde awtotamamlama ýapylýar. Mysal üçin:
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="file.php" autocomplete="on">
+                            </script>
+                        </li>
+                        <li><span class="atr">novalidate</span> – eger-de bu atribut ýazylan bolsa, onda girizme polýasyna girizilen maglumatlar barlagdan geçmez. Safari brauzeri bu atributy gollamaýar. Mysal üçin:
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="file.php" novalidate>
+                            </script>
+                        </li>
+                    </ul>
+                </div>
+                <!--input tegi-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky"><span class="teg">input</span> tegi <a href="#c-4">#</a></h2>
+                    <div class="note">
+                        <span class="teg">input</span> tegi formuň içine dolandyryş elementlerini goýmaga mümkinçilik berýär. Mysal üçin,
+                        tekst polýasy, düwme we ş.m. dolandyryş elementleri hasaplanýar. Bu tegiň aşakdaky ýaly atributlary bar:
+                    </div>
+                    <ul>
+                        <li><span class="atr">type</span> – dolandyryş elementiň görnüşini kesgitlemek üçin ulanylýar. Dolandyryş elementleriniň aşakdaky ýaly görnüşleri bolup biler:
+                            <ul>
+                                <li><span class="atr-value">text</span> – tekst girizme polýasy. Mysal üçin:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="text">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">password</span> – parol üçin niýetlenen tekst girizme polýasy. Girizilen tekst ýyldyzjyklar görnüşinde görkezilýär:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="password">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">file</span> – faýl saýlama düwmesi. Web-serwere faýl ibermeklik üçin ulanylýar:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="file">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">checkbox</span> – "bellijek" (ptiçka) goýulýan polýa. Bu polýa bellijegi goýup bolýar ýa-da bellijegi aýyryp bolýar:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="checkbox">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">radio</span> – radiodüwmejik:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="radio">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">reset</span> – düwme. Bu düwmaniň üstüne basylanda formuň elementleriniň içindäki ähli maglumatlar pozulýar ýa-da has dogrusy formuň ähli elementleri kabulgörlen bahalaryny alýarlar.
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="reset" value="Poz">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">submit</span> – düwme. Bu düwmäniň üstüne basylanda forma girizilen ähli maglumatlar web-serwere iberilýär. 
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="submit" value="Iber">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">button</span> – adaty buýruk düwmesi. Bu düwmelere diňe skript berkidilen ýagdaýynda ulanmaklygyň manysy bar. Düwmelere skritpleriň berkidilişi barada JavaScript bölüminde içgin gürrüň ediler:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="button" value="OK" onclick="alert('OK')">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">image</span> – surat. Bu suratyň üstüne basylanda forma girizilen ähli maglumatlar web-serwere iberilýär. Şol bir wagtyň özünde syçanjygyň kursory arkaly suratyň basylan ýeriniň koordinatalary hem iberilýär. Suratyň ýoly <span class="atr">src</span> atributyň kömegi bilen berilýär. <span class="atr">action</span> atributynyň kömegi bilen bolsa alternatiw tekst berilýär:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="image" src="button.gif" alt="Iber">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">hidden</span> – gizlin element. Bu gizlin elementiň bahasy hem formuň beýleki elementleriniň maglumatlary bilen bilelikde iberilýär. Element ulanyja görkezilmeýär, ýöne, mysal üçin, eger-de ulanyjy birnäçe formy doldurýan bolsa, onda ulanyjynyň öňki dolduran formunyň maglumaty häzirki formuň içindäki bu elementde saklanmagy zerur bolup biler (mysal üçin ulanyjynyň unikal ady):
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="hidden" name="user_id" value="1">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">url</span> – URL salgynyň girizilýän polýasy. Girizilen baha awtomatiki barlanýar. Eger-de bu gutujyga baha girizilmese ýa-da girizilen baha dogry URL bahasyna gabat gelýän bolsa, onda form iberiler. Bahanyň girizilmesini hökmany ýagdaýa getirmek üçin <span class="atr">required</span> atributy ýazylmaly:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="url" required>
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">email</span> – elektron salgynyň girizilýän polýasy. Girizilen baha awtomatiki barlanýar. Eger-de bu gutujyga baha girizilmese ýa-da girizilen baha dogry elektron salgynyň bahasyna gabat gelýän bolsa, onda form iberiler. Bahanyň girizilmesini hökmany ýagdaýa getirmek üçin <span class="atr">required</span> atributy ýazylmaly:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="email" required>
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">tel</span> – telefon belginiň girizilýän polýasy. Girizilen baha awtomatiki barlanmaýar, çünki telefon belgileriň formatlary biri-birinden düýpgöter tapawutlanýarlar:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="tel" placeholder="+0 (000) 000-00-00">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">number</span> – san bahanyň girizilýän polýasy. Polýanyň sagynda brauzer iki sany düwmejigi görkezýär. Bu düwmejikleriň kömegi bilen sanyň bahasyny <span class="atr">step</span> atributynda görkezilen ädim bilen artdyryp ýa-da kemeldip bolýar. Girizilen baha awtomatiki barlanýar. Eger-de bu gutujyga baha girizilmese ýa-da girizilen baha položitel ýa-da otrisatel bolsa, onda form iberiler. Bahanyň girizilmesini hökmany ýagdaýa getirmek üçin <span class="atr">required</span> atributy ýazylmaly:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="number" step="5" required>
+                                        <input type="number" step="0.5" required>
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">range</span> – berlen diapazon boýunça san bahany saýlamaklyk polýasy. Bu element brauzerde markersiz görkezilýär, şonuň üçin bahany takmynan saýlamaly bolýar. Ulanyja diapazondan saýlanan bahany görkezmeklik üçin goşmaja skritp ýazmaly bolýar. Elemente <span class="atr">min</span> atributy bilen minimal bahany, <span class="atr">max</span> atributy bilen maksimal bahany, <span class="atr">value</span> atributy bilen başlangyç bahany, <span class="atr">step</span> atributy bilen bolsa ädimi berip bolýar:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="range" min="0" max="100" value="10">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">color</span> – reňk saýlama polýasy. Elementiň üstüne basylanda reňk palitrasynyň penjiresi görkezilýär (aşakdaky surat). Bu palitranyň kömegi bilen reňki el bilen saýlap bolýar. Başlangyçda saýlanan reňkiň bahasyny <span class="atr">value</span> atributyň kömegi bilen berip bolýar:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="color" color="#227EF7">
+                                    </script>
+                                    <figure>
+                                        <img src="../../images/palitra.jpg" alt="Reňk palitrasy">
+                                        <figcaption>Reňk palitrasy</figcaption>
+                                    </figure>
+                                </li>
+                                <li><span class="atr-value">search</span> – gözleg gutujygy:
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="search">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">date</span> – senäni girizmek üçin niýetlenen polýa (Firefox we Internet Explorer brauzerleri tarapyndan gollanmaýar):
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="date">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">time</span> – wagty girizmek üçin niýetlenen polýa (Firefox we Internet Explorer brauzerleri tarapyndan gollanmaýar):
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="time">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">datetime-local</span> – ýerli senäni we wagty girizmek üçin niýetlenen polýa (Firefox we Internet Explorer brauzerleri tarapyndan gollanmaýar):
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="datetime-local">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">month</span> – aýy we ýyly girizmek üçin niýetlnen polýa (Firefox we Internet Explorer brauzerleri tarapyndan gollanmaýar):
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="month">
+                                    </script>
+                                </li>
+                                <li><span class="atr-value">week</span> – hepdäni girizmek üçin niýetlnen polýa (Firefox we Internet Explorer brauzerleri tarapyndan gollanmaýar):
+                                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                        data-prismjs-copy-success="Kopýalandy">
+                                        <input type="week">
+                                    </script>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="atr">name</span> – dolandyryş elementiň adyny bermek üçin ulanylýar. Dolandyryş elementiň ady hökman latyn harplary bilen berilmeli. Elementiň adynyň başyna san goýmak bolmaýar: 
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" name="field1">
+                            </script>
+                        </li>
+                        <li><span class="atr">disabled</span> – formuň elementine bolan elýeterliligi çäklendirýär. Eger-de elemente bu atribut ýazylsa, onda element aktiw däl ýagdaýda görkeziler.
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" name="field1" disabled>
+                            </script>
+                        </li>
+                        <li><span class="atr">readonly</span> – formuň elementiniň diňe okamak üçin niýetlenendigini aňladýar. Eger-de elemente bu atribut ýazylsa, onda elementiň bahasyny üýtgedip bolmaz.
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" value="Elementiň bahasyny diňe okap bolýar" readonly>
+                            </script>
+                        </li>
+                        <li><span class="atr">value</span> – formuň elementlerine kabulgörlen bahany bermek ýa-da düwmeleriň ýazgylaryny bermek:
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" value="Kabulgörlen baha">
+                                <input type="submit" value="Iber">
+                            </script>
+                        </li>
+                    </ul>
+                    <p>HTML 5 diliniň <span class="teg">input</span> teginiň täze atributlary:</p>
+                    <ul>
+                        <li><span class="atr">autocomplete</span> – girizme polýasynyň girizilen bahasynyň awtotamamlamasyny açmak ýa-da ýapmak üçin ulanylýar. Bahasyny "on" berenimizde awtotamamlama açylýar, bahasyny "off" berenimizde awtotamamlama ýapylýar. Mysal üçin:
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" autocomplete="on">
+                            </script>
+                        </li>
+                        <li><span class="atr">autofocus</span> – elemente girizme fokusyny gurnaýar. Sahypa ýüklenende elementiň işjeň ýagdaýda bolmagyna girizme fokusy diýilýär. 
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" name="field1" autofocus>
+                            </script>
+                        </li>
+                        <li><span class="atr">placeholder</span> – girizme polýasy doldurylmanka giriziljek maglumat hakynda goşmaça maglumat berýän atribut. 
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" placeholder="Adyňyzy giriziň">
+                            </script>
+                        </li>
+                        <li><span class="atr">required</span> – eger-de polýa hökmany doldurylmaly bolsa, onda bu atribut ýazylmaly. 
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="text" required>
+                            </script>
+                        </li>
+                        <li><span class="atr">pattern</span> – girizilýän bahanyň JavaScript regulýar aňlatma görnüşindäki şablony. Bu elemente girizilen maglumat şablona gabat gelse form tarapyndan iberiler, girizilen maglumat şablona gabat gelmese iberilmez. 
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <input type="tel" placeholder="+0 (000) 000-00-00" required
+                                pattern="\+[1-9] \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}">
+                            </script>
+                        </li>
+                        <li><span class="atr">form</span> – elementi onuň identifikatory boýunça form bilen baglanyşdyrmak (diňe element formuň daşynda bolsa ulanylýar). 
+                            <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                data-prismjs-copy-success="Kopýalandy">
+                                <form action="process.php" id="form1"></form>
+                                <input type="text" name="field1" form="form1">
+                            </script>
+                        </li>
+                    </ul>
+                    <p>
+                        HTML 5 diliniň <span class="teg">input</span> teginiň täze atributlary formuň maglumatlary serwere iberilmänkä
+                        girizme polýasyna girizilen bahalary barlagdan geçirýärler, ýagny girizilen bahalar dogry bolan ýagdaýynda, mysal
+                        üçin elektron poçta salgysy dogry girizilen bolsa serwere iberiler, formuň elementleriniň bahasy nädogry girizilen
+                        bolsa ýalňyşlyk habarnamasy görkeziler we formuň maglumatlary serwere iberilmez. Girizilýän maglumatlaryň barlagyny
+                        <span class="teg">form</span> teginiň <span class="atr">novalidate</span> atributyny ýazmaklyk bilen öçürmeklik
+                        mümkin, ýöne muny etmeklik zerurlygy käbir ýagdaýlarda ýüze çykýar.
+                    </p>
+                    <div class="note-red">
+                        Jenaýatçylaryň formdaky HTML kodlaryny üýtgedip biljekdigini nazara almaklyk bilen formuň maglumatlarynyň brauzerde
+                        barlanýandygyna bil baglaman Web-serwerde kabul edilip alnan maglumatlary hökmany suratda serwer programmalaryň
+                        kömegi bilen barlagdan geçirmeli. Elbetde formuň maglumatlarynyň müşderi tarap bolan brauzerde barlanmagy
+                        web-serweriň ýüküni azaldar. Şonuň üçin forma girizilen maglumatlaryň müşderi kompýuterde barlanmagynyň peýdalary
+                        bar hem bolsa maglumatlary hem brauzerde, hem web-serwerde serwer programmalaryň kömegi bilen barlamaklyk maslahat
+                        berilýär.
+                    </div>
+                    <p>Indi bolsa, aýratyn elementlere mahsus bolan atributlara seredip geçeliň.</p>
+                </div>
+                <!--text we password gutujyklary-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky"><span class="atr">text</span> we <span class="atr">password</span> gutujyklary <a href="#c-5">#</a></h2>
+                    <div class="note">Tekst we parol girizme polýalalary üçin aşakdaky atributlar bardyr:</div>
+                    <ul>
+                        <li><span class="atr">value</span> – tekst gutujygyň başlangyç bahasyny berýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="text" name="field1" value="http://">
+                        </script>
+                        <li><span class="atr">maxlength</span> – tekst gutujygyna girizip boljak maksimal simwol mukdaryny bermeklik:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="text" name="field1" maxlength="100">
+                        </script>
+                        <li><span class="atr">minlength</span> – tekst gutujygyna girizip boljak minimal simwol mukdaryny bermeklik:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="password" name="field1" minlength="3">
+                        </script>
+                        <li><span class="atr">size</span> – tekst gutujygyň görnünýän ölçegini bermeklik:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="text" name="field1" maxlength="100" size="20">
+                        </script>
+                    </ul>
+                </div>
+                <!--reset, submit we button duwmeleri-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky"><span class="atr">reset</span>, <span class="atr">submit</span> we <span class="atr">button</span> düwmeleri <a href="#c-6">#</a></h2>
+                    <div class="note">
+                        Bu düwmeleriň funksiýalary ýokarda düşündirilipdi. Bu düwmeleriň <span class="atr">value</span> atributy düwmedäki
+                        görkeziljek tekstiň bahasyny berýär:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <input type="submit" value="Iber">
+                    </script>
+                </div>
+                <!--hidden gizlin elementi-->
+                <div class="item-container" id="c-7">
+                    <h2 class="sticky"><span class="atr">hidden</span> gizlin elementi <a href="#c-7">#</a></h2>
+                    <div class="note">
+                        Gizlin elementiň <span class="atr">value</span> atributy bu elementiň bahasyny berýär:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <input type="hidden" name="hidden1" value="1">
+                    </script>
+                </div>
+                <!--checkbox gutujygy-->
+                <div class="item-container" id="c-8">
+                    <h2 class="sticky"><span class="atr">checkbox</span> "bellijek" gutujygy <a href="#c-8">#</a></h2>
+                    <p>Bellijek gutujygy üçin aşakdaky atributlar ulanylýar:</p>
+                    <ul>
+                        <li><span class="atr">value</span> – eger-de gutujyk bellenen bolsa, onda bu atributa berlen baha web-serwere iberiler. Gutujyk bellenmedik bolsa bu atributa berlen baha web-serwere ugradylmaz. Eger-de bu atributyň bahasy berilmedik bolsa, onda bu atributyň kabulgörlen bahasy bolan "on" ulanylar:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <input type="checkbox" name="check1" value="yes">Tekst
+                        </script>
+                        <li><span class="atr">checked</span> – başlangyçda bellijek gutujygynyň bellenendigini görkezýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <input type="checkbox" name="check1" value="yes" checked>Tekst
+                        </script>
+                    </ul>
+                    <p>
+                        Bellijek gutujyklarynyň toparyny hem ulanmaklyk mümkin. Munuň üçin ähli bellijek gutujyklarynyň adyny, ýagny <span class="atr">name</span> atirbutyna birmeňzeş at bermeli. Web-serwerde bellijek gutujyklarynyň toparyna degişli ähli maglumatlary almaklyk üçin gutujygyň adyndan soňra kwadrat ýaýlary goýmaly (bu ýagdaý PHP dilinde massiw hökmünde kabul edilýär):
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <input type="checkbox" name="check[]" value="1">Tekst 1
+                        <input type="checkbox" name="check[]" value="2">Tekst 2
+                        <input type="checkbox" name="check[]" value="3">Tekst 3                        
+                    </script>
+                </div>
+                <!--radio duwmejigi-->
+                <div class="item-container" id="c-9">
+                    <h2 class="sticky"><span class="atr">radio</span> radiodüwmejigi <a href="#c-9">#</a></h2>
+                    <p>
+                        Radiodüwmejik üçin aşakdaky atributlary ulanmaklyk mümkin:
+                    </p>
+                    <ul>
+                        <li><span class="atr">value</span> – eger-de radiodüwmejik saýlanan bolsa, onda bu atributa berlen baha web-serwere iberiler:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <input type="radio" name="radio1" value="yes">Tekst
+                        </script>
+                        <p>
+                            Eger-de radiodüwmejikleriň hiç biri saýlanmadyk bolsa, onda web-serwere hiç hili baha ugradylmaz.
+                        </p>
+                        <li><span class="atr">checked</span> – radiodüwmejik toparynyň içinden başlangyçda saýlanan radiodüwmejigi aňladýar:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <input type="radio" name="radio1" value="yes" checked>Tekst
+                        </script>
+                    </ul>
+                    <p>
+                        Radiodüwmejikler diňe radiodüwmejikleriň topary görnüşinde ulanylyp bilner we bu radiodüwmejik toparynyň içinden
+                        diňe birini saýlamaklyga rugsat berilýär. Meselem, eger-de formda test soraglary berlen bolsa, onda testiň
+                        jogaplaryny radiodüwmejik topary bilen beýan edip bolar, çünki testiň jogaplarynyň içinden diňe birini saýlamaklyga
+                        rugsat berilýär.
+                    </p>
+                    <p>
+                        Radiodüwmejikleri bir topara birleşdirmek üçin topardaky ähli radiodüwmejikleriň <span class="atr">name</span>
+                        atirbutynyň bahasyna birmeňzeş at, <span class="atr">value</span> atirbutlarynyň bahasyna bolsa biri-birinden
+                        tapawutly atlary bermeli:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <input type="radio" name="jynsy" value="male">Oglan
+                        <input type="radio" name="jynsy" value="female">Gyz
+                    </script>
+                </div>
+                <!--file duwmejigi-->
+                <div class="item-container" id="c-10">
+                    <h2 class="sticky"><span class="atr">file</span> faýl saýlamak düwmejigi <a href="#c-10">#</a></h2>
+                    <p>Faýl saýlamak düwmejigi aşakdaky atributlary ulanmaga mümkinçilik berýär:</p>
+                    <ul>
+                        <li><span class="atr">multiple</span> – eger-de atribut saýlanan bolsa, birden köp faýly saýlamaga rugsat berler:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="file" multiple>
+                        </script>
+                        <li><span class="atr">accept</span> – gollanylýan MIME tiplerini ýa-da faýl giňeltmelerini görkezmäge mümkinçilik berýär (bahalaryň arasyna otur goýulýar):</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="file" accept="image/jpeg, image/png, image/gif">
+                            <input type="file" accept="image/*">
+                            <input type="file" accept=".gif, .jpg, .jpeg">
+                        </script>
+                    </ul>
+                </div>
+                <!--number we range elementleri-->
+                <div class="item-container" id="c-11">
+                    <h2 class="sticky"><span class="atr">number</span> we <span class="atr">range</span> elementleri <a href="#c-11">#</a></h2>
+                    <p>
+                        San bahany girizmek we diapazon boýunça san bahany saýlamak elementleri aşakdaky atributlary gollaýarlar:
+                    </p>
+                    <ul>
+                        <li><span class="atr">value</span> – häzirki baha;</li>
+                        <li><span class="atr">min</span> – minimal baha;</li>
+                        <li><span class="atr">max</span> – maksimal baha;</li>
+                        <li><span class="atr">step</span> – ädim.</li>
+                    </ul>
+                    <p>Mysal üçin:</p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="range" min="0" max="100" value="10" step="2">
+                    </script>
+                </div>
+                <!--date senanin girizmek-->
+                <div class="item-container" id="c-12">
+                    <h2 class="sticky"><span class="atr">date</span> senäni girizmek elementi <a href="#c-12">#</a></h2>
+                    <p>Senäni girizmek elementi aşakdaky atributlary gollaýar:</p>
+                    <ul>
+                        <li><span class="atr">value</span> – häzirki baha;</li>
+                        <li><span class="atr">min</span> – minimal baha;</li>
+                        <li><span class="atr">max</span> – maksimal baha.</li>
+                    </ul>
+                    <p>Senäniň bahasy ÝÝÝÝ-AA-GG formatynda görkezilýär:</p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <input type="date" min="2010-01-01" max="2023-01-01" value="2008-01-01">
+                    </script>
+                </div>
+                <!--Awtotamamlama sanawlary-->
+                <div class="item-container" id="c-13">
+                    <h2 class="sticky">Awtotamamlama sanawlary <a href="#c-13">#</a></h2>
+                    <div class="note">Girizme gutujygyna girizilen bahalaryň awtotamamlanmagy käbir ýagdaýlarda örän peýdalydyr (eger awtotamamlama
+                        zerur däl bolsa, onda <span class="atr">autocomplete</span> atributynyň bahasyny "off" etmeli). Tekst gutujygyna
+                        ulanyjynyň girizen bahasyna görä öňden kesgitlenen käbir bahalar sanaw görnüşinde ulanyja görkezilip bilner.
+                        Awtotamamlama sanawy <span class="teg">datalist</span> teginiň kömegi bilen dördilýär (Safari brauzeri
+                        tarapyndan gollanmaýar). Ýöne hökmany suratda bu tegiň <span class="atr">id</span> atributynyň bahasy berilmeli.
+                        Awtotamamlama sanawynyň her bir elementiniň bahasy bolsa <span class="teg">datalist</span> teginiň içinde
+                        ýazylýan <span class="teg">option</span> teginiň kömegi bilen dördilýär. Iň soňunda edilmeli iş bolsa, tekst
+                        gutujygyny awtotamamlama sanawyna baglamaly. Onuň üçin tekst gutujygynyň <span class="atr">list</span>
+                        atributynyň bahasyna awtotamamlama sanawynyň identifikatorynyň bahasyny bermeli:</div>
+                        <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <datalist id="browsers">
+                                <option value="Microsoft Edge"></option>
+                                <option value="Firefox"></option>
+                                <option value="Chrome"></option>
+                                <option value="Opera"></option>
+                                <option value="Safari"></option>
+                            </datalist>
+                            <input type="text" name="browser" list="browsers" placeholder="Siziň brauzeriňiz">
+                        </script>
+                        <div class="code-run">
+                            <datalist id="browsers">
+                                <option value="Microsoft Edge"></option>
+                                <option value="Firefox"></option>
+                                <option value="Chrome"></option>
+                                <option value="Opera"></option>
+                                <option value="Safari"></option>
+                            </datalist>
+                            <input type="text" name="browser" list="browsers" placeholder="Siziň brauzeriňiz">
+                        </div>
+                        <figcaption>Awtotamamlama sanawy</figcaption>
+                </div>
+                <!--textarea-->
+                <div class="item-container" id="c-14">
+                    <h2 class="sticky"><span class="teg">textarea</span> (tekst meýdançasy) tegi <a href="#c-14">#</a></h2>
+                    <div class="note">
+                        Jübüt teg bolan <span class="teg">textarea</span> tegi formuň içinde köpsetirli girizme polýasyny döredýär:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <textarea>
+                            Tekst
+                        </textarea>
+                    </script>
+                    <div class="code-run">
+                        <textarea>
+                            Tekst
+                        </textarea>
+                    </div>
+                    <p>
+                        Web-brauzeriň penjiresinde tekst meýdançasy süýşürme zologyna eýe gönüburçlyk meýdança görnüşinde görkezilýär.
+                    </p>
+                    <p>
+                        Bu tegiň aşakdaky ýaly atributlary bar:
+                    </p>
+                    <ul>
+                        <li><span class="atr">name</span> – polýanyň unikal adyny bermek:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt">Tekst</textarea>
+                        </script>
+                        <li><span class="atr">cols</span> – polýanyň ini:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" cols="15">Tekst</textarea>
+                        </script>
+                        <li><span class="atr">rows</span> – görünýän setirleriň sany:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" cols="15" rows="10">Tekst</textarea>
+                        </script>
+                        <li><span class="atr">disabled</span> – elementi işjeňsizleşdirýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" disabled></textarea>
+                        </script>
+                        <li><span class="atr">readonly</span> – elementiň diňe okamak üçin elýeterliligini görkezýär. Eger-de bu atribut ýazylsa tekst meýdançasyna maglumat girizip bolmaýar:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" readonly>Teksti diňe okap bolýar</textarea>
+                        </script>
+                        <li><span class="atr">autocomplete</span> – tekst meýdançasyna girizilen maglumatlaryň awtotamamlanmagy. Bu atributa "on" bahany bersek awtotamamlama açylýar, "off" bahany bersek awtotamamlama ýapylýar:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" autocomplete="off">Tekst</textarea>
+                        </script>
+                        <li><span class="atr">autofocus</span> – sahypa ýüklenende elementi işjeň ýagdaýa getirýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" autofocus></textarea>
+                        </script>
+                        <li><span class="atr">placeholder</span> – tekst meýdançanyň içi doldurylmanka goşmaça maglumat berýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" placeholder="Tekst giriziň"></textarea>
+                        </script>
+                        <li><span class="atr">required</span> – eger-de atribut ýazylan bolsa, onda tekst meýdançasyny hökman doldurmaly:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" required></textarea>
+                        </script>
+                        <li><span class="atr">maxlength</span> – tekst meýdançasyna girizip boljak maksimal simwollaryň mukdaryny berýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" maxlength="100"></textarea>
+                        </script>
+                        <li><span class="atr">minlength</span> – tekst meýdançasyna girizip boljak minimal simwollaryň mukdaryny berýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea name="txt" minlength="3"></textarea>
+                        </script>
+                        <li><span class="atr">wrap</span> – eger-de tekst setire sygmaýan bolsa, onda teksti "täze setire geçirmeklik" 
+                            simwollarynyň awtomatiki dolandyryşyny ýerine ýetirýär. Aşakdaky bahalary alyp bilýär:
+                            <ul>
+                                <li><span class="atr-value">soft</span> – eger sözler setire sygmasa awtomatiki täze setire geçirilýär, ýöne "täze setire 
+                                    geçmeklik" simwollary web-serwere iberilmeýär (kabulgörlen baha):
+                                </li>
+                                <li><span class="atr-value">hard</span> – eger sözler setire sygmasa awtomatiki täze setire geçirilýär we "täze setire 
+                                    geçmeklik" simwollary web-serwere iberilýär (bu ýagdaýda <span class="atr">cols</span> atributynyň
+                                    bahasyny bermeli):                                    
+                                </li>
+                                <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <textarea name="txt1" wrap="soft"></textarea>
+                                    <textarea name="txt2" wrap="hard" cols="20"></textarea>
+                                </script>
+                            </ul>
+                        </li>
+                        <li><span class="atr">form</span> – elementi formuň identifikatory boýunça form bilen baglaýar (eger-de element formuň daşynda ýerleşýän bolsa ulanylýar):</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <form action="process.php" id="form1"></form>
+                            <textarea name="txt1" form="form1"></textarea>
+                        </script>
+                    </ul>
+                    <p>
+                        CSS 3-de <span class="atr">resize</span> stil atributynyň kömegi bilen tekst meýdançasynyň ölçegini syçanjyk arkaly üýtgedip boljakdygyny
+                        ýa-da bolmajakdygyny sazlap bolýar. Bu stil atributy aşakdaky ýaly bahalary alyp bilýär:
+                    </p>
+                    <ul>
+                        <li><span class="atr-value">none</span> – polýanyň ölçeglerini üýtgedip bolmaýar;</li>
+                        <li><span class="atr-value">horizontal</span> – ölçegi diňe gorizontal ugurda üýtgedip bolýar;</li>
+                        <li><span class="atr-value">vertical</span> – ölçegi diňe wertikal ugurda üýtgedip bolýar;</li>
+                        <li><span class="atr-value">both</span> – ölçegi hem gorizontal hem wertikal ugurda üýtgedip bolýar.</li>
+                        <p>Mysal üçin:</p>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <textarea cols="25" rows="10" style="resize: both">Tekst</textarea>
+                        </script>
+                    </ul>
+                </div>
+                <!--select-->
+                <div class="item-container" id="c-15">
+                    <h2 class="sticky"><span class="teg">select</span> tegi <a href="#c-15">#</a></h2>
+                    <p>
+                        Jübüt teg bolan <span class="teg">select</span> tegi formuň içinde mümkin bolan bahalara eýe sanawy döredýär: 
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <select>
+                            <option>Element 1</option>
+                            <option>Element 2</option>
+                        </select>                         
+                    </script>
+                    <div class="code-run">
+                        <select>
+                            <option>Element 1</option>
+                            <option>Element 2</option>
+                        </select>
+                    </div>
+                    <p>Bu tegiň aşakdaky ýaly atributlary bar:</p>
+                    <ul>
+                        <li><span class="atr">name</span> – sanawyň unikal adyny bermek:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1">
+                        </script>
+                        <li><span class="atr">size</span> – sanawyň hemme görünýän elementleriniň mukdaryny bermek:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1" size="3">
+                        </script>
+                        <li><span class="atr">multiple</span> – sanawdan (ýekeje däl-de) birnäçe elementi saýlap boljakdygyny kesgitleýär. Serwer tarapda sanawyň ähli elementleriniň bahalaryny almak üçin sanawyň adyndan soňra kwadrat ýaýlary ýazmaly (PHP dilinde massiwi alamatlandyrýar):</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1[]" size="3" multiple>
+                        </script>
+                        <li><span class="atr">disabled</span> – elementi işjeňsizleşdirýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1" disabled>
+                        </script>
+                        <li><span class="atr">autofocus</span> – sahypa ýüklenende element işjeň ýagdaýda bolýar:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1" autofocus>
+                        </script>
+                        <li><span class="atr">required</span> – eger-de atribut ýazylan bolsa, onda sanawyň içinden hökman element saýlanan bolmaly:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1" size="2" required>
+                                <option>Element1</option>
+                                <option>Element2</option>
+                            </select>                                
+                        </script>
+                        <li><span class="atr">form</span> – elementi formuň identifikatory boýunça form bilen baglaýar (eger-de element formuň daşynda ýerleşýän bolsa ulanylýar):</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <form action="process.php" id="form1"></form>
+                            <select name="select1" form="form1">
+                            <option>Element1</option>
+                                <option>Element2</option>
+                            </select>
+                        </script>
+                    </ul>
+                    <p>
+                        <span class="teg">select</span> teginiň içinde sanawyň her bir elementini beýan etmek üçin niýetlenen <span class="teg">option</span> tegi ýerleşdirilýär. 
+                    </p>
+                    <p>Bu tegiň aşakdaky ýaly atributlary bar:</p>
+                    <ul>
+                        <li><span class="atr">value</span> – eger-de sanawyň elementi saýlanan bolsa, onda bu atributa berlen baha web-serwere iberiler:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1">
+                                <option value=" val1">Element1</option>
+                                <option>Element2</option>
+                            </select>                                
+                        </script>
+                        <p>
+                            Eger-de bu mysalda "Element1" saýlanan bolsa, onda web-serwere "select1=val1" iberiler. Eger "Element2" saýlanan bolsa, onda web-serwere "select1=Element2" iberiler.
+                        </p>
+                        <li><span class="atr">selected</span> – sahypa ýüklenende başlangyçda saýlanan elementi kesgitlemek üçin ulanylýar:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1">
+                                <option value=" val1">Element1</option>
+                                <option selected>Element2</option>
+                            </select>                                                                
+                        </script>
+                        <li><span class="atr">disabled</span> – sanawyň elementini işjeňsizleşdirýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1">
+                                <option value=" val1">Element1</option>
+                                <option disabled>Element2</option>
+                            </select>                                                                
+                        </script>
+                    </ul>
+                    <p>
+                        <span class="teg">optgroup</span> teginiň kömegi bilen sanawyň birnäçe maddasyny bir topara birikdirip bolýar. Toparyň ady <span class="atr">label</span> atributyň kömegi bilen berilýär:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                            data-prismjs-copy-success="Kopýalandy">
+                            <select name="select1">
+                                <optgroup label="Amerikan awto-ulaglar">
+                                    <option value="1">Ford</option>
+                                    <option value="2">Mustang</option>
+                                    <option value="3">Tesla</option>
+                                </optgroup>
+                                <optgroup label="Nemes awto-ulaglar">
+                                    <option value="4">BMW</option>
+                                    <option value="5">Opel</option>
+                                    <option value="6">Audi</option>
+                                </optgroup>
+                            </select>                                                      
+                    </script>
+                    <div class="code-run">
+                        <select name="select1">
+                            <optgroup label="Amerikan awto-ulaglar">
+                                <option value="1">Ford</option>
+                                <option value="2">Mustang</option>
+                                <option value="3">Tesla</option>
+                            </optgroup>
+                            <optgroup label="Nemes awto-ulaglar">
+                                <option value="4">BMW</option>
+                                <option value="5">Opel</option>
+                                <option value="6">Audi</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <p>
+                        Eger-de <span class="teg">optgroup</span> teginiň içinde <span class="atr">disabled</span> atributy ýazylsa onda topar işjeňsizleşer we elýetersiz bolar. 
+                    </p>
+                </div>
+                <!--button-->
+                <div class="item-container" id="c-16">
+                    <h2 class="sticky"><span class="teg">button</span> tegi <a href="#c-16">#</a></h2>
+                    <div class="note">
+                        Jübüt teg bolan <span class="teg">button</span> teginiň kömegi bilen formuň içine düwme goýup bolýar. Bu tegiň arasynda dürli elementler ýa-da ýönekeý tekst ýerleşdirilip bilner. Mysal üçin:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <button type="button">Düwme</button>
+                    </script>
+                    <p>Bu tegiň aşakdaky ýaly atributlary bar:</p>
+                    <ul>
+                        <li><span class="atr">type</span> – düwmaniň görnüşini berip bolýar. Aşakdaky bahalary alyp bilýär:
+                            <ul>
+                                <li><span class="atr-value">submit</span> – basylan ýagdaýynda formdaky maglumatlar serwere iberilýär (kabulgörlen baha):</li>
+                                <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <button type="submit">Iber</button>
+                                </script>
+                                <li><span class="atr-value">reset</span> – basylan ýagdaýynda formuň içindäki ähli elementleriň bahalary pozulýar, has takygy formuň elementlerine başlangyç bahalar berilýär:</li> 
+                                <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <button type="reset">Poz</button>
+                                </script>
+                                <li><span class="atr-value">button</span> – adaty buýruk düwmesi:</li> 
+                                <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <button type="button" onclick="alert('OK')">OK</button>
+                                </script>
+                            </ul>
+                        </li>
+                        <li><span class="atr">name</span> – düwmäniň adyny bermek;</li>
+                        <li><span class="atr">value</span> – serwere iberiljek bahany bermeklik (name=value):</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                <button name="btn1" value="OK">Iber</button>
+                        </script>
+                        <li><span class="atr">disabled</span> – düwmäniň işjeňsizleşdirilmegi:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                <button disabled>Iber</button>
+                        </script>
+                        <li><span class="atr">autofocus</span> – sahypa ýüklenende düwme aktiw ýagdaýa getirilýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                <button name="btn1" value="OK">Iber</button>
+                        </script>
+                        <li><span class="atr">form</span> – formuň identifikatory boýunça düwmäni form bilen bagalýar (eger-de düwme 
+                            formuň daşynda ýerleşýän bolsa ulanylýar);
+                            </li>
+                        <li><span class="atr">formaction</span> – formuň maglumatlaryny işläp taýýarlajak programmanyň URL salgysyny bermek. URL salgy absolýut ýa-da otnositel görnüşde berlip bilner:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                <button type="submit" formaction="/action_page2.php">Iber</button>
+                        </script>
+                        <li><span class="atr">formenctype</span> – iberilýän maglumatlaryň kodlama usulyny bermek. Alyp biljek bahalary: <span class="atr-value">application/x-www-form-urlencoded</span> (kabulgörlen baha) we <span class="atr-value">multipart/form-data</span> 
+                            (web-serwere faýallar iberilende berilýän baha);
+                            </li>
+                        <li><span class="atr">formmethod</span> – formuň maglumatlarynyň web-serwere haýsy usul bilen iberiljegini 
+                            kesgitlemek. Alyp biljek bahalary: "GET" we "POST";
+                            </li>
+                        <li><span class="atr">formtarget</span> – iberilen form maglumatlarynyň web-serwerdäki programma tarapyndan işlenilip taýýarlanylan netijesiniň, ýagny dokumentiň nirä ýerleşdiriljekdigini kesgitleýär. Mysal üçin:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="/action_page.php" method="get">
+                                        <label for="fname">Adyňyz:</label>
+                                        <input type="text" id="fname" name="fname"><br><br>
+                                        <label for="lname">Familiýaňyz:</label>
+                                        <input type="text" id="lname" name="lname"><br><br>
+                                        <button type="submit">Netijäni görkez</button>
+                                        <button type="submit" formtarget="_blank">Netijän görkez</button>
+                                     </form>                                     
+                        </script>
+                        <li><span class="atr">formvalidate</span> – eger-de ýazylan ýagdaýynda forma girizilen maglumatlar barlagdan geçirilmez:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                                    data-prismjs-copy-success="Kopýalandy">
+                                    <form action="process.php" id="form1"></form>
+                                    <button form="form1" formaction="test.php" formmethod="GET" formenctype="application/x-www-form-urlencoded" formtarget="_blank" formnovalidate="formnovalidate">Iber</button>                
+                        </script>
+                    </ul>
+                </div>
+                <!--label-->
+                <div class="item-container" id="c-17">
+                    <h2 class="sticky"><span class="teg">label</span> tegi <a href="#c-17">#</a></h2>
+                    <div class="note">
+                        Jübüt teg bolan <span class="teg">label</span> teginiň kömegi bilen formuň elementleri üçin düşündiriş ýazgylaryny goýup bolýar. Mysal üçin:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <form action="/action_page.php">
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">HTML</label><br>
+                            <input type="radio" id="css" name="fav_language" value="CSS">
+                            <label for="css">CSS</label><br>
+                            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                            <label for="javascript">JavaScript</label><br><br>
+                            <input type="submit" value="Iber">
+                        </form>                           
+                    </script>
+                    <div class="code-run">
+                        <form action="/action_page.php">
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">HTML</label><br>
+                            <input type="radio" id="css" name="fav_language" value="CSS">
+                            <label for="css">CSS</label><br>
+                            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                            <label for="javascript">JavaScript</label><br><br>
+                            <input type="submit" value="Iber">
+                        </form>
+                    </div>
+                    <p>Bu tegiň aşakdaky ýaly iki sany atributy bar:</p>
+                    <ul>
+                        <li><span class="atr">for</span> – <span class="atr-1">&ltlabel&gt</span> teginiň içindäki ýazgy formuň haýsy elementine baglanmaly bolsa, bu atributyň bahasyna şol elementiň identifikatory berilýär:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <label for="passw1">Parol*:</label>
+                            <input type="password" name="passw1" id="passw1">                           
+                        </script>
+                        <p>
+                            Eger-de formuň elementi <span class="teg">label</span> teginiň içine ýerleşdirilse, onda <span class="atr">for</span> atributyň bahasy 
+                                berilmese hem tegiň içindäki ýazgy elemente bagalanar:
+                        </p>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <label>Parol*:
+                                <input type="password" name="passw1" id="passw1">
+                            </label>                                               
+                        </script>
+                        <li><span class="atr">accesskey</span> – gysga ýol klawişasynyň bahasyny bermeklik üçin ulanylýar. Kesgitlenen gysga ýol klawişasy bilen birlikde (Chrome we Safari brauzerler üçin) "ALT" klawişasy, (Firefox brauzeri üçin) "SHIFT+ALT" klawişasy, (Opera brauzeri üçin) "SHIFT+ESC" klawişasy basylsa, onda tegiň arasyndaky element fokus ýagdaýyna getiriler:</li>
+                        <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                            <label accesskey="N">Parol*:
+                                <input type="password" name="passw1" id="passw1">
+                            </label>                                                    
+                        </script>
+                    </ul>
+                    <p>Mysal hökmünde ulanyjyny hasaba almaklyk formuna seredip geçeliň:</p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>Ulanyjyny hasaba almaklyk formy</title>
+                            <style type="text/css">
+                                body {
+                                    /* Ähli dokument üçin stiller */
+                                    font-size: 10pt;
+                                    /* Şriftiň ölçegi */
+                                    font-family: "Verdana", sans-serif;
+                                    /* Şriftiň ady */
+                                }
+                                label {
+                                    /* Ähli label elementleri üçin stil */
+                                    display: inline-block;
+                                    /* Bloguň görnüşi */
+                                    width: 150px;
+                                    /* Ini */
+                                    vertical-align: top;
+                                    /* Keseligine deňleme */
+                                }
+                                select {
+                                    /* Ähli sanawlar üçin stiller */
+                                    width: 250px;
+                                    /* Ini */
+                                    border: 1px solid black;
+                                    /* Çägiň stili */
+                                }
+                                input.txt {
+                                    /* txt atly synpy bolan input elementleri üçin stil */
+                                    width: 250px;
+                                    /* Ini */
+                                    border: 1px solid black;
+                                    /* Çägiň stili */
+                                }
+                                textarea {
+                                    /* Köpsetirli tekst meýdançasy üçin stil */
+                                    width: 250px;
+                                    /* Ini */
+                                    height: 100px;
+                                    /* Beýikligi */
+                                    border: 1px solid black;
+                                    /* Çägiň stili */
+                                }
+                                form div {
+                                    /* form elementiniň içindäki ähli div elementleri üçin stil */
+                                    margin-bottom: 20px;
+                                    /* Bloguň aşagyndaky boşluk */
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <h1>Ulanyjyny hasaba almaklyk formy</h1>
+                            <form action="reg.php" method="POST" enctype="multipart/form-data">
+                                <div><label for="login">Login*:</label>
+                                    <input type="text" name="login" id="login" class="txt" required>
+                                </div>
+                                <div><label for="passw1">Parol*:</label>
+                                    <input type="password" name="passw1" id="passw1" class="txt" required>
+                                </div>
+                                <div><label for="passw2">Paroly gaýtalaň*:</label>
+                                    <input type="password" name="passw2" id="passw2" class="txt" required>
+                                </div>
+                                <div><label for="jynsy1">Jynsy*:</label>
+                                    Ogl. <input type="radio" name="jynsy" id="jynsy1" value="1">
+                                    Gyz. <input type="radio" name="jynsy" id="jynsy2" value="2"></div>
+                                <div><label for="education">Bilimi*:</label>
+                                    <select id="education" name="education" required>
+                                        <option value="" disabled>&nbsp;</option>
+                                        <option value="1">Orta</option>
+                                        <option value="2">Ýokary</option>
+                                    </select>
+                                </div>
+                                <div><label for="comment">Teswir:</label>
+                                    <textarea id="comment" name="comment" cols="15" rows="10"></textarea>
+                                </div>
+                                <div><label for="userfile">Fotosuratyňyz:</label>
+                                    <input type="file" name="userfile" id="userfile">
+                                </div>
+                                <div><label for="rule">Düzgünleri kabul edýärin*:</label>
+                                    <input type="checkbox" name="rule" id="rule" value="yes" required>
+                                </div>
+                                <div>
+                                    <input type="submit" value="Iber" style="margin-left: 150px;">
+                                </div>
+                            </form>
+                        </body>
+                        </html>
+                    </script>
+                    <div class="code-run">
+                        <h1>Ulanyjyny hasaba almaklyk formy</h1>
+                            <form action="reg.php" method="POST" enctype="multipart/form-data">
+                                <div><label for="login">Login*:</label>
+                                    <input type="text" name="login" id="login" class="txt" required>
+                                </div>
+                                <div><label for="passw1">Parol*:</label>
+                                    <input type="password" name="passw1" id="passw1" class="txt" required>
+                                </div>
+                                <div><label for="passw2">Paroly gaýtalaň*:</label>
+                                    <input type="password" name="passw2" id="passw2" class="txt" required>
+                                </div>
+                                <div><label for="jynsy1">Jynsy*:</label>
+                                    Ogl. <input type="radio" name="jynsy" id="jynsy1" value="1">
+                                    Gyz. <input type="radio" name="jynsy" id="jynsy2" value="2"></div>
+                                <div><label for="education">Bilimi*:</label>
+                                    <select id="education" name="education" required>
+                                        <option value="" disabled>&nbsp;</option>
+                                        <option value="1">Orta</option>
+                                        <option value="2">Ýokary</option>
+                                    </select>
+                                </div>
+                                <div><label for="comment">Teswir:</label>
+                                    <textarea id="comment" name="comment" cols="15" rows="10"></textarea>
+                                </div>
+                                <div><label for="userfile">Fotosuratyňyz:</label>
+                                    <input type="file" name="userfile" id="userfile">
+                                </div>
+                                <div><label for="rule">Düzgünleri kabul edýärin*:</label>
+                                    <input type="checkbox" name="rule" id="rule" value="yes" required>
+                                </div>
+                                <div>
+                                    <input type="submit" value="Iber" style="margin-left: 150px;">
+                                </div>
+                            </form>
+                    </div>
+                </div>
+                <!--fieldset-->
+                <div class="item-container" id="c-18">
+                    <h2 class="sticky"><span class="teg">fieldset</span> tegi <a href="#c-18">#</a></h2>
+                    <div class="note">
+                        Jübüt teg bolan <span class="teg">fieldset</span> tegi formuň elementlerini toparlaşdyrmaga mümkinçilik berýär.
+                        Web-brauzerler toparyň daşyna ramka ýerleşdirip görkezýärler. Ramkanyň çyzgysynyň geçýän ýerinden <span
+                            class="teg">legend</span> teginiň kömegi bilen toparyň adyny görkezip bolýär. Mysal üçin:
+                    </div>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <form action="/action_page.php">
+                            <fieldset>
+                                <legend>Şahsy maglumatlar</legend>
+                                <label for="fname">Adyňyz:</label>
+                                <input type="text" id="fname" name="fname"><br><br>
+                                <label for="lname">Familiýaňyz:</label>
+                                <input type="text" id="lname" name="lname"><br><br>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email"><br><br>
+                                <label for="birthday">Doglan senäňiz:</label>
+                                <input type="date" id="birthday" name="birthday"><br><br>
+                                <input type="submit" value="Iber">
+                            </fieldset>
+                        </form>                    
+                    </script>
+                    <div class="code-run">
+                        <form action="/action_page.php">
+                            <fieldset>
+                                <legend>Şahsy maglumatlar</legend>
+                                <label for="fname">Adyňyz:</label>
+                                <input type="text" id="fname" name="fname"><br><br>
+                                <label for="lname">Familiýaňyz:</label>
+                                <input type="text" id="lname" name="lname"><br><br>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email"><br><br>
+                                <label for="birthday">Doglan senäňiz:</label>
+                                <input type="date" id="birthday" name="birthday"><br><br>
+                                <input type="submit" value="Iber">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!--meter-->
+                <div class="item-container" id="c-19">
+                    <h2 class="sticky"><span class="teg">meter</span> tegi <a href="#c-19">#</a></h2>
+                    <div class="note">
+                        Jübüt teg bolan <span class="teg">meter</span> teginiň kömegi bilen diapazon aralygynyň bahasyny grafiki görnüşde şekillendirip bolýar. Tegiň aşakdaky ýaly atributlary bar:
+                    </div>
+                    <ul>
+                        <li><span class="atr">value</span> – häzirki baha;</li>
+                        <li><span class="atr">min</span> – minimal baha;</li>
+                        <li><span class="atr">max</span> – maksimal baha;</li>
+                        <li><span class="atr">optimum</span> – optimal baha;</li>
+                        <li><span class="atr">low</span> – iň pes baha;</li>
+                        <li><span class="atr">high</span> – iň uly baha.</li>
+                    </ul>
+                    <p>Mysal üçin: </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <label for="disk_c">C: diski</label>
+                        <meter id="disk_c" value="2" min="0" max="10">2/10</meter><br>
+                        <label for="disk_d">D: diski</label>
+                        <meter id="disk_d" value="0.6">60%</meter>
+                    </script>
+                    <div class="code-run">
+                        <label for="disk_c">C: diski</label>
+                        <meter id="disk_c" value="2" min="0" max="10">2/10</meter><br>
+                        <label for="disk_d">D: diski</label>
+                        <meter id="disk_d" value="0.6">60%</meter>
+                    </div>
+                </div>
+                <!--progress-->
+                <div class="item-container" id="c-20">
+                    <h2 class="sticky"><span class="teg">progress</span> tegi <a href="#c-20">#</a></h2>
+                    <div class="note">
+                        Jübüt teg bolan <span class="teg">progress</span> tegi uzyn möhletli prosesiň häzirki ýagdaýyny grafiki görnüşde şekillendirmäge mümkinçilik berýär. Bu tegiň aşakdaky ýaly atributlary bar:
+                    </div>
+                    <ul>
+                        <li><span class="atr">value</span> – häzirki baha;</li>
+                        <li><span class="atr">max</span> – maksimal baha.</li>
+                    </ul>
+                    <p>Mysal üçin:</p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <label for="file">Ýükläp alyndy:</label>
+    	                <progress id="file" value="32" max="100"> 32% </progress>
+                    </script>
+                    <div class="code-run">
+                        <label for="file">Ýükläp alyndy:</label>
+    	                <progress id="file" value="32" max="100"> 32% </progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Dizaýn Elementleri</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/prism-dark.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="contents-html.html">HTML</a>
+                <a href="contents-css.html">CSS</a>
+                <a href="contents-javascript.html">JavaScript</a>
+                <a href="glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="contents-html.html">HTML</a>
+                    <a href="contents-css.html">CSS</a>
+                    <a href="contents-javascript.html">JavaScript</a>
+                    <a href="glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Habarnama gutulary</a></li>
+                    <li><a class="btn" href="#c-2">Elementler we atributlar</a></li>
+                    <li><a class="btn" href="#c-3">Tablisalar</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 06.10.2023</div>
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="index.html">Esasy</a><span>/</span></li>
+                    <li><a href="contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Dizaýn Elementleri</li>
+                </ul>
+                <!--Habarnama gutulary-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Habarnama Gutulary <a href="#c-1">#</a></h2>
+                    <p>
+                        Aşakda habarnama gutularynyň görnüşleri berlen:
+                    </p>
+                    <h2 class="sticky">1. Umumy habar gutusy (<code class="language-css">class="note"</code>)</h2>
+                    <div class="note">
+                        <ul>
+                            <li>Islendik tekst redaktory: Bloknot, Notepad++, Atom, Sublime, <em>Visual Studio Code</em> we ş.m.;</li>
+                            <li>Islendik web-brauzer: Chrome, Safari, Edge, Firefox, Opera we ş.m.</li>
+                        </ul>
+                        <p>
+                            Web-sahypalaryň düzümi HTML dilini ulanmaklyk bilen taýýarlanylýar. Bu diliň iň soňky wersiýasy HTML 5. HTML dili
+                            programmalaşdyrma dili däl-de web-sahypalary <em>belgileme</em> dilidir.
+                        </p>
+                    </div>
+                    <h2 class="sticky">2. Bellik gutusy (<code class="language-css">class="note-red"</code>)</h2>
+                    <div class="note-red">
+                        Saýtyň faýllary web-serwere ýüklenmedik ýagdaýynda gipersalgynyň başlangyjyna / (sleş) simwoly goýulsa faýlyň ýoly ýalňyş bolar we web-sahypa açylmaz. Çünki, operasion sistema faýlyň kök papkasynyň haýsydygyny bilmeýänligi üçin faýly açyp bilmez. Şonuň üçin bu faýlyň açylmasy üçin bu faýlyň operasion sistemadaky doly ýoly görkezilmeli.
+                    </div>
+                    <h2 class="sticky">3. Deslapky kody işletmegiň gutusy (<code class="language-css">class="code-run"</code>)</h2>
+                    <div class="code-run">
+                        <canvas id="myCanvas">
+                            Siziň brauzeriňiz "canvas" tegini gollamaýar.
+                        </canvas>
+                        <script>
+                            var c = document.getElementById("myCanvas");
+                            var ctx = c.getContext("2d");
+                            ctx.fillStyle = "red";
+                            ctx.fillRect(20, 20, 75, 50);
+                            //Durulygy aktiw etmeklik
+                            ctx.globalAlpha = 0.2;
+                            ctx.fillStyle = "blue";
+                            ctx.fillRect(50, 50, 75, 50);
+                            ctx.fillStyle = "green";
+                            ctx.fillRect(80, 80, 75, 50);
+                        </script>
+                    </div>  
+                </div>
+                <!--Elementler we atributlar-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Atributlar <a href="#c-2">#</a></h2>
+                        <ul>
+                            <li><span class="teg">teg</span> (<code class="language-css">class="teg"</code>)</li>
+                            <div class="note">
+                                <span class="teg">a</span> tegiň kömegi bilen HTML dokumentine daşky gipersalgylary goýup bolýar. 
+                            </div>
+                            <li><span class="atr">atribut-1</span> (<code class="language-css">class="atr"</code>)</li>
+                            <div class="note">
+                                    Eger-de URL salgynyň düzüminde <span class="atr">&amp;</span> simwoly bar bolsa, onda oňa derek 
+                                    <span class="atr">&amp;amp;</span> HTML ekwiwalentini goýmaly.
+                            </div>
+                            <li><span class="atr-value">atribut-baha</span> (<code class="language-css">class="atr-value"</code>)</li>
+                            <div class="note">                        
+                                <span class="teg" style="text-decoration: none;">iframe <span class="atr">sandbox</span> = <span class="atr-value">allow-forms</span></span>
+                            </div>
+                            <li><span class="atr-1">atribut-2</span> (<code class="language-css">class="atr-1"</code>)</li>
+                            <div class="note">
+                                <div class="atr-1">http://www.mysite.com/</div>
+                                <div class="atr-1">http://www.mysite.com/folder/</div>
+                            </div>
+                            <li><span class="atr-link">gipersalgy</span> (<code class="language-css">class="atr-link"</code>)</li>
+                            <div class="note">
+                                <span class="atr-link">http://www.mysite.com/folder1/folder2/file1.html</span>
+                            </div>
+                            <li><code class="language-markup"><!--<del>Setir HTML elementi</del>--></code></li>
+                            <div class="note">
+                                Bu tegiň <span class="atr">cite</span> atributynyň bahasy tekstiň pozulma sebäbini düşündirýän 
+                                sahypanyň salgysy hökmünde berilýär. Tegiň <span class="atr">datetime</span> atributynyň bahasy 
+                                tekstiň pozulma senesini görkezýär. Pozulan tekstiň ýerine goýlan tekst 
+                                <span class="atr">&ltins&gt</span> tegi bilen berilýär. Mysal üçin:
+                                <code class="language-markup"><!--<del>Köne tekst</del>--></code> 
+                                <code class="language-markup"><!--<ins>Täze tekst</ins>--></code>
+                            </div>
+                        </ul>
+                </div>
+                <!--Tablisalar-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Tablisalar <a href="#c-3">#</a></h2>
+                    <h2 class="sticky">Tablisa-1 (<code class="language-css">class="table-1"</code>)</h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Element</th>
+                                <th>Wezipesi</th>
+                                <th>Brauzerde görkezilişi</th>
+                            </tr>
+                            <tr>
+                                <td>&lt;cite&gt;</td>
+                                <td>Sitatalaryň we eserleriň atlary</td>
+                                <td>Has gara ýazylan görnüşde görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;code&gt;</td>
+                                <td>Programma kodlary</td>
+                                <td>Monogiňişlikli (monospace) şrift bilen görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;abbr&gt;</td>
+                                <td>Abbrewiýatura</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;kbd&gt;</td>
+                                <td>Ulanyjy tarapyndan klawiaturadan girizilen tekst</td>
+                                <td>Monogiňişlikli (monospace) şrift bilen görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;q&gt;</td>
+                                <td>Gysga sitatalar</td>
+                                <td>Goşa dyrnagyň içinde görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;samp&gt;</td>
+                                <td>Haýsy hem bolsa bir programma tarapyndan görkezilýän maglumatlar</td>
+                                <td>Monogiňişlikli (monospace) şrift bilen görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;var&gt;</td>
+                                <td><em>Deslapky programmadaky</em> üýtgeýäniň ady</td>
+                                <td>asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;dfn&gt;</td>
+                                <td>Tekstiň içindäki täze termin</td>
+                                <td>Kursiw görnüşde görkezilýär</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <figcaption>Logiki formatirleme elementleri</figcaption>
+                    <h2 class="sticky">Tablisa-2 (DIV elementi arkaly) (<code class="language-css">class="data-vis"</code>)</h2>
+                    <div class="data-vis">
+                        <div>&lt;address&gt;</div>
+                        <div>&lt;article&gt;</div>
+                        <div>&lt;aside&gt;</div>
+                        <div>&lt;blockquote&gt;</div>
+                        <div>&lt;canvas&gt;</div>
+                        <div>&lt;dd&gt;</div>
+                        <div>&lt;div&gt;</div>
+                        <div>&lt;dl&gt;</div>
+                        <div>&lt;dt&gt;</div>
+                        <div>&lt;fieldset&gt;</div>
+                        <div>&lt;figcaption&gt;</div>
+                        <div>&lt;figure&gt;</div>
+                        <div>&lt;footer&gt;</div>
+                        <div>&lt;form&gt;</div>
+                        <div>&lt;h1&gt;...&lt;h6&gt;</div>
+                        <div>&lt;header&gt;</div>
+                        <div>&lt;hr&gt;</div>
+                        <div>&lt;li&gt;</div>
+                        <div>&lt;main&gt;</div>
+                        <div>&lt;nav&gt;</div>
+                        <div>&lt;noscript&gt;</div>
+                        <div>&lt;ol&gt;</div>
+                        <div>&lt;p&gt;</div>
+                        <div>&lt;pre&gt;</div>
+                        <div>&lt;section&gt;</div>
+                        <div>&lt;table&gt;</div>
+                        <div>&lt;tbody&gt;</div>
+                        <div>&lt;tfoot&gt;</div>
+                        <div>&lt;ul&gt;</div>
+                        <div>&lt;video&gt;</div>
+                    </div>
+                    <figcaption>HTML diliniň käbir blok elementleri</figcaption>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="about-project.html">Proýekt barada</a> |
+                <a href="glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="js/prism-dark.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-theme.js"></script>
+</body>
+
+</html>

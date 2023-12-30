@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Audio we wideo</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Audio we wideo</a></li>
+                    <li><a class="btn" href="#c-2">Audioroligi goşmak</a></li>
+                    <li><a class="btn" href="#c-3">Wideoroligi goşmak</a></li>
+                    <li><a class="btn" href="#c-4">Audio we wideo üçin birden köp çeşmäniň görkezilmegi</a></li>
+                    <li><a class="btn" href="#c-5"><b class="teg">track</b> tegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 27.12.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Audio we wideo</li>
+                </ul>
+                <!--Audio we wideo-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Audio we wideo <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        HTML 5 diline goşmaça programmalary ulanmazdan audio we wideo rolikleri goşup bolýar. Käbir köne brauzerler audio we
+                        wideo roliklerini goşmaklyk üçin niýetlenen tegleri gollamaýarlar.
+                    </div>
+                </div>
+                <!--Audioroligi goşmak-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">Audioroligi goşmak <a href="#c-2">#</a></h2>
+                    <p>
+                        Web-sahypa audiorolik <span class="teg">audio</span> teginiň kömegi bilen goşulýar:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <audio controls>
+                            <source src="PinkPanther30.wav" type="audio/wav">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Siziň brauzeriňiz audio elementini gollamaýar.
+                        </audio>                    
+                    </script>
+                    <div class="code-run">
+                        <audio controls>
+                            <source src="PinkPanther30.wav" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Siziň brauzeriňiz audio elementini gollamaýar.
+                        </audio> 
+                    </div>
+                    <p>
+                        Eger-de brauzer <span class="teg">audio</span> tegini gollamaýan bolsa, onda <span class="teg">audio</span> tegiň arasyndaky degişli ýazgy görkeziler.
+                    </p>
+                    <p>Internetde esasan aşakdaky audio formatlar ulanylýar: MP3, AAC, OGG/Vorbis we WAV.</p>
+                    <p><span class="teg">audio</span> tegiň aşakdaky ýaly atributlary bar:</p>
+                    <div class="note">
+                        <ul>
+                            <li><span class="atr">src</span> – audio faýlyň ýoly;</li>
+                            <li><span class="atr">autoplay</span> – eger-de ýazylan bolsa, onda sahypa ýüklenen mahaly audio faýl aýdyp başlar;</li>
+                            <li><span class="atr">controls</span> – eger-de ýazylan bolsa, onda ekranda roligi aýtdyrmak üçin gerekli bolan dolandyryş elementleri görkeziler (ses gataltmak/peseltmek, pauza we aýtdyrma düwmeleri, sesi öçürme düwmesi);</li>
+                            <li><span class="atr">loop</span> – eger-de ýazylan bolsa, onda rolik tükeniksiz aýtdyrylar;</li>
+                            <li><span class="atr">muted</span> – eger-de ýazylan bolsa, onda sahypa ýüklenen mahaly, audiorolik sessiz aýtdyrylar;</li>
+                            <li><span class="atr">preload</span> – audio faýlyň öňýüklenmesini kesgitlemek üçin ulanylýar. Bu atributy diňe <span class="atr">autoplay</span> atributy ulanylmadyk ýagdaýda ulanyp bolýar Üç sany bahadan birini alyp bilýär:
+                                <ul>
+                                    <li><span class="atr-value">none</span> – audio faýlyň öňýüklenmesini amala aşyrmazlyk;</li>
+                                    <li><span class="atr-value">metadata</span> – düzüminde audio faýlyň (mysal üçin faýlyň dowamlylygy) hakynda 
+                                        maglumatlary saklaýan faýlyň diňe başlangyjyny ýüklemek;
+                                        </li>
+                                    <li><span class="atr-value">auto</span> – audio faýly bütinligine ýüklemek (kabulgörlen baha).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Wideoroligi goşmak-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Wideoroligi goşmak <a href="#c-3">#</a></h2>
+                    <div class="note">Web-sahypa wideorolik <span class="teg">video</span> teginiň kömegi bilen goşulýar:</div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <video width="320" height="240" src="myvid.mp4" controls>
+                            Siziň brauzeriňiz video tegini gollamaýar.
+                        </video>                    
+                    </script>
+                    <div class="code-run">
+                        <video width="320" height="240" src="myvid.mp4" controls>
+                            Siziň brauzeriňiz video tegini gollamaýar.
+                        </video>  
+                    </div>
+                    <p>
+                        Eger-de brauzer <span class="teg">video</span> tegini gollamaýan bolsa, onda <span class="teg">video</span> tegiň arasyndaky degişli ýazgy görkeziler.
+                    </p>
+                    <p>
+                        Internetde esasan aşakdaky wideo formatlar ulanylýar: MPEG 4/H.264, OGG/Theora we WebM.
+                    </p>
+                    <p>
+                        <span class="teg">video</span> tegiň aşakdaky ýaly atributlary bar: 
+                    </p>
+                    <div class="note">
+                        <ul>
+                            <li><span class="atr">src</span> – wideo faýlyň ýoly;</li>
+                            <li><span class="atr">autoplay</span> – eger-de ýazylan bolsa, onda sahypa ýüklenen mahaly wideo faýl görkezilip başlar;</li>
+                            <li><span class="atr">controls</span> – eger-de ýazylan bolsa, onda ekranda roligi görkezmek üçin gerekli bolan dolandyryş elementleri görkeziler (ses gataltmak/peseltmek, pauza we aýtdyrma düwmeleri, sesi öçürme düwmesi, doly ekran düwmesi);</li>
+                            <li><span class="atr">loop</span> – eger-de ýazylan bolsa, onda rolik tükeniksiz görkeziler;</li>
+                            <li><span class="atr">muted</span> – eger-de ýazylan bolsa, onda sahypa ýüklenen mahaly, wideorolik sessiz görkeziler;</li>
+                            <li><span class="atr">preload</span> – wideo faýlyň öňýüklenmesini kesgitlemek üçin ulanylýar. Bu atributy diňe <span class="atr">autoplay</span> atributy ulanylmadyk ýagdaýda ulanyp bolýar. Alty sany bahadan birini alyp bilýär:
+                                <ul>
+                                    <li><span class="atr-value">none</span> – wideo faýlyň öňýüklenmesini amala aşyrmazlyk;</li>
+                                    <li><span class="atr-value">metadata</span> – düzüminde wideo faýlyň (mysal üçin faýlyň dowamlylygy) hakynda 
+                                        maglumatlary saklaýan faýlyň diňe başlangyjyny ýüklemek;
+                                        </li>
+                                    <li><span class="atr-value">auto</span> – wideo faýly bütinligine ýüklemek (kabulgörlen baha);</li>
+                                </ul>
+                            </li>
+                            <li><span class="atr">width</span> – piksel ölçeg birliginde wideo ekranyň ini;</li>
+                            <li><span class="atr">height</span> – piksel ölçeg birliginde wideo ekranyň beýikligi. Eger-de wideo ekranyň ini we beýikligi görkezilmedik bolsa, onda wideonyň hakyky ölçegi brauzeriň penjiresinde görkeziler. Eger-de iniň ýa-da beýikligiň haýsy hem bolsa biri ýazylan bolsa, onda ýazylmadyk iniň ýa-da beýikligiň ölçegi awtomatiki proporsional görnüşde saýlanar;</li>
+                            <li><span class="atr">poster</span> – wideo oýnadylmanka wideo penjiresinde görkeziljek suratyň ýoluny berip bolýar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Audio we wideo üçin birden köp çeşmäniň görkezilmegi-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">Audio we wideo üçin birden köp çeşmäniň görkezilmegi <a href="#c-4">#</a></h2>
+                    <div class="note">
+                        Dürli web-brauzerler biri-birinden tapawutly audio we wideo formatlary gollaýarlar. Şonuň üçin <span class="teg">audio</span> ýa-da <span class="teg">video</span> tegiň içinde <span class="teg">source</span> tegini ýazyp bu tegiň içinde şol bir audio ýa-da wideoroligiň tapawutly formatlaryny ýazyp bolýar. Bu ýagdaýda audio ýa-da wideorolik haýsy brauzerde açylsa degişli format görkeziler:
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <video width="320" height="240" controls>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Siziň brauzeriňiz video tegini gollamaýar.
+                        </video>
+                    </script>
+                    <p>
+                        <span class="teg">source</span> teginiň aşakdaky ýaly iki sany atributy bar:
+                    </p>
+                    <ul>
+                        <li><span class="atr">src</span> – wideo ýa-da audio faýlyň ýoly;</li>
+                        <li><span class="atr">type</span> – faýlyň MIME tipi: "video/mp4" (MPEG4 üçin), "video/webm" (WebM üçin), "audio/mpeg" (MP3 üçin), "audio/ogg" (OGG üçin) we ş.m. Eger-de bu atributyň bahasy berilmese, onda faýlyň formatyny web-brauzeriň özi kesgitlär. </li>
+                    </ul>
+                </div>
+                <!--Track tegi-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky"><span class="teg">track</span> tegi <a href="#c-5">#</a></h2>
+                    <div class="note">
+                        <span class="teg">track</span> tegi audio ýa-da wideo elementlerine tekst ýodajygyny – meselem, wideonyň içine subtitrleri goşmaga mümkinçilik berýär. Tekst ýodajyklaryň formaty WebVTT formatdyr (.vtt):
+                    </div>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <video width="320" height="240" controls>
+                            <source src="forrest_gump.mp4" type="video/mp4">
+                            <source src="forrest_gump.ogg" type="video/ogg">
+                            <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                            <track src="fgsubtitles_no.vtt" kind="subtitles" srclang="tm" label="Turkmen">
+                       </video>                       
+                    </script>
+                    <p><span class="teg">track</span> teginiň aşakdaky ýaly iki sany atributy bar:</p>
+                    <div class="note">
+                        <ul>
+                            <li><span class="atr">src</span> – tekst ýodajygy faýlyň ýoluny bermek;  </li>
+                            <li><span class="atr">srclang</span> – tekst ýodajygy faýlyň içinde ulanylan diliň koduny bermek;</li>
+                            <li><span class="atr">kind</span> – tekst ýodajygy faýlyň tipini bermek:
+                                <ul>
+                                    <li><span class="atr-value">subtitles</span> – subtitrler;</li>
+                                    <li><span class="atr-value">captions</span> – sözbaşylar;</li>
+                                    <li><span class="atr-value">descriptions</span> – beýan;</li>
+                                    <li><span class="atr-value">chapters</span> – bölümler;</li>
+                                    <li><span class="atr-value">metadata</span> – metamaglumatlar.</li>
+                                </ul>
+                            </li>
+                            <li><span class="atr">label</span> – tekst ýodajygyň atlandyrylyşy;</li>
+                            <li><span class="atr">default</span> – eger-de bu atribut ýazylan bolsa, onda subtitrleriň içinden başlangyç subtitr hökmünde kabul edilýär.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

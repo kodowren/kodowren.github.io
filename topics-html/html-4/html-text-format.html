@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Teksti formatirlemek</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Teksti formatirlemek</a></li>
+                    <li><a class="btn" href="#c-2">HTML ekwiwalentleri</a></li>
+                    <li><a class="btn" href="#c-3">Täze setire geçmeklik <b>&ltbr&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-4">Tekstiň bölekleriniň tapawutlandyrylmagy</a></li>
+                    <li><a class="btn" href="#c-5">Logiki formatirleme tegleri</a></li>
+                    <li><a class="btn" href="#c-6">Ýokarky we aşaky indeksleriň döredilmegi</a></li>
+                    <li><a class="btn" href="#c-7"><b>&ltspan&gt</b> tegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 19.08.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">Teksti formatirlemek</li>
+                </ul>
+                <!--Teksti formatirlemek-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Teksti formatirlemek <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        Blok elementleriň içindäki teksti formatirlemek üçin setir elementleri ulanylýar. Aşakda setir elementler
+                        düşündirilýär.
+                    </div>
+                </div>
+                <!--HTML ekwiwalentleri-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">HTML ekwiwalentleri <a href="#c-2">#</a></h2>
+                    <p>
+                        Brauzerde ýörite simwollary görkezmeklik üçin HTML ekwiwalentleri ulanylýar. Köp ulanylýan HTML ekwiwalentleri
+                        aşakda berlen:
+                    </p>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1">
+                            <tr>
+                                <th>HTML ekwiwalenti</th>
+                                <th>Beýany</th>
+                            </tr>
+                            <tr>
+                                <td>&amp;lt;</td>
+                                <td>Kiçidir belgisi (&lt;)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;gt;</td>
+                                <td>Uludyr belgisi (&gt;)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;amp;</td>
+                                <td>Ampersand belgisi (&amp;)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;nbsp;</td>
+                                <td>Probel</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;quot;</td>
+                                <td>Goşa dyrnak (&quot;)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;copy;</td>
+                                <td>Eýeçilik hukugy belgisi (&copy;)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;reg;</td>
+                                <td>Hasaba alnan söwda markasynyň belligi (&reg;)</td>
+                            </tr>
+                            <tr>
+                                <td>&amp;trade;</td>
+                                <td>Söwda markasy (&trade;)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <figcaption>HTML ekwiwalentleri</figcaption>
+                </div>
+                <!--Täze setire geçmeklik-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Täze setire geçmeklik <a href="#c-3">#</a></h2>
+                    <p>
+                        Täze setire geçmeklik üçin <span class="atr">&ltbr&gt</span>
+                         tegi ulanylýar. Eger-de aşakdaky ýaly HTML koduny
+                        ýazsak:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <p>
+                            Setir1 
+                            Setir2 
+                            Setir3
+                         </p>                         
+                    </script>
+                    <p>
+                        Onda brauzer absazy her sözüň arasyna bir boşluk goýmaklyk bilen bir setirde görkezer:
+                        <code>Setir1 Setir2 Setir3</code>. Setirleri aşakly-aşagyna ýerleşdirmek üçin <span class="atr">&ltbr&gt</span>
+                        tegini ulanmaly:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <p>
+                            Setir1 <br>
+                            Setir2 <br>
+                            Setir3
+                         </p>                                                  
+                    </script>
+                    <p>
+                        Eger-de sözleriň arasyna birden köp boşluk goýulmak islense, onda <span class="atr">&amp;nbsp;</span> HTML ekwiwalentinden peýdalanyp bolar:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <p>
+                            Söz1&nbsp; &nbsp; &nbsp;Söz2<br>
+                            Söz3
+                        </p>                                                  
+                    </script>
+                    <p>
+                        Teksti <span class="atr">deslapky koddaky</span> (source code) görnüşde görkezmelik üçin jübüt <span
+                            class="atr">&ltpre&gt</span> tegi ulanlyp bilner, ýöne bu ýagdaýda tekst brauzerde redaktordaky formatda
+                        görkeziler:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <pre>
+                            Bölüm 1
+                            Bölüm 1.1
+                            Bölüm 1.2
+                        </pre>                                                                           
+                    </script>
+                </div>
+                <!--Tekstiň bölekleriniň tapawutlandyrylmagy-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">Tekstiň bölekleriniň tapawutlandyrylmagy <a href="#c-4">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1">
+                            <tr>
+                                <th>Element</th>
+                                <th>Beýany</th>
+                            </tr>
+                            <tr>
+                                <td>&ltb&gt</td>
+                                <td>Teksti has gara ýazylan (galyň) görnüşe öwürýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltstrong&gt</td>
+                                <td>Teksti has gara ýazylan (galyň) görnüşe öwürýär. Tekstiň möhüm bölegini görkezmek üçin ulanylýar. <span
+                                        class="atr">&ltb&gt</span> teginiň deregine ulanylyp bilner</td>
+                            </tr>
+                            <tr>
+                                <td>&lti&gt</td>
+                                <td>Teksti kursiw (gytaklaýyn) görnüşe öwürýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltem&gt</td>
+                                <td>Teksti kursiw (gytaklaýyn) görnüşe öwürýär. <span class="atr">i</span> teginiň deregine ulanylyp bilner</td>
+                            </tr>
+                            <tr>
+                                <td>&ltu&gt</td>
+                                <td>Tekstiň aşagyny çyzylan görnüşde görkezýär</td>
+                            </tr>
+                            <tr>
+                                <td>&lts&gt</td>
+                                <td>Tekstiň üstüni çyzylan görnüşde görkezýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltdel&gt</td>
+                                <td>Tekstiň bölegini pozulan hökmünde bellemeklik üçin ulanylýar. Tekstiň üsti çyzylan görnüşde görkezilýär. Bu
+                                    tegiň <span class="atr">cite</span> atributynyň bahasy tekstiň pozulma sebäbini düşündirýän sahypanyň salgysy 
+                                    hökmünde berilýär. Tegiň <span class="atr">datetime</span> atributynyň bahasy tekstiň pozulma senesini görkezýär. 
+                                    Pozulan tekstiň ýerine goýlan tekst <span class="atr">&ltins&gt</span> tegi bilen berilýär. Mysal üçin:
+                                <code class="language-markup"><!--<del>Köne tekst</del>--></code> <code class="language-markup"><!--<ins>Täze tekst</ins>--></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&ltsmall&gt</td>
+                                <td>Tekstiň kiçi ölçegde görkezilmesi üçin ulanylýar</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <figcaption>Teksti tapawutlandyrma elementleri</figcaption>
+                </div>
+                <!--Logiki formatirleme tegleri-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky">Logiki formatirleme tegleri <a href="#c-5">#</a></h2>
+                    <p>
+                        Ýokardaky tablisada <span class="atr">&ltstrong&gt</span> we <span class="atr">&ltem&gt</span> teglerinden galan tegler 
+                        fiziki formatirleme tegleridir. <span class="atr">&ltstrong&gt</span> we <span class="atr">&ltem&gt</span>
+                        tegleri logiki formatirleme tegleridir we degişlilikde teksti has möhüm we möhüm hökmünde
+                        tapawutlandyrýarlar. Logiki formatirleme tegleri dokumentiň gurluş sahypalandyrmasy üçin
+                        ulanylýarlar we dürli görnüşli brauzerlerde tapawutly görkezilip bilnerler. Aşakda käbir möhüm
+                        formatirleme tegleri berlen:
+                    </p>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tr>
+                                <th>Element</th>
+                                <th>Wezipesi</th>
+                                <th>Brauzerde görkezilişi</th>
+                            </tr>
+                            <tr>
+                                <td>&ltcite&gt</td>
+                                <td>Sitatalaryň we eserleriň atlary</td>
+                                <td>Has gara ýazylan görnüşde görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltcode&gt</td>
+                                <td>Programma kodlary</td>
+                                <td>Monogiňişlikli (monospace) şrift bilen görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltabbr&gt</td>
+                                <td>Abbrewiýatura</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>&ltkbd&gt</td>
+                                <td>Ulanyjy tarapyndan klawiaturadan girizilen tekst</td>
+                                <td>Monogiňişlikli (monospace) şrift bilen görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltq&gt</td>
+                                <td>Gysga sitatalar</td>
+                                <td>Goşa dyrnagyň içinde görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltsamp&gt</td>
+                                <td>Haýsy hem bolsa bir programma tarapyndan görkezilýän maglumatlar</td>
+                                <td>Monogiňişlikli (monospace) şrift bilen görkezilýär</td>
+                            </tr>
+                            <tr>
+                                <td>&ltvar&gt</td>
+                                <td><em>Deslapky programmadaky</em> üýtgeýäniň ady</td>
+                                <td>asdfasdf</td>
+                            </tr>
+                            <tr>
+                                <td>&ltdfn&gt</td>
+                                <td>Tekstiň içindäki täze termin</td>
+                                <td>Kursiw görnüşde görkezilýär</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <figcaption>Logiki formatirleme elementleri</figcaption>
+                    <p>
+                        Aşakda bu tegleriň ulanylyşyna mysallar berlen:
+                    </p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <p><dfn>HTML</dfn> dili <em>web-sahypalaryň mazmunyny</em> 
+                            döretmeklik üçin ulanylýar.</p>
+                        <p><strong>Tegleriň iç-içe goýluş tertibini berjaý ediň!</strong></p>
+                        <p><code>p</code> tegi HTML dilinde abzas döretmeklik üçin ulanylýar.</p>
+                        <p>Web-brauzerde <kbd>http://www.w3c.org</kbd> internet-adresini giriziň.</p>
+                    </script>
+                </div>
+                <!--Ýokarky we aşaky indeksleriň döredilmegi-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky">Ýokarky we aşaky indeksleriň döredilmegi <a href="#c-6">#</a></h2>
+                    <p>
+                        <span class="atr">&ltsub&gt</span> tegi aşaky indeksiň, <span class="atr">&ltsup&gt</span> tegi bolsa ýokarky
+                        indeksiň döredilmegi üçin ulanylýar. Mysal üçin:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <p>Suwuň formulasy: H<sub>2</sub>O</p>
+                        <p>Meýdany ölçemekligiň birligi: m<sup>2</sup></p>
+                    </script>
+                </div>
+                <!--span tegi-->
+                <div class="item-container" id="c-7">
+                    <h2 class="sticky"><span class="atr">&ltspan&gt</span> tegi <a href="#c-7">#</a></h2>
+                    <p>
+                        <span class="atr">&ltspan&gt</span> tegi dürli stilleri berkidip bolýan uniwersal setir elementidir:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>SPAN elementi</title>
+                            <style type="text/css">
+                                span {
+                                    /* Ähli SPAN elementleri üçin stil */
+                                    font-size: 12pt;
+                                    /* Şriftiň ölçegi */
+                                    color: blue;
+                                    /* Şriftiň reňki */
+                                    font-family: "Arial";
+                                    /* Şriftiň ady */
+                                    font-weight: bold;
+                                    /* Şriftiň agyrlygy */
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <p>
+                                <span>SPAN</span> tegiň kömegi bilen abzasyň içindäki
+                                <span style="color: red">bölege</span> format berip bolýar.
+                            </p>
+                        </body>
+                        </html>
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

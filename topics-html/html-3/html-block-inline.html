@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - HTML diliniň blok we setir elementleri</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a class="active-top" href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Umumy maglumat</a></li>
+                    <li><a class="btn" href="#c-2"><b>&ltblockquote&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-3"><b>&ltdiv&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-4">Semantiki sahypalandyrma</a></li>
+                    <li><a class="btn" href="#c-5"><b>&ltdetails&gt</b> tegi</a></li>
+                    <li><a class="btn" href="#c-6">Gorizontal liniýa tegi</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 22.07.2023</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-html.html">HTML</a><span>/</span></li>
+                    <li class="active">HTML diliniň blok we setir elementleri</li>
+                </ul>
+                <!--Blok we setir elementler-->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">HTML diliniň blok (block) we setir (inline) elementleri <a href="#c-1">#</a></h2>
+                    <p>
+                        Mysal üçin, <span class="atr">&ltp&gt</span> absaz we <span class="atr">&lth1&gt</span>, <span
+                            class="atr">&lth2&gt</span>, … , <span class="atr">&lth6&gt</span> sözbaşy tegleri blok elementleridir. Blok
+                        elementleriň aşakdaky ýaly aýratynlyklary bar:
+                    </p>
+                    <div class="note">
+                        <ul>
+                            <li>Brauzerde täze setirden başlap aşakly-aşagyna görkezilýär;</li>
+                            <li>Köplenç goňşy blok elementler bilen arasy boşluk bilen bölünýär;</li>
+                            <li>Brauzerde keseligine ähli boş giňişligi doldurýar;</li>
+                            <li>Haýsy elementiň içinde bolsa şol elementiň inini gurşap alýar;</li>
+                            <li>Beýikligi düzümine görä üýtgeýär;</li>
+                            <li>Düzüminde adaty tekst bilen bir hatarda beýleki blok elementleri hem saklap bilýär;</li>
+                            <li>Zerur halatynda brauzer blok elementiň düzümindäki teksti täze setire geçirer, ýagny brauzer 
+                                penjiresiniň ölçegi kiçeldilse blok elementiň düzümindäki tekst hem penjiräniň ölçegine görä täze setire geçer.</li>
+                        </ul>
+                    </div>
+                    <div class="data-vis">
+                        <div>&ltaddress&gt</div>
+                        <div>&ltarticle&gt</div>
+                        <div>&ltaside&gt</div>
+                        <div>&ltblockquote&gt</div>
+                        <div>&ltcanvas&gt</div>
+                        <div>&ltdd&gt</div>
+                        <div>&ltdiv&gt</div>
+                        <div>&ltdl&gt</div>
+                        <div>&ltdt&gt</div>
+                        <div>&ltfieldset&gt</div>
+                        <div>&ltfigcaption&gt</div>
+                        <div>&ltfigure&gt</div>
+                        <div>&ltfooter&gt</div>
+                        <div>&ltform&gt</div>
+                        <div>&lth1&gt...&lth6&gt</div>
+                        <div>&ltheader&gt</div>
+                        <div>&lthr&gt</div>
+                        <div>&ltli&gt</div>
+                        <div>&ltmain&gt</div>
+                        <div>&ltnav&gt</div>
+                        <div>&ltnoscript&gt</div>
+                        <div>&ltol&gt</div>
+                        <div>&ltp&gt</div>
+                        <div>&ltpre&gt</div>
+                        <div>&ltsection&gt</div>
+                        <div>&lttable&gt</div>
+                        <div>&lttbody&gt</div>
+                        <div>&lttfoot&gt</div>
+                        <div>&ltul&gt</div>
+                        <div>&ltvideo&gt</div>
+                    </div>
+                    <figcaption>HTML diliniň käbir blok elementleri</figcaption>
+                    <p>
+                        Mysal üçin, <span class="atr">&ltstrong&gt</span>, <span class="atr">&ltem&gt</span>, <span
+                            class="atr">&ltabr&gt</span> we ş.m. tegler setir elementleridir (olar barada aşakdaky temalarda içgin aýdylar).
+                        Setir elementleriň aşakdaky ýaly aýratynlyklary bar:
+                    </p>
+                    <div class="note">
+                        <ul>
+                            <li>Brauzerde çepden-saga keseligine görkezilýär;</li>
+                            <li>Brauzerde keslegine biri-birine degip duran görnüşde görkezilýär;</li>
+                            <li>Ölçegleri diňe mazmunyny (içindäkileri) sygdyrjak görnüşde bolýar;</li>
+                            <li>Diňe blok elementleriň içine ýerleşdirip bolýar;</li>
+                            <li>Adaty tekst we setir elementleri düzüminde saklap bilýärler, ýöne blok elementleri düzüminde saklap bilmeýärler.</li>
+	                    </ul>
+                    </div>
+                    <div class="data-vis">
+                        <div>&lta&gt</div>
+                        <div>&ltabbr&gt</div>
+                        <div>&ltacronym&gt</div>
+                        <div>&ltb&gt</div>
+                        <div>&ltbdo&gt</div>
+                        <div>&ltbig&gt</div>
+                        <div>&ltbr&gt</div>
+                        <div>&ltbutton&gt</div>
+                        <div>&ltcite&gt</div>
+                        <div>&ltcode&gt</div>
+                        <div>&ltdfn&gt</div>
+                        <div>&ltem&gt</div>
+                        <div>&lti&gt</div>
+                        <div>&ltimg&gt</div>
+                        <div>&ltinput&gt</div>
+                        <div>&ltkbd&gt</div>
+                        <div>&ltlabel&gt</div>
+                        <div>&ltmap&gt</div>
+                        <div>&ltobject&gt</div>
+                        <div>&ltoutput&gt</div>
+                        <div>&ltq&gt</div>
+                        <div>&ltsamp&gt</div>
+                        <div>&ltscript&gt</div>
+                        <div>&ltselect&gt</div>
+                        <div>&ltsmall&gt</div>
+                        <div>&ltspan&gt</div>
+                        <div>&ltstrong&gt</div>
+                        <div>&ltsub&gt</div>
+                        <div>&ltsup&gt</div>
+                        <div>&lttextarea&gt</div>
+                        <div>&lttime&gt</div>
+                        <div>&lttt&gt</div>
+                        <div>&ltvar&gt</div>
+                    </div>
+                    <figcaption>HTML diliniň käbir setir elementleri</figcaption>
+                    <div class="note">
+                        Setir elementleriň ölçegini (width we height) hem-de arka fonunyň reňkini berip bolmaýar. Setir elementiň ölçegini
+                        we arka fonuny bermeklik üçin bu elementi blok elemente öwürmeli (<span class="atr">display:block</span> ýa-da <span
+                            class="atr">display:inline-block</span>)
+                    </div>
+                </div>
+                <!--blockquote tegi-->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky"><span class="atr">&ltblockquote&gt</span> tegi <a href="#c-2">#</a></h2>
+                    <p>
+                        <span class="atr">&ltblockquote&gt</span> tegi uzyn sitataly abzasy emele getirýär. Brauzerde adaty abzasa görä kiçi
+                        ine eýe bolmaklyk bilen sahypanyň merkezi boýunça deňlenýär. Bu tegiň <span class="atr">cite</span> atributy bilen sitatanyň original
+                        sahypasynyň salgysy berlip bilner.
+                    </p>
+                </div>
+                <!--div tegi-->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky"><span class="atr">&ltdiv&gt</span> tegi <a href="#c-3">#</a></h2>
+                    <p>
+                        <span class="atr">&ltdiv&gt</span> tegi uniwersal blok elementidir. Bu elementiň kömegi bilen sahypanyň birnäçe
+                        elementini bitewi görnüşe gruppalaşdyryp bolýar. Mundan başga-da <span class="atr">&ltdiv&gt</span> tegi
+                        web-sahypanyň blok usuly arkaly sahypalandyrylmagynda hem ulanylýar:
+                    </p>
+                    <figure>
+                        <img src="../../images/block-layouting.jpg" alt="Blok sahypalandyrma">
+                        <figcaption>Blok usuly arkaly sahypalandyrma</figcaption>
+                    </figure>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <!DOCTYPE html>
+                        <html lang="tm">
+                        <head>
+                            <meta charset="utf-8">
+                            <title>DIV ELEMENTI</title>
+                        </head>
+                        <body>
+                            <div id="header">
+                                <h1>SAHYPANYŇ &quot;ŞAPKASY (HEADER)&quot;</h1>
+                            </div>
+                            <div id="nav">
+                                <p><a href="#">Sahypa 1</a></p>
+                                <p><a href="#">Sahypa 2</a></p>
+                            </div>
+                            <div id="main">
+                                <p>SAHYPANYŇ ESASY DÜZÜMI</p>
+                            </div>
+                            <div id="footer">
+                                <p>SAHYPANYŇ &quot;DÜÝBI (FOOTER)&quot;</p>
+                            </div>
+                        </body>
+                        </html>
+
+                    </script>
+                    <figcaption>Blok usuly arkaly sahypalandyrma kody</figcaption>
+                </div>
+                <!--semantiki sahypalandyrma-->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">Semantiki sahypalandyrma <a href="#c-4">#</a></h2>
+                    <p>
+                        Ýokardaky berlen kodda <span class="atr">&ltdiv&gt</span> tegini ulanmaklyk bilen blok sahypalandyrmak usuly
+                        görkezildi. Her <span class="atr">&ltdiv&gt</span> tegi üçin <span class="atr">id</span> atributy ulanyldy, ýagny
+                        her tege gaýtalanmaz at (identifikator) berildi. <span class="atr">id</span> atributyny HTML diliniň ähli teglerinde
+                        ulanyp bolýar diýsek hem bolýar. Bu atributyň kömegi bilen biz JavaScript programmanyň içinden belli bir atly
+                        elemente ýüzlenip bilýäris ýa-da belli bir atly elemente stil berip bilýäris. Ýokardaky berlen kodda sahypanyň
+                        “şapkasy” üçin ulanylan kod bölegine seredip geçeliň:
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <div id="header">
+                            <h1>SAHYPANYŇ &quot;SÖZBAŞYSY (HEADER)&quot;</h1>
+                        </div>
+                    </script>
+                    <p>
+                        Programmaçy üçin bu kod bölegi sahypanyň “şapkasydygy”, sözbaşysydygy düşnükli, emma gözleg motorlary sahypanyň
+                        içinden kontenti gözlänlerinde ýokardaky kod bölegine seredip bu bölegiň sahypanyň şapkasydygyna düşünip
+                        bilmeýärler. <em>Gözleg motorlarynyň sahypanyň içinden kontent gözlegini aňsatlaşdyrmak we programmaçynyň koda aňsat
+                        düşünmesi üçin HTML 5 diline semantiki sahypalandyrma elementleri girizildi.</em> Brauzerler semantiki elementleri
+                        görkezenlerinde hiç hili tapawutlandyrmaýarlar. Olary tapawutlandyrmak üçin CSS stillerini ulanyp bileris. Sahypanyň
+                        semantiki gurluşy aşakdaky suratda görkezilen:
+                    </p>
+                    <figure class="big">
+                        <img src="../../images/semantic.jpg" alt="Semantiki sahypalandyrma">
+                        <figcaption>Semantiki sahypalandyrma</figcaption>
+                    </figure>
+                    <p>Semantiki tegleriň ählisi jübüt teglerdir:</p>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1">
+                            <tr>
+                                <th>Element</th>
+                                <th>Beýany</th>
+                            </tr>
+                            <tr>
+                                <td>&ltheader&gt</td>
+                                <td>Makalanyň ýa-da sahypanyň “şapkasy”, sözbaşysy</td>
+                            </tr>
+                            <tr>
+                                <td>&ltnav&gt</td>
+                                <td>Makala ýa-da saýt boýunça nawigasiýa üçin gerekli bolan gipersalgylaryň toplumy</td>
+                            </tr>
+                            <tr>
+                                <td>&ltmain&gt</td>
+                                <td>Sahypanyň esasy bölegi</td>
+                            </tr>
+                            <tr>
+                                <td>&ltfooter&gt</td>
+                                <td>Sahypanyň düýbi (futer)</td>
+                            </tr>
+                            <tr>
+                                <td>&ltsection&gt</td>
+                                <td>Sahypanyň aýratyn bölegi. Bölegiň öz şapkasy (sözbaşysy) bolmaly</td>
+                            </tr>
+                            <tr>
+                                <td>&ltarticle&gt</td>
+                                <td>Sahypanyň esasy böleginiň garaşsyz we özbaşdak bölejigi: aýratyn makala we ş.m.</td>
+                            </tr>
+                            <tr>
+                                <td>&ltaside&gt</td>
+                                <td>Makala goýlan bellik. Adatça esasy tekstiň gapdallarynda ýerleşýär. Köplenç sahypanyň esasy böleginiň
+                                    gapdalyndaky gutujyk hökmünde ulanylýar</td>
+                            </tr>
+                            <tr>
+                                <td>&ltfigure&gt</td>
+                                <td>Makalada goýlan surat: adaty grafiki şekil, audio-wideo rolik</td>
+                            </tr>
+                            <tr>
+                                <td>&ltfigcaption&gt</td>
+                                <td>Suratyň aşaky ýazgysy. Diňe <b class="atr-1">&ltfigure&gt</b> teginiň içinde goýup bolýar</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <figcaption>Semantiki sahypalandyrma tegleri</figcaption>
+                    <div class="note">
+                        Setir elementi bolan <span class="atr">&ltmark&gt</span> teginiň kömegi bilen tekstiň möhüm bölejigini
+                        tapawutlandyryp bolýar. Adatça brauzerler tekstiň bölejigini sary reňk bilen tapawutlandyrýarlar.
+                    </div>
+                    <p>Aşakda semantiki sahypalandyrma mysal berlen:</p>
+                    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                    <html lang="tm">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Semantiki sahypalandyrma</title>
+                    </head>
+                    <body>
+                        <header>
+                            <h1>Sahypanyň &quot;şapkasy&quot;</h1>
+                        </header>
+                        <nav>
+                            <p><a href="#">Sahypa 1</a></p>
+                            <p><a href="#">Sahypa 2</a></p>
+                        </nav>
+                        <section>
+                            <h2>Bölümiň sözbaşysy</h2>
+                            <p>Esasy mazmun</p>
+                            <article>
+                                <h3>Makalanyň sözbaşysy</h3>
+                                <p>Makalanyň teksti.
+                                    <mark>Tekstiň möhüm bölejigi</mark>
+                                </p>
+                                <figure>
+                                  <p>
+                                    <img src="images/semantic.jpg" alt="Semantiki sahypalandyrma">
+                                  </p>
+                                  <figcaption>1-nji surat</figcaption>
+                                </figure>
+                                <aside>
+                                    <p>Makala berlen bellik</p>
+                                </aside>
+                            </article>
+                        </section>
+                        <footer>
+                            <p>Sahypanyň &quot;düýbi&quot;</p>
+                        </footer>
+                    </body>
+                    
+                    </script>
+                    <figcaption>Semantiki sahypalandyrma kody</figcaption>
+                </div>
+                <!--details tegi-->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky"><span class="atr">&ltdetails&gt</span> tegi <a href="#c-5">#</a></h2>
+                    <p>
+                        <span class="atr">&ltdetails&gt</span> tegi HTML 5 dilinde sahypanyň haýsy hem bolsa bir bölegini görkezmäge ýa-da
+                        gizlemäge mümkinçilik berýär. Elementiň kabulgörlen bahasyna görä elementiň düzümi gizlenýär. Bu tegiň mazmunyny
+                        görmeklik üçin <span class="atr">&ltsummary&gt</span> teginiň içine ýerleşdirilen bu tegiň sözbaşysynyň üstüne
+                        basmaly ýa-da <span class="atr">open</span> atributyny ulanmaly. Brauzerleriň köne wesiýalary bu tegi gollamaýar.
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <details open>
+                            <summary>Açmak ýa-da ýapmak</summary>
+                            <p>Gizlenýän ýa-da görkezilýän mazmun</p>
+                        </details>                        
+                    </script>
+                </div>
+                <!--Gorizontal liniya-->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky"><span class="atr">&lthr&gt</span> gorizontal liniýa tegi <a href="#c-6">#</a></h2>
+                    <p>
+                        Ýeke <span class="atr">&lthr&gt</span> tegi gorizontal liniýany geçirmäge mümkinçilik berýär. Kabulgörlen (default)
+                        görnüşde liniýa haýsy elementiň içinde bolsa şol elementiň inini eýeleýär we merkez boýunça deňlenýär.
+                    </p>
+                    <script type="text/plain" class="language-html" data-prismjs-copy="Kopýala"
+                        data-prismjs-copy-success="Kopýalandy">
+                        <p>Kabulgörlen baha bilen</p>
+                        <hr>
+                        <p>Beýikligi 5 px, ini 90 göterim, çarçuwaly</p>
+                        <hr style="height: 5px; width: 90%">
+                        <p>Ini 200 px we sag tarapa deňlenen</p>
+                        <hr style="width: 200px; margin: 0 0 0 auto">
+                        <p>
+                            Beýikligi 5 px, ini 200 px, çarçuwasyz,
+                            merkez boýunça deňlenen we gyzyl fona eýe
+                        </p>
+                        <hr style="height: 5px; width: 200px; border: 0; background: red">
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

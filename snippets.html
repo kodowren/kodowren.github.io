@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //  <span class="teg"></span>
+        //  <code class="language-markup"><!--<del>Köne tekst</del>--></code>
+    </script>
+</head>
+
+<body>
+    <!--CSS snippet-->
+    <pre>
+        <code class="language-css line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+            .grid-container {
+                display: grid;
+                grid-template: 
+                    "header header header header header header"
+                    "menu main main main right right"
+                    "menu footer footer footer footer footer";
+            } 
+            .item-1 { grid-area: header }
+            .item-2 { grid-area: menu }
+            .item-3 { grid-area: main }
+            .item-4 { grid-area: right }
+            .item-5 { grid-area: footer }
+        </code>
+    </pre>
+
+    <!--HTML snippet-->
+    <script type="text/plain" class="language-html line-numbers" data-prismjs-copy="Kopýala"
+        data-prismjs-copy-success="Kopýalandy">
+    </script>
+
+    <!--table-1-->
+    <div style="overflow-x: auto;">
+        <table class="table-1">
+            <tr>
+                <th>Element</th>
+                <th>Beýany</th>
+            </tr>
+            <tr>
+                <td>&ltheader&gt</td>
+                <td>Makalanyň ýa-da sahypanyň “şapkasy”, sözbaşysy</td>
+            </tr>
+            <tr>
+                <td>&ltnav&gt</td>
+                <td>Makala ýa-da saýt boýunça nawigasiýa üçin gerekli bolan gipersalgylaryň toplumy</td>
+            </tr>
+            <tr>
+                <td>&ltmain&gt</td>
+                <td>Sahypanyň esasy bölegi</td>
+            </tr>
+            <tr>
+                <td>&ltfooter&gt</td>
+                <td>Sahypanyň düýbi (futer)</td>
+            </tr>
+            <tr>
+                <td>&ltsection&gt</td>
+                <td>Sahypanyň aýratyn bölegi. Bölegiň öz şapkasy (sözbaşysy) bolmaly</td>
+            </tr>
+            <tr>
+                <td>&ltarticle&gt</td>
+                <td>Sahypanyň esasy böleginiň garaşsyz we özbaşdak bölejigi: aýratyn makala we ş.m.</td>
+            </tr>
+            <tr>
+                <td>&ltaside&gt</td>
+                <td>Makala goýlan bellik. Adatça esasy tekstiň gapdallarynda ýerleşýär. Köplenç sahypanyň esasy böleginiň
+                    gapdalyndaky gutujyk hökmünde ulanylýar</td>
+            </tr>
+            <tr>
+                <td>&ltfigure&gt</td>
+                <td>Makalada goýlan surat: adaty grafiki şekil, audio-wideo rolik</td>
+            </tr>
+            <tr>
+                <td>&ltfigcaption&gt</td>
+                <td>Suratyň aşaky ýazgysy. Diňe <b class="atr-1">&ltfigure&gt</b> teginiň içinde goýup bolýar</td>
+            </tr>
+        </table>
+    </div>
+    <figcaption>Semantiki sahypalandyrma tegleri</figcaption>
+
+    <!--image-1-->
+    <figure class="big">
+        <img src="../images/grid-6.webp" alt="Grid-liniýalar">
+        <figcaption>Grid-liniýa</figcaption>
+    </figure>
+
+    <!--image-2-->
+    <div class="img-container">
+        <img src="../images/grid-1.jpg" alt="grid-auto-column">
+    </div>
+
+    <!--data-vis (table)-->
+    <div class="data-vis">
+        <div>&ltaddress&gt</div>
+        <div>&ltarticle&gt</div>
+    </div>
+</body>
+
+</html>

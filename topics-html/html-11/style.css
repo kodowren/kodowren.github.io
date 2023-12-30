@@ -1,0 +1,45 @@
+input[type="text"], input[type="submit"], input[type="password"], input[type="reset"], input[type="email"], textarea, select {
+    background-color: gainsboro;
+}
+
+select, textarea, input[type="date"] {
+    color: rgb(129, 129, 129);
+}
+
+label {
+    /* Ähli label elementleri üçin stil */
+    display: inline-block;
+    /* Bloguň görnüşi */
+    width: 150px;
+    /* Ini */
+    vertical-align: top;
+    /* Keseligine deňleme */
+}
+select {
+    /* Ähli sanawlar üçin stiller */
+    width: 250px;
+    /* Ini */
+    border: 1px solid black;
+    /* Çägiň stili */
+}
+input.txt {
+    /* txt atly synpy bolan input elementleri üçin stil */
+    width: 250px;
+    /* Ini */
+    border: 1px solid black;
+    /* Çägiň stili */
+}
+textarea {
+    /* Köpsetirli tekst meýdançasy üçin stil */
+    width: 250px;
+    /* Ini */
+    height: 100px;
+    /* Beýikligi */
+    border: 1px solid black;
+    /* Çägiň stili */
+}
+form div {
+    /* form elementiniň içindäki ähli div elementleri üçin stil */
+    margin-bottom: 20px;
+    /* Bloguň aşagyndaky boşluk */
+}
