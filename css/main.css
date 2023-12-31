@@ -334,6 +334,7 @@ a span.atr, a span.atr-1, a span.teg {
     word-wrap: break-word;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    overflow-x: auto;
 }
 
 .code-run::before {
