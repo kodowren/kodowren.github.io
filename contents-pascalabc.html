@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - PascalABC.NET öwren</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="contents-html.html">HTML</a>
+                <a href="contents-css.html">CSS</a>
+                <a href="contents-javascript.html">JavaScript</a>
+                <a href="glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="contents-html.html">HTML</a>
+                    <a href="contents-css.html">CSS</a>
+                    <a href="contents-javascript.html">JavaScript</a>
+                    <a href="glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main-1">
+            <div class="sidenav-1" id="mySidenav">
+                <p>
+                    PascalABC.NET — bu döwrebap programmirleme dilleriniň gurluşlaryny ulanýan we öz içinde dürli programmirleme
+                    paradigmalaryny saklaýan dildir. Mekdep okuwçylarynyň we talyplaryň döwrebap programmirlemäniň esaslaryny öwrenmelerine uly
+                    gollag berýär. Ýurdumyzda <em>"Olimpiada Programmirlemede"</em> giňden ulanylýan dilleriň biridir. 
+                </p>
+            </div>
+            <div class="topics-1" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="index.html">Esasy</a><span>/</span></li>
+                    <li class="active">PascalABC.NET</li>
+                </ul>
+                <!--contents-->
+                <p id="t-desc">
+                    PascalABC.NET — bu döwrebap programmirleme dilleriniň gurluşlaryny ulanýan we öz içinde dürli programmirleme
+                    paradigmalaryny saklaýan dildir. Mekdep okuwçylarynyň we talyplaryň döwrebap programmirlemäniň esaslaryny öwrenmelerine uly
+                    gollag berýär. Ýurdumyzda <em>"Olimpiada Programmirlemede"</em> giňden ulanylýan dilleriň biridir.
+                </p>
+                <ul class="contents">
+                    <li><a href="#">UMUMY OPERATORLAR</a>
+                        <ul>
+                            <li><a href="#"><span class="atr">Println</span> (<span class="atr">Print</span>) operatory</a></li>
+                            <li><a href="#">Derejä götermek</a></li>
+                            <li><a href="#">Bitin sanlaryň girizilmegi</a></li>
+                            <li><a href="#">Hakyky sanlaryň girizilmegi</a></li>
+                            <li><a href="#">Simwollaryň girizilmegi</a></li>
+                            <li><a href="#">Setirleriň girizilmegi</a></li>
+                            <li><a href="#">Diapazonlar (baha aralygy)</a></li>
+                            <li><a href="#"><span class="atr">foreach</span> gaýtalama operatorynyň ulanylyşyna mysal</a></li>
+                            <li><a href="#">Elementiň yzygiderligiň içinde barlygy (<span class="atr">in</span> operatory)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">FUNKSIÝALAR WE PROSEDURALAR</a>
+                        <ul>
+                            <li><a href="#">Maglumat tipleri</a></li>
+                            <li><a href="#">Funksiýalar we proseduralaryň umumy beýany</a></li>
+                            <li><a href="#">Proseduranyň beýany</a></li>
+                            <li><a href="#">Funksiýanyň beýany</a></li>
+                            <li><a href="#">Funksiýanyň we proseduranyň ulanylyşyna mysal</a></li>
+                            <li><a href="#">Rekursiw funksiýalar we proseduralar</a></li>
+                            <li><a href="#">Parametrleriň baha boýunça berilmegi</a></li>
+                            <li><a href="#">Parametrleriň salgy boýunça berilmegi</a></li>
+                            <li><a href="#">Parametrleriň baha we salgy boýunça berilmegindäki tapawut</a></li>
+                            <li><a href="#"><span class="atr">Result</span> üýtgeýäni</a></li>
+                            <li><a href="#">Parametr hökmünde ulanyjy tipi</a></li>
+                            <li><a href="#">Kabulgörlen (default) parametr</a></li>
+                            <li><a href="#">Parametrsiz prosedura - ýönekeý sintaksis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">LÝAMBDA-AŇLATMALAR</a>
+                        <ul>
+                            <li><a href="#">Lýambda-aňlatmalaryň beýany</a></li>
+                            <li><a href="#">Lýambda-funksiýalar we lýambda-proseduralar</a></li>
+                            <li><a href="#">Üýtgeýäniň tutulyp alynmagy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">KORTEŽLER</a>
+                        <ul>
+                            <li><a href="#">Kortežleriň elementlerine elýeterlilik</a></li>
+                            <li><a href="#">Kortež ada geçirmek</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-1">YZYGIDERLIKLER</a>
+                        <ul>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-2"><span class="atr">Sequence</span> yzygiderlikleri</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-3">Yzygiderlik generatorlary</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-4">Tükeniksiz yzygiderlik generatorlary</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-5">Yzygiderlikleriň elementleriniň klawiaturadan girizilmegi</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-6">Elementleriň agregirlenmegi (üýşürilmegi)</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-7">Yzygiderligiň içinden elementleriň saýlanmagy (filtrlenmegi)</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-8">Yzygiderlikleriň birleşdirilmegi, kesişmesi we tapawudy</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-9">Yzygiderlikleriň Dekart köpeltmek hasyly</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-10">Yzygiderlikleriň elemetleriniň gezekleşmegi</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-11">Yzygiderlikleriň elemetleriniň birikdirilmegi</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-12">Yzygiderlikleriň tertipleşdirilmegi</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-13">Yzygiderligiň içinde elementleriň gözlegi</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-14">Yzygiderlikleriň deňligi</a></li>
+                            <li><a href="topics-pascalabc/pascalabc-5/sequences.html#c-15">Yzygiderlikleriň tabulýasiýasy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">DINAMIKI MASSIWLER</a>
+                        <ul>
+                            <li><a href="#">Dinamiki massiwleri döretmeklik</a></li>
+                            <li><a href="#">Dinamiki massiwleriň generatorlary</a></li>
+                            <li><a href="#">Lýambda-aňlatmaly generatorlar</a></li>
+                            <li><a href="#">Massiwiň elementlerini klawiaturadan girizmek</a></li>
+                            <li><a href="#">Bitewi obýekt hökmünde massiwiň üstünde amallar</a></li>
+                            <li><a href="#">Gaýtalama operatorynda massiwiň ähli elementlerini bir-birden gözden geçirmek (<span class="atr">.ForEach</span>)</a></li>
+                            <li><a href="#"><span class="atr">.ForEach</span> arkaly massiwiň elementlerini bir-birden gözden geçirmek</a></li>
+                            <li><a href="#">Massiwleriň üstünde + we * arifmetiki amallarynyň ýerine ýetirilmegi</a></li>
+                            <li><a href="#">Proýesirleme (<span class="atr">Select</span> metody)</a></li>
+                            <li><a href="#">Proýesirleme (<span class="atr">SelectMany</span> metody)</a></li>
+                            <li><a href="#">Maksimum, minimum, jem, köpeltmek hasyly we ortaça baha</a></li>
+                            <li><a href="#">Elementleri ters teripde düzmeklik (<span class="atr">Reverse</span> metody)</a></li>
+                            <li><a href="#">Massiwden element saýlawy</a></li>
+                            <li><a href="#">Massiwiň elementleriniň özgerdilmegi (<span class="atr">.ConvertAll</span>)</a></li>
+                            <li><a href="#">Massiwiň bahalar bilen doldurylmagy (<span class="atr">.Fill</span>)</a></li>
+                            <li><a href="#">Massiwde elementiň bahasynyň çalşyrylmagy (<span class="atr">.Replace</span>)</a></li>
+                            <li><a href="#">Elementleriň ters tertipde düzülmegi (<span class="atr">Reverse</span>)</a></li>
+                            <li><a href="#">Elementleri tötänleýin görnüşde garmak (<span class="atr">Shuffle</span>)</a></li>
+                            <li><a href="#">Massiwiň elementlerini tertipleşdirmek (<span class="atr">Sort</span>)</a></li>
+                            <li><a href="#">Massiwiň elementlerini üýtgetmek (<span class="atr">.Transform</span>)</a></li>
+                            <li><a href="#">Berlen şert boýunça massiwiň elementlerini gözlemek</a></li>
+                            <li><a href="#">Massiwiň maksimal elementiniň indeksi</a></li>
+                            <li><a href="#">Massiwiň minimal elementiniň indeksi</a></li>
+                            <li><a href="#">Elementiň indeksiniň binar gözlegi (<span class="atr">.BinarySearch</span>)</a></li>
+                            <li><a href="#">Şerti kanagatlandyrýan elementiň indeksiniň gözlegi</a></li>
+                            <li><a href="#">Şerti kanagatlandyrýan elementleriň indeksleriniň gözlegi</a></li>
+                            <li><a href="#">Berlen elementiň indeksiniň gözlegi</a></li>
+                            <li><a href="#">Massiwiň elementleriniň permutasiýasy, kombinasiýasy we dekart köplükleri</a></li>
+                            <li><a href="#">Massiwleriň üstünde çylşyrymly amallary ýerine ýetirmek</a></li>
+                            <li><a href="#">Dinamiki massiwiň parametr hökmünde berilmegi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">DINAMIKI IKIÖLÇEGLI MASSIWLER (MATRISALAR)</a>
+                        <ul>
+                            <li><a href="#">Ikiölçegli massiwleri generirlemek</a>
+                                <ul>
+                                    <li><a href="#">Tötänleýin bahalar bilen doldurmak</a></li>
+                                    <li><a href="#">Bellenen baha bilen doldurmak</a></li>
+                                    <li><a href="#">Indekslere bagly bahalar bilen doldurmak</a></li>
+                                    <li><a href="#">Birölçegli massiwiň bahalary bilen doldurmak</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Matrisanyň elementleriniň klawiaturadan girizilmegi</a></li>
+                            <li><a href="#">Matrisanyň ölçeginiň üýtgedilmegi</a></li>
+                            <li><a href="#">Matrisanyň häzirki ölçegi</a></li>
+                            <li><a href="#">Matrisanyň elementlerini saýlamak</a></li>
+                            <li><a href="#">Gaýtalama operatorynda matrisanyň ähli elementlerini bir-birden gözden geçirmek (<span class="atr">.ForEach</span>)</a></li>
+                            <li><a href="#">Matrisanyň setir we sütünleriniň özgerdilmegi</a></li>
+                            <li><a href="#">Matrisanyň transponirlenmegi</a></li>
+                            <li><a href="#">Matrisalara degişli meseleler</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">KÖPLÜKLER (SETS)</a>
+                        <ul>
+                            <li><a href="#">Köplükleriň döredilmegi</a></li>
+                            <li><a href="#">Köplügiň içine elementiň goşulmagy</a></li>
+                            <li><a href="#">Köplügiň içinden elementiň pozulmagy</a></li>
+                            <li><a href="#">Köplügiň içinde elementiň barlygyny barlamak</a></li>
+                            <li><a href="#">Köplükleri birleşdirmek</a></li>
+                            <li><a href="#">Köplükleriň tapawudy</a></li>
+                            <li><a href="#">Köplükleriň kesişimi</a></li>
+                            <li><a href="#">Köplükleriň deňligi</a></li>
+                            <li><a href="#">Köplükleri deňeşdirmek</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SIMWOLLAR WE SETIRLER</a>
+                        <ul>
+                            <li><a href="#">Simwollar</a></li>
+                            <li><a href="#">Simwollara degişli giňetlmeler we funksiýalar</a></li>
+                            <li><a href="#">Setirler</a></li>
+                            <li><a href="#">Setirleri çapa çykarmaklyk</a></li>
+                            <li><a href="#">Setirler bilen arifmetiki amallar (+ we *)</a></li>
+                            <li><a href="#">Setirlere degişli giňetlmeler we funksiýalar</a></li>
+                            <ul>
+                                <li><a href="#">Setiriň uzynlygy</a></li>
+                                <li><a href="#">Setirleri deňeşdirmek</a></li>
+                                <li><a href="#">Setiriň içinden bölek setiriň saýlanmagy</a></li>
+                                <li><a href="#">Setirleriň kesimi</a></li>
+                                <li><a href="#">Setirleriň registrini üýtgetmek</a></li>
+                                <li><a href="#">Setiriň başyndan we soňundan simwollaryň pozulmagy</a></li>
+                                <li><a href="#">Setirden bölek setiriň pozulmagy</a></li>
+                                <li><a href="#">Setiri tersine öwürmek</a></li>
+                                <li><a href="#">Setire bölek setiriň goýulmagy</a></li>
+                                <li><a href="#">Setiriň barlagy</a></li>
+                                <li><a href="#">Setiriň sözlere bölünmegi</a></li>
+                                <li><a href="#">Setirdäki bölek setiriň çalşyrylmagy</a></li>
+                                <li><a href="#">Setirleriň birikdirilmegi</a></li>
+                                <li><a href="#">Setiriň içinde gözleg</a></li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li><a href="#">ÝAZGYLAR (RECORD)</a>
+                        <ul>
+                            <li><a href="#">Ulanyjy tipi</a></li>
+                            <li><a href="#">Ýazgylaryň beýan edilişi</a></li>
+                            <li><a href="#">Ýazgynyň polýalaryna ýüzlenmek</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PASCALABC.NET BILEN MESELE ÇÖZMEK</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="about-project.html">Proýekt barada</a> |
+                <a href="glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-theme.js"></script>
+</body>
+
+</html>

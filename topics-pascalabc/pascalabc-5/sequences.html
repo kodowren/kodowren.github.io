@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Yzygiderlikler</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/prism-dark.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="../../contents-html.html">HTML</a>
+                <a href="../../contents-css.html">CSS</a>
+                <a href="../../contents-javascript.html">JavaScript</a>
+                <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../../contents-html.html">HTML</a>
+                    <a href="../../contents-css.html">CSS</a>
+                    <a href="../../contents-javascript.html">JavaScript</a>
+                    <a href="../../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Yzygiderlikler</a></li>
+                    <li><a class="btn" href="#c-2"><b class="atr">Sequence</b> yzygiderlikleri</a></li>
+                    <li><a class="btn" href="#c-3">Yzygiderlik generatorlary</a></li>
+                    <li><a class="btn" href="#c-4">Tükeniksiz yzygiderlik generatorlary</a></li>
+                    <li><a class="btn" href="#c-5">Yzygiderlikleriň elementleriniň klawiaturadan girizilmegi</a></li>
+                    <li><a class="btn" href="#c-6">Elementleriň agregirlenmegi (üýşürilmegi)</a></li>
+                    <li><a class="btn" href="#c-7">Yzygiderligiň içinden elementleriň saýlanmagy (filtrlenmegi)</a></li>
+                    <li><a class="btn" href="#c-8">Yzygiderlikleriň birleşdirilmegi, kesişmesi we tapawudy</a></li>
+                    <li><a class="btn" href="#c-9">Yzygiderlikleriň Dekart köpeltmek hasyly</a></li>
+                    <li><a class="btn" href="#c-10">Yzygiderlikleriň elemetleriniň gezekleşmegi</a></li>
+                    <li><a class="btn" href="#c-11">Yzygiderlikleriň elemetleriniň birikdirilmegi</a></li>
+                    <li><a class="btn" href="#c-12">Yzygiderlikleriň tertipleşdirilmegi</a></li>
+                    <li><a class="btn" href="#c-13">Yzygiderligiň içinde elementleriň gözlegi</a></li>
+                    <li><a class="btn" href="#c-14">Yzygiderlikleriň deňligi</a></li>
+                    <li><a class="btn" href="#c-15">Yzygiderlikleriň tabulýasiýasy</a></li>
+                </ul>
+                <div class="date">Täzelenme senesi: 31.01.2024</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../../contents-pascalabc.html">PascalABC.NET</a><span>/</span></li>
+                    <li class="active">Yzygiderlikler</li>
+                </ul>
+                <!-- -->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Yzygiderlikler <a href="#c-1">#</a></h2>
+                    <div class="note">
+                        PascalABC.NET programmalaşdyrma dilinde esasan 4 sany yzygiderlikleriň görnüşleri bar. Olar: statiki massiwler,
+                        dinamiki massiwler, sequence yzygiderlikleri we köplükler (sets). Programmist üçin bu yzygiderlikler, elementlerine
+                        bolan elýeterlilik bilen tapawutlanýarlar.
+                    </div>
+                    <p>
+                        Eger-de R we S adynda iki sany yzygiderlik bar bolsa we bu yzygiderlikler üçin
+                        S := R adyna geçirmeklik amaly ýerine ýetirilse, onda R-iň elementleriniň hemmesi S-iň içine kopýalanmaýar diňe S-iň
+                        içine R-iň salgysy kopýalanýar, şeýlelikde S yzygiderlik hem R yzygiderligiň başga bir ady bolýar. Munuň netijesinde
+                        S-iň belli bir elementleriniň bahasy üýtgedilse R-iň hem şol elementleriniň bahasy üýtgär. Munuň beýle bolmagy
+                        statiki massiwlerden galan ähli yzygiderlikleriň salgy tipine eýe bolmagynyň netijesidir.
+                    </p>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky"><span class="atr">Sequence</span> yzygiderlikleri <a href="#c-2">#</a></h2>
+                    <div class="note">
+                        <span class="atr">Sequence</span> yzygiderlikleriň belli bir elementine bolan elýeterlilik bu elementiň öňündäki
+                        ähli elementleri bir-birden saýlamaklyk bilen ýola goýulýar. Bir-birden saýlamaklyk <span class="atr">foreach</span>
+                        operatorynyň kömegi bilen amala aşyrylýar. <span class="atr">Sequence</span> yzygiderligiň elementleri kompýuteriň
+                        ýadynda saklanmaýar we elementleri diňe okap bolýar, ýagny üýtgedip bolmaýar we elementleriň sanawy 0-dan başlaýar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            begin
+                                //Range generatory [-10, 10] aralykdaky sanlary 1 adimden 
+                                //yzygiderlige beryar
+                                var b: sequence of integer;
+                                b := Range(-10, 10);  
+                                println(b);
+                                foreach var bb in b do if(bb > 0) then write(bb:3)
+                            end.
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-netije" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10]
+                            1  2  3  4  5  6  7  8  9 10
+                        </code>
+                    </pre>
+                    <p>
+                        Ýokardaky mysalda <span class="atr">b</span> üýtgeýäni <span class="atr">sequence</span> yzygiderlikdir. Bu
+                        yzygiderligiň içi <span class="atr">Range</span> generatorynyň kömegi bilen -10-dan 10-a çenli sanlar bilen
+                        doldurylýar. Ýagny, bu mysalda görşümiz ýaly yzygiderligiň elementleri ýatda saklanmaýar, diňe bu yzygiderligi
+                        almaklygyň usuly (Range) ýatda saklanýar. Soňra yzygiderligiň ähli elementleri çapa çykarylýar, yzyndan bolsa <span
+                            class="atr">Foreach</span> gaýtalama operatorynyň kömegi bilen yzygiderligiň 0-dan uly elementleri çapa
+                        çykarylýar. <span class="atr">Println()</span> operatory yzygiderligiň elementlerini arasyna otur belgisini
+                        goýmaklyk bilen yzygiderligi kwadrat ýaýlaryň içinde çapa çykarýar. <span class="atr">.Println</span> giňeltmesi
+                        bolsa yzygiderligiň (ýa-da dinamiki massiwiň) elementleriniň arasyna boşluk simwolyny goýmaklyk bilen yzygiderligi
+                        kwadrat ýaýlar bolmadan çapa çykarýar.
+                    </p>
+                    <p>
+                        Bu bölümde <span class="atr">sequence</span> yzygiderlikleriň aýratynlyklarynyň üstünde kän durulman esasan dinamiki
+                        massiwler üçin hem geçerli bolan bu yzygiderlikleriň käbir funksiýalary we metotlary düşündiriljekdir. Mundan beýläk
+                        düşündirişlerde aňsatlyk üçin <span class="atr">sequence</span> yzygiderlikler ýöne yzygiderlikler diýip
+                        atlandyryljakdyr.
+                    </p>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-3">
+                    <h2 class="sticky">Yzygiderlik generatorlary <a href="#c-3">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>Seq(T tipe eýe sanaw)</b></td>
+                                <td>
+                                    Arasy otur belgisi bilen bölünen T tipe eýe yzygiderlik döredýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var a: sequence of integer;
+                                            a := Seq(1, 8, -10, 14, 23, 19, 126);
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Range(a,b)</b></td>
+                                <td>
+                                    [a; b] aralykda bir ädimden yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Range(a,b,h)</b></td>
+                                <td>
+                                    [a; b] aralykda h ädimden yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqFill(n,a)</b></td>
+                                <td>
+                                    a baha eýe n element gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqRandomInteger(n,a,b)
+                                    SeqRandom(n,a,b)
+                                    </b></td>
+                                <td>
+                                    [a; b] aralygynda n sany tötänleýin bitin sanlaryň yzygiderligini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqRandomReal(n,a,b)</b></td>
+                                <td>
+                                    [a; b] aralygynda n sany tötänleýin hakyky sanlaryň yzygiderligini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>n.Rangе</b></td>
+                                <td>
+                                    1, 2, 3, ... n; görnüşinde yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>n.Times</b></td>
+                                <td>
+                                    0, 1, 2, ... n-1; görnüşinde yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>a.To(b)</b></td>
+                                <td>
+                                    a, a+1, a+2, … b; görnüşinde yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>a.DownTo(b)</b></td>
+                                <td>
+                                    a, a-1, a-2, … b; görnüşinde yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>PartitionPoints(a,b,n)</b></td>
+                                <td>
+                                    [a;b] san aralygyny deň n kesime bölýär. a we b-niň tipi real. Matematiki funksiýanyň tabulýasiýasy üçin amatlydyr. Eger-de tabulýasiýany [a; b] aralykda h ädimden ýerine ýetirmeli bolsa, onda generatory
+                                    <code class="language-pascal">PartitionPoints(a, b, Trunc((b - a) / h))</code> görnüşde ýazmak ýeterlikdir
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqGen(n, integer -> T)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen F(i) funksiýa görä T tipe eýe n elementlik yzygiderlik generirlenýär (i = 0, 1, ... , n-1).
+                                    Aşakdaky mysalda 10 sany täk san generirlenýär:
+                                    <code class="language-pascal">SeqGen(10, i -> 2 * i + 1).Println;</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqGen(n, integer -> T, m)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen F(i) funksiýa görä T tipe eýe n elementlik yzygiderlik generirlenýär (i = m, m+1, ... , m+n-1). Ýokardaky funksiýadan tapawudy i-niň başlangyç bahasy berilýär.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqGen(n, m, T -> T)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen F(i) funksiýa görä T tipe eýe n elementlik yzygiderlik generirlenýär. m yzygiderligiň ilkinji elmentiniň bahasy. Lýambda-aňlatma iki goňşy elementiň birinjisinden ikinjisine bolan özgertmäni berýär. Yzygiderligiň häzirki elementiniň bahasy onuň öňündäki elementiň bahasyna bagly bolan ýagdaýda ulanylýar. Aşakdaky mysalda yzygiderligiň iki goňşy elementiniň ikinjisiniň bahasynyň üstüne 0,5 goşulýar:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            SeqGen(5, 1.0, x -> x + 0.5).Println
+                                            //1  1.5  2  2.5  3
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqGen(n, m, k, (T,T)->T)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen F(i) funksiýa görä T tipe eýe n elementlik yzygiderlik generirlenýär. m yzygiderligiň birinji elmentiniň, k bolsa yzygiderligiň ikinji elementiniň başlangyç bahasy. Lýambda-aňlatma iki goňşy elementiň birinjisinden ikinjisine bolan özgertmäni berýär. Yzygiderligiň häzirki elementiniň bahasy onuň öňündäki iki elementiň bahasyna bagly bolan ýagdaýda ulanylýar. Mysal üçin 10 sany Fibonaççi sanlaryny aşakdaky ýaly generirläp bolar:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            SeqGen(10, 1, 1, (i , j) -> i + j).Println 
+                                            //1 1 2 3 5 8 13 21 34 55
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqWhile(m,T->T,T->boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň elementleri üçin ikinji lýambda-aňlatmada berlen şert kanagatlanýança birinji lýambda-aňlatmada berlen özgertme ýerine ýetirilýär. Birinji lýambda-aňlatma özgertme funksiýasydyr. m bolsa yzygiderligiň birinji elementiniň bahasydyr. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            SeqWhile(1, i -> 2*i, i -> i <= 500).Println
+                                            //1 2 4 8 16 32 64 128 256
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>SeqWhile(m,k,(T,T)->T,T->boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň elementleri üçin ikinji lýambda-aňlatmada berlen şert kanagatlanýança birinji lýambda-aňlatmada berlen özgertme ýerine ýetirilýär. Birinji lýambda-aňlatma özgertme funksiýasydyr. m we k bolsa yzygiderligiň birinji we ikinji elementiniň bahasydyr. Mysal üçin, 100 kiçi Fibonaççi sanlary aşakdaky ýaly alnar:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            SeqWhile(1,1,(i,j)->(i+j), t->t < 100).Println
+                                            //1 1 2 3 5 8 13 21 34 55 89
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-4">
+                    <h2 class="sticky">Tükeniksiz yzygiderlik generatorlary <a href="#c-4">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>a.Cycle</b></td>
+                                <td>Islendik a yzygiderligi a.Cycle generatoryň kömegi bilen tükeniksiz gaýtalatmak bilen tükeniksiz yzygiderligi almak mümkin. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var a := Seq(1,2,3);
+                                            a.Cycle.Println
+                                            //1 2 3 1 2 3 1 2 3 1 2 3...
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>m.Step</b></td>
+                                <td>
+                                    m bahadan başlaýan tükeniksiz yzygiderligi gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            5.Step.Println 
+                                            //5 6 7 8 9 10 11 12 13 14 15 16...
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>m.Step(h)</b></td>
+                                <td>
+                                    m bahadan başlaýan h ädimli tükeniksiz yzygiderligi gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            5.Step(2).Println 
+                                            //5 7 9 11 13 15 17 19 21 23 25 27...
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-5">
+                    <h2 class="sticky">Yzygiderlikleriň elementleriniň klawiaturadan girizilmegi <a href="#c-5">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqInteger(n)</b></td>
+                                <td>
+                                    n elementli bitin san yzygiderliginiň klawiaturadan girizilmegi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqInteger('Tekst', n)</b></td>
+                                <td>
+                                    n elementli bitin san yzygiderliginiň klawiaturadan girizilmegi. Ýokardaky funksiýadan tapawudy elementler girizilmezden öň ekrana “Giriş tekstini” çap edýär
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqIntegerWhile(integer -> boolean)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen şert kanagatlanýança n elementli bitin san yzygiderliginiň klawiaturadan girizilmegi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqIntegerWhile('Tekst', integer -> boolean)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen şert kanagatlanýança n elementli bitin san yzygiderliginiň klawiaturadan girizilmegi. Ýokardaky funksiýadan tapawudy elementler girizilmezden öň ekrana “Giriş tekstini” çap edýär
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqReal(n)</b></td>
+                                <td>
+                                    n elementli hakyky san yzygiderliginiň klawiaturadan girizilmegi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqReal('Tekst', n)</b></td>
+                                <td>
+                                    n elementli hakyky san yzygiderliginiň klawiaturadan girizilmegi. Ýokardaky funksiýadan tapawudy elementler girizilmezden öň ekrana “Giriş tekstini” çap edýär
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqRealWhile(real -> boolean)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen şert kanagatlanýança n elementli hakyky san yzygiderliginiň klawiaturadan girizilmegi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>ReadSeqRealWhile('Tekst', real -> boolean)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen şert kanagatlanýança n elementli hakyky san yzygiderliginiň klawiaturadan girizilmegi. Ýokardaky funksiýadan tapawudy elementler girizilmezden öň ekrana “Giriş tekstini” çap edýär
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-6">
+                    <h2 class="sticky">Elementleriň agregirlenmegi (üýşürilmegi) <a href="#c-6">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s.Aggregate((T, T) -> T)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen funksiýa s yzygiderligiň elementleri üçin ýerine ýetirilýär we netije gaýtarylýar. Agregat funksiýa ilki bilen yzygiderligiň birinji we ikinji elementi üçin ýerine ýetirilip netije alynýar, soňra funksiýa netije bilen yzygiderligiň üçünji elementi üçin ýerine ýetirilýär we ş.m. görnüşde dowam edýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var s := Seq(6,-3,11,8,-2);
+                                            s.Aggregate((i,j) -> i+j).Println //20 
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Aggregate(a,(T,T) -> T)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen funksiýa s yzygiderligiň elementleri üçin ýerine ýetirilýär we netije gaýtarylýar, ýöne a baha başlangyç baha hökmünde kabul edilýär. Agregat funksiýa ilki a baha we yzygiderligiň birinji elementi üçin ýerine ýetirilip netije alynýar, soňra funksiýa netije bilen yzygiderligiň ikinji elementi üçin ýerine ýetirilýär we ş.m. görnüşde dowam edýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var s := Seq(6,-3,11,8,-2);
+                                            s.Aggregate(1,(i,j) -> i*j).Println
+                                            //3168
+                                        </code>
+                                    </pre>
+                                    Aşakdaky mysalda 50! netijesi hasaplanýar: 
+                                    <p>
+                                        <code class="language-pascal">
+                                            50.Range.Aggregate(BigInteger(1),(i,j) -> i*j).Println
+                                        </code>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-7">
+                    <h2 class="sticky">Yzygiderligiň içinden elementleriň saýlanmagy (filtrlenmegi) <a href="#c-7">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s.First</b></td>
+                                <td>
+                                    Yzygiderligiň birinji elementini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.First(T -> boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň içinden lýambda-aňlatmada berlen şerti kanagatlandyrýan birinji elementi gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.FirstOrDefault</b></td>
+                                <td>
+                                    Yzygiderligiň birinji elementini gaýtarýar. Eger-de yzygiderligiň içi boş bolsa kabulgörlen baha gaýtarylýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.FirstOrDefault(T->boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň içinden lýambda-aňlatmada berlen şerti kanagatlandyrýan birinji elementi gaýtarýar. Şerti kanagatlandyrýan element ýok bolsa, kabulgörlen baha gaýtarylýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Take(n)</b></td>
+                                <td>
+                                    s yzygiderligiň ilkinji n elementini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.TakeWhile(T -> boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň birinji elementinden başlap tä lýambda-aňlatmada berlen şerti kanagatlandyrýan elementleriň ählisini gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            Seq(1,2,3,4,5,6).TakeWhile(t -> t < 3).Println
+                                            //1 2                                          
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Skip(n)</b></td>
+                                <td>
+                                    s yzygiderligiň n-nji elementinden soňraky elementleriniň yzygiderligini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.SkipWhile(T -> boolean)</b></td>
+                                <td>
+                                    s yzygiderligiň şerti kanagatlandyrýan elementlerinden galanlaryny gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            Seq(1,2,3,4,5,6).SkipWhile(t->t < 3).Println
+                                            //3 4 5 6 
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.SkipLast</b></td>
+                                <td>
+                                    s yzygiderligiň ahyrky elementlerinden galan elementleriniň yzygiderligini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.SkipLast(n)</b></td>
+                                <td>
+                                    s yzygiderligiň soňky n elementinden galanlaryny gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Last</b></td>
+                                <td>
+                                    s yzygiderligiň ahyrky elementini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.LastOrDefault</b></td>
+                                <td>
+                                    Yzygiderligiň ahyrky elementini gaýtarýar. Eger-de yzygiderligiň içi boş bolsa kabulgörlen baha gaýtarylýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Last(T -> boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň içinden lýambda-aňlatmada berlen şerti kanagatlandyrýan ahyrky elementi gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.LastOrDefault(T -> boolean)</b></td>
+                                <td>
+                                    Yzygiderligiň içinden lýambda-aňlatmada berlen şerti kanagatlandyrýan ahyrky elementi gaýtarýar. Şerti kanagatlandyrýan element ýok bolsa, kabulgörlen baha gaýtarylýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Distinct</b></td>
+                                <td>
+                                    s yzygiderligiň gaýtalanmaýan (unikal) elementlerini gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Where(T->boolean)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen şerte görä yzygiderligi filtrleýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var a := Arr(1, 2, 3, 5, 6);
+                                            a.Where(x -> x mod 2 = 0).Println; // 2 6
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Where((T, integer)->boolean)</b></td>
+                                <td>
+                                    Lýambda-aňlatmada berlen şerte görä elementiň indeksini hasaba goşmaklyk bilen yzygiderligi filtrleýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var a := Arr(1,2,3,5,6);
+                                            a.Where((x,i)->(i mod 2=0) and (x mod 2=0)) .Println; // 6
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Incremental</b></td>
+                                <td>
+                                    s yzygiderligiň iki goňşy elementiniň tapawudyny almaklyk bilen täze yzygiderligi gaýtarýar. Tapawut şu görnüşde ýerine ýetirilýär: 
+                                    <em>ikinji_element – birinji_element </em>
+                                    Mysal üçin:  
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            Seq(7,9,6,3,5,1,4,3,9).Incremental.Println
+                                            //2 -3 -3 2 -4 3 -1 6
+                                        </code>
+                                    </pre>                                  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Incremental((T, T) -> T)</b></td>
+                                <td>
+                                    s yzygiderligiň iki goňşy elementi üçin lýambda-aňlatmada berlen funksiýany ýerine ýetirmeklik bilen täze yzygiderlik gaýtarýar. Ýokardaky mysaly bu giňeltme arkaly şu görnüşde ýazyp bolar:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            Seq(7,9,6,3,5,1,4,3,9).Incremental((i,j)->j-i)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Pairwise</b></td>
+                                <td>
+                                    s yzygiderligiň iki goňşy elementini iki elementlik kortežleriň yzygiderligi görnüşinde gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Pairwise((T, T) -> T)</b></td>
+                                <td>
+                                    s yzygiderligiň iki goňşy elementi üçin lýambda-aňlatmada berlen funksiýany ýerine ýetirmeklik bilen täze yzygiderlik gaýtarýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Numerate</b></td>
+                                <td>
+                                    s yzygiderligiň her bir elementini tertibi boýunça nomerleýär. Bu giňeltme iki elementli kortežleriň yzygiderligini gaýtarýar. Kortežiň birinji elementi, yzygiderligiň elementiniň tertip belgisi, ikinjisi bolsa elementiň bahasy. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            Seq(7,9,6,3,5,1,4).Println.Numerate.Println
+                                            7 9 6 3 5 1 4 
+                                            (1,7) (2,9) (3,6) (4,3) (5,5) (6,1) (7,4)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Numerate(m)</b></td>
+                                <td>
+                                    s yzygiderligiň her bir elementini tertibi boýunça m bahadan başlap nomerleýär. Bu giňeltme iki elementli kortežleriň yzygiderligini gaýtarýar. Kortežiň birinji elementi, yzygiderligiň elementiniň m-den başlaýan tertip belgisi, ikinjisi bolsa elementiň bahasy. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            Seq(7,9,6,3,5,1,4).Println.Numerate(3).Println
+                                            7 9 6 3 5 1 4 
+                                            (3,7) (4,9) (5,6) (6,3) (7,5) (8,1) (9,4)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Batch(k)</b></td>
+                                <td>
+                                    s yzygiderligi k elementi bolan yzygiderliklere bölýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin 
+                                                var s := Seq(7,9,6,3,5,1,4,3,9);
+                                                var p := s.Batch(4).Println;
+                                                foreach var r in p do
+                                                    r.Println;
+                                            end.
+                                            //[7,9,6,3] [5,1,4,3] [9]
+                                            //7 9 6 3
+                                            //5 1 4 3
+                                            //9
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Partition(T -> boolean)</b></td>
+                                <td>
+                                    s yzygiderligi lýambda-aňlatmada berlen şert boýunça iki yzygiderlige bölýär. Birinji yzygiderlige şertiň kanagatlandyrýan elementleri, ikinji yzygiderlige bolsa şertiň kanagatlandyrmaýan elementleri goýlar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin 
+                                                var s := Seq(7, 9, 6, 3, 5, 1, 4, 3, 9);
+                                                s.Println;
+                                                var (Jubut,Tak) := s.Partition(v->v.IsEven);
+                                                Jubut.Println;
+                                                Tak.Println
+                                            end.
+                                            //7 9 6 3 5 1 4 3 9
+                                            //6 4
+                                            //7 9 3 5 1 3 9
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.SplitAt(n)</b></td>
+                                <td>
+                                    s yzygiderligi iki sany yzygiderlige bölýär. Birinji yzygiderligiň içine n sany element, ikinji yzygiderligiň içine bolsa, galan elementler ýerleşdirilýär. Bölünen yzygiderlik iki elementlik korteže ýerleşdirilýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin 
+                                                var s := Seq(7, 9, 6, 3, 5, 5);
+                                                s.Println;
+                                                s.SplitAt(3).Println;
+                                            end.
+                                            //7 9 6 3 5 5
+                                            //([7,9,6],[3,5,5]) 
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Slice(a, h)</b></td>
+                                <td>
+                                    s yzygiderligiň a-njy elementinden başlap h ädim bilen saýlanan elementleriň yzygiderligini gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                Seq(7,9,6,3,5,1,4,3,9).Slice(1, 3).Println
+                                            end.
+                                            //9 5 3 
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Slice(a, h, n)</b></td>
+                                <td>
+                                    s yzygiderligiň a-njy elementinden başlap h ädim bilen saýlanan elementlerden uzynlygy n elementden ybarat bolan yzygiderligi gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                Seq(7,9,6,3,5,1,4,3,9).Slice(0,2,4).Println
+                                            end.
+                                            //7 6 5 4
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-8">
+                    <h2 class="sticky">Yzygiderlikleriň birleşdirilmegi, kesişmesi we tapawudy <a href="#c-8">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>p.Union(q)</b></td>
+                                <td>
+                                    p we q yzygiderlikleriň birleşdirilen yzygiderligini gaýtarýar. Iki yzygiderligiňem gaýtalanýan elementleri bir gezek alynýar 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>p.Intersect(q)</b></td>
+                                <td>
+                                    p we q yzygiderlikleriň kesişmesini gaýtarýar, ýagny hem p yzygiderligiň içinde, hem q yzygiderligiň içinde bar bolan elementleriň yzygiderligi gaýtarylýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>p.Except(q)</b></td>
+                                <td>
+                                    p yzygiderligiň elementleriniň sanawyndan q yzygiderligiň içinde bar bolan elementler aýrylýar
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-9">
+                    <h2 class="sticky">Yzygiderlikleriň Dekart köpeltmek hasyly <a href="#c-9">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>a.CartesianPower(n)</b></td>
+                                <td>
+                                    a yzygiderligiň n elementlik dekart köplüklerini gaýtarýar. Her köplük massiw görnüşinde gaýtarylýar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>a.Cartesian(k)</b></td>
+                                <td>
+                                    a we k yzygiderlikleriň dekart köpeltmek hasylyny kortežleriň yzygiderligi görnüşinde gaýtarýar
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-10">
+                    <h2 class="sticky">Yzygiderlikleriň elemetleriniň gezekleşmegi <a href="#c-10">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s1.Interleave(s2)</b></td>
+                                <td>
+                                    s1 we s2 yzygiderlikleriň degişli elementlerini gezekleşdirme bilen döredilen yzygiderligi gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var s1 := Seq(1,2,3);
+                                            var s2 := Seq(4,5,6);
+                                            s1.Interleave(s2).Println //1 4 2 5 3 6
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-11">
+                    <h2 class="sticky">Yzygiderlikleriň elemetleriniň birikdirilmegi <a href="#c-11">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s1.Zip(s2,(p,q) -> Res)</b></td>
+                                <td>
+                                    s1 we s2 yzygiderlikleriň degişli elementleriniň üstünde lýambda-aňlatmada berlen funksiýany ýerine ýetirmeklik bilen yzygiderlik gaýtarylýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var s1 := Seq(1,2,3);
+                                            var s2 := Seq(4,5,6);
+                                            s1.Zip(s2,(i,j)->(i+j)).Println
+                                            //5 7 9
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s1.ZipTuple(s2)</b></td>
+                                <td>
+                                    s1 we s2 yzygiderlikleriň degişli elementlerini kortežleriň yzygiderligi görnüşinde gaýtarýar. Bu funksiýa iň köp 3 yzygiderligi parametr hökmünde alyp biler. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var s1 := Seq(1,2,3);
+                                            var s2 := Seq(4,5,6);
+                                            var s3 := Seq(7,8,9);
+                                            var s4 := Seq(10,11,12);
+                                            s1.ZipTuple(s2,s3,s4).Println
+                                            //(1,4,7,10) (2,5,8,11) (3,6,9,12)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.UnZipTuple</b></td>
+                                <td>
+                                    Iki, üç ýa-da dört elementlik kortežleriň degişli elementlerini iki, üç ýa-da dört yzygiderlik görnüşine özgerdýär. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            var s1 := Seq(1,2,3);
+                                            var s2 := Seq(4,5,6);
+                                            var s3 := Seq(7,8,9);
+                                            var s4 := Seq(10,11,12);
+                                            var s5 := s1.ZipTuple(s2,s3,s4).Println;
+                                            //(1,4,7,10) (2,5,8,11) (3,6,9,12)
+                                            (s1,s2,s3,s4) := s5.UnZipTuple;
+                                            Println(s1,s2,s3,s4);
+                                            //[1,2,3] [4,5,6] [7,8,9] [10,11,12]
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-12">
+                    <h2 class="sticky">Yzygiderlikleriň tertipleşdirilmegi <a href="#c-12">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s.Order</b></td>
+                                <td>
+                                    s yzygiderligiň elementlerini artýan tertipde tertipleşdirýän giňeltme
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.OrderDescending</b></td>
+                                <td>
+                                    s yzygiderligiň elementlerini kemelýän tertipde tertipleşdirýän giňeltme
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.OrderBy(T->Key)</b></td>
+                                <td>
+                                    s yzygiderligiň elmentlerini lýambda-aňlatma arkaly berlen açaryň bahasyna görä artýan tertipde tertipleşdirýän giňeltme. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var s := Seq(('Atayew',20),('Nazarow',21),
+                                                ('Berdiyew',28));
+                                                s.OrderBy(t -> t[0]).Println
+                                            end. 
+                                            //(Atayew,20) (Berdiyew,28) (Nazarow,21)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.OrderByDescending(T->Key)</b></td>
+                                <td>
+                                    s yzygiderligiň elmentlerini lýambda-aňlatma arkaly berlen açaryň bahasyna görä kemelýän tertipde tertipleşdirýän giňeltme. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var s := Seq(('Atayew',20),('Nazarow',21),
+                                                ('Berdiyew',28));
+                                                s.OrderByDescending(t -> t[1]).Println
+                                            end. 
+                                            //(Berdiyew,28) (Nazarow,21) (Atayew,20)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>.ThenBy(T->Key)</b></td>
+                                <td>
+                                    Tertipleşdirilen yzygiderligiň meňzeş atributlaryny artýan tertipde tertipleşdirýär. .OrderBy ýa-da .OrderByDescending giňeltmesinden soňra ulanylýar. Käbir ýagdaýlarda tertipleşdirilen yzygiderligi gaýtadan tertipleşdirmeli bolýar. Mysal üçin, adamlary ýaşy boýunça tertipleşdirenimizden soňra, ýaşlary deň bolanlary öz aralarynda familiýalary boýunça tertipleşdirmeli bolýar. Aşakdaky mysalda ilki bilen adamlar ýaşyna görä artýan tertipde tertipleşdirilýär, soňra bolsa, ýaşy deň bolanlar öz aralarynda familiýalaryna görä artýan tertipde tertipleşdirilýär.
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var  s := Seq((20,'Durdyyew'), (21,'Berdiyew'), 
+                                                (18,'Myradow'), (20,'Babayew'), (20,'Atayew'));
+                                                s.OrderBy(t -> t[0]).ThenBy(t -> t[1]).Println;
+                                            end.
+                                            //(18,Myradow) (20,Atayew) (20,Babayew) 
+                                            //(20,Durdyyew) (21,Berdiyew)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>.ThenByDescending(T->Key)</b></td>
+                                <td>
+                                    Tertipleşdirilen yzygiderligiň meňzeş atributlaryny kemelýän tertipde tertipleşdirýär. .OrderBy ýa-da .OrderByDescending giňeltmesinden soňra ulanylýar. Käbir ýagdaýlarda tertipleşdirilen yzygiderligi gaýtadan tertipleşdirmeli bolýar. Mysal üçin, adamlary ýaşy boýunça tertipleşdirenimizden soňra, ýaşlary deň bolanlary öz aralarynda familiýalary boýunça tertipleşdirmeli bolýar. Aşakdaky mysalda ilki bilen adamlar ýaşyna görä kemelýän tertipde tertipleşdirilýär, soňra bolsa, ýaşy deň bolanlar öz aralarynda familiýalaryna görä kemelýän tertipde tertipleşdirilýär.
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var  s := Seq((20,'Durdyyew'), (21,'Berdiyew'), 
+                                                (18,'Myradow'), (20,'Babayew'), (20,'Atayew'));
+                                                s.OrderByDescending(t -> t[0])
+                                                .ThenByDescending(t -> t[1]).Println;
+                                            end.
+                                            //(21,Berdiyew) (20,Durdyyew) (20,Babayew) 
+                                            //(20,Atayew) (18,Myradow)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-13">
+                    <h2 class="sticky">Yzygiderligiň içinde elementleriň gözlegi <a href="#c-13">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s.ElementAt(n)</b></td>
+                                <td>
+                                    s yzygiderligiň n-nji indeksindeki elementiň bahasyny gaýtarýar. Indeksiň bahasy çägiň daşynda bolsa ýalňyşlyk habarnamasy görkeziler
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.ElementAtOrDefault(n)</b></td>
+                                <td>
+                                    s yzygiderligiň n-nji indeksindeki elementiň bahasyny gaýtarýar. Indeksiň bahasy çägiň daşynda bolsa kabulgörlen baha görkeziler
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.DefaultIfEmpty</b></td>
+                                <td>
+                                    Eger-de s yzygiderligiň içi boş bolsa, onda s yzygiderligiň tipiniň kabulgörlen bir elementlik bahasyny gaýtarýar. Eger-de s yzygiderligiň içi boş bolmasa, onda bu yzygiderligiň elemenlerini gaýtarýar. Yzygiderligiň belli bir şerte görä saýlanan elementleriniň ortaça bahasy hasaplananda bu funksiýany ulanmaklyk amatly bolup biler. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var s := Seq(1,2,3,4);
+                                                s.Skip(4).DefaultIfEmpty.Println; // 0
+                                                s.Where(t->     
+                                                Abs(Tan(t))>1).DefaultIfEmpty.Average.Println;
+                                                s.Where(t -> Tan(t)>2)  
+                                                .DefaultIfEmpty.Average.Println
+                                                //2.33333333333333
+                                                //0
+                                            end. 
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.DefaultIfEmpty(Т)</b></td>
+                                <td>
+                                    Eger-de s yzygiderligiň içi boş bolsa, onda s yzygiderligiň tipiniň kabulgörlen bir elementlik bahasyna derek şol tipe deň ulanyjynyň görkezen bahasyny gaýtarýar. Eger-de s yzygiderligiň içi boş bolmasa, onda bu yzygiderligiň elemenlerini gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            s.Where(t -> Tan(t)>2)
+                                            .DefaultIfEmpty(777).Average.Println
+                                            //777
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Contains(a)</b></td>
+                                <td>
+                                    s yzygiderligiň içinde a baha deň iň azyndan bir element bar bolsa, True bolmasa False bahany gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var s := Range(-5, 8).Println;
+                                                s.Contains(4).Println
+                                            end.
+                                            //-5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8
+                                            //True
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Any</b></td>
+                                <td>
+                                    Eger-de s yzygiderlik boş däl bolsa, onda True bolmasa False bahany gaýtarýan metod. s.Count&lt&gt0 aňlatma deňdir
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.Any(T -> boolean)</b></td>
+                                <td>
+                                    Eger-de s yzygiderligiň içinde lýambda-aňlatmada berlen şerti kanagatlandyrýan iň azyndan bir element hem bar bolsa, True bolmasa False bahany gaýtarýan metod. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var s := Range(-5, 8).Println;
+                                                s.Any(r -> r > 10).Println;
+                                                s.Any(r -> r < -3).Println
+                                            end.
+                                            //-5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8
+                                            //False
+                                            //True
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>s.All(T -> boolean)</b></td>
+                                <td>
+                                    Eger-de s yzygiderligiň ähli elementleri lýambda-aňlatmada berlen şerti kanagatlandyrýan bolsa, True bolmasa False bahany gaýtarýan metod. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin 
+                                                loop 10 do
+                                                    ArrRandom(10, -5, 50).All(p -> p > 0).Print;
+                                                Println
+                                            end.
+                                            //False False True False True False False 
+                                            //False False False
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-14">
+                    <h2 class="sticky">Yzygiderlikleriň deňligi <a href="#c-14">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>p.SequenceEqual(q)</b></td>
+                                <td>
+                                    Eger-de p we q yzygiderlikleriň degişli elementleri biri-birine deň bolsa, onda True, bolmasa False baha gaýtarylar
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="item-container" id="c-15">
+                    <h2 class="sticky">Yzygiderlikleriň tabulýasiýasy <a href="#c-15">#</a></h2>
+                    <div style="overflow-x: auto;">
+                        <table class="table-1 auto-column">
+                            <tbody><tr>
+                                <th>Funksiýa</th>
+                                <th>Düşündirişi</th>
+                            </tr>
+                            <tr>
+                                <td><b>s.Tabulate(T -> T1)</b></td>
+                                <td>
+                                    s yzygiderligiň her bir elementi üçin lýambda-aňlatmada berlen funksiýany ýerine ýetirmeklik bilen iki elementlik (argument, funksiýa) kortežleriň yzygiderligini gaýtarýar. Mysal üçin:
+                                    <pre>
+                                        <code class="language-pascal" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                                            begin
+                                                var s := Seq(30,45,60,90);
+                                                s.Tabulate(t->Round(Sin(t),2)).Println
+                                            end.
+                                            //(30,-0.99) (45,0.85) (60,-0.3) (90,0.89)
+                                        </code>
+                                    </pre>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../../about-project.html">Proýekt barada</a> |
+                <a href="../../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../../js/prism-dark.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/dark-theme.js"></script>
+</body>
+
+</html>

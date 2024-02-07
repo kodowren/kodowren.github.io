@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Ýyllara görä olimpiada soraglary</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/prism-dark.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <span onclick="openNav()" class="opnbtn" id="opnbtn">&#9776;</span>
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="../contents-html.html">HTML</a>
+                <a href="../contents-css.html">CSS</a>
+                <a href="../contents-javascript.html">JavaScript</a>
+                <a href="../glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../contents-html.html">HTML</a>
+                    <a href="../contents-css.html">CSS</a>
+                    <a href="../contents-javascript.html">JavaScript</a>
+                    <a href="../glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main">
+            <div class="sidenav" id="mySidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul id="nav">
+                    <li><a class="btn active" href="#c-1">Mekdep tapgyry</a>
+                        <ul id="sublist">
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-2"><b class="atr">2016-2017 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-2_1">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-2_2">10-njy synp</a></li>
+                                        <li><a class="btn" href="#c-2_3">11-nji synp</a></li>
+                                        <li><a class="btn" href="#c-2_4">12-nji synp</a></li>
+                                    </ul>
+                                </details>  
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-3"><b class="atr">2020-2021 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-3_1">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-3_2">10-njy synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-4"><b class="atr">2021-2022 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-4_1">8-nji synp</a></li>
+                                        <li><a class="btn" href="#c-4_2">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-4_3">10-njy synp</a></li>
+                                        <li><a class="btn" href="#c-4_4">11-nji synp</a></li>
+                                        <li><a class="btn" href="#c-4_5">12-nji synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-5"><b class="atr">2022-2023 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-5_1">8-nji synp</a></li>
+                                        <li><a class="btn" href="#c-5_2">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-5_3">10-njy synp</a></li>
+                                        <li><a class="btn" href="#c-5_4">11-nji synp</a></li>
+                                        <li><a class="btn" href="#c-5_5">12-nji synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-6"><b class="atr">2023-2024 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-6_1">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-6_2">10-njy synp</a></li>
+                                        <li><a class="btn" href="#c-6_3">11-nji synp</a></li>
+                                        <li><a class="btn" href="#c-6_4">12-nji synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="btn" href="#c-7">Şäher tapgyry</a>
+                        <ul id="sublist">
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-8"><b class="atr">2021-2022 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-8_1">8-nji synp</a></li>
+                                        <li><a class="btn" href="#c-8_2">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-8_3">10-njy synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-9"><b class="atr">2022-2023 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-9_1">8-nji synp</a></li>
+                                        <li><a class="btn" href="#c-9_2">9-njy synp</a></li>
+                                        <li><a class="btn" href="#c-9_3">10-njy synp</a></li>
+                                        <li><a class="btn" href="#c-9_4">11-nji synp</a></li>
+                                        <li><a class="btn" href="#c-9_5">12-nji synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-10"><b class="atr">2023-2024 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-10_1">10-njy synp</a></li>
+                                        <li><a class="btn" href="#c-10_2">11-nji synp</a></li>
+                                        <li><a class="btn" href="#c-10_3">12-nji synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="btn" href="#c-11">Welaýat tapgyry</a>
+                        <ul id="sublist">
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-12"><b class="atr">2019-2020 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-12_1">12-nji synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-13"><b class="atr">2021-2022 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-13_1">10-njy synp</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary><a class="btn" href="#c-14"><b class="atr">2022-2023 okuw ýyly</b></a></summary>
+                                    <ul id="sublist">
+                                        <li><a class="btn" href="#c-14_1">11-nji synp (adaty)</a></li>
+                                        <li><a class="btn" href="#c-14_2">12-nji synp (adaty)</a></li>
+                                        <li><a class="btn" href="#c-14_3">11-nji synp (ýöriteleşdirilen)</a></li>
+                                        <li><a class="btn" href="#c-14_4">12-nji synp (ýöriteleşdirilen)</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="date">Täzelenme senesi: 03.02.2024</div>               
+            </div>
+            <div class="topics" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="../index.html">Esasy</a><span>/</span></li>
+                    <li><a href="../contents-olymp.html">Olimpiada programmirleme</a><span>/</span></li>
+                    <li class="active">Ýyllara görä olimpiada soraglary</li>
+                </ul>
+                <!---->
+                <div class="item-container" id="c-1">
+                    <h2 class="sticky">Mekdep tapgyry <a href="#c-1">#</a></h2>
+                    <div class="note">Ýyllar boýunça olimpiadanyň mekdep tapgyrynda çykan soraglar</div>
+                </div>
+                <!---->
+                <div class="item-container" id="c-2">
+                    <h2 class="sticky">2016-2017 okuw ýyly <a href="#c-2">#</a></h2>
+                    <div class="note">2016-2017 okuw ýylynda synplar boýunça çykan soraglar</div>
+                </div>
+                <!---->
+                <div class="item-container" id="c-2_1">
+                    <h2 class="sticky">9-njy synp <a href="#c-2_1">#</a></h2>
+                    <div class="question">
+                        <span>MESELE-1</span>
+                        Üç sany bitin san berlen. Bu sanlaryň içinde näçe sany jübüt sanyň barlygyny kesgitlemeli. Meselem, 2, 3 we 4 berlen bolsa, jogap=2 bolar, 1, 3 we 5 berlen bolsa, jogap=0 bolar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            //1-nji usul:
+                            Program sorag_1;
+                            var a, b, c, count: integer;
+                            begin
+                                write('Uc sany bitin san girizin: '); read(a, b, c);
+                                count := 0;
+                                if(a mod 2 = 0) then inc(count);
+                                if(b mod 2 = 0) then inc(count);
+                                if(c mod 2 = 0) then inc(count);
+                                writeln('Jubut sanlaryn mukdary: ', count);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-2</span>
+                        N sanyň bölüjileriniň jemini tapmaly. Meselem n=6 berlen bolsa, S=1+2+3+6=12 bolar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_2;
+                            var n, jem:integer;
+                            begin
+                                write('n-i girizin: '); readln(n);
+                                writeln('Berlen sanyn bolujileri:');
+                                for var i:=1 to n do
+                                    if(n mod i = 0) then 
+                                    begin
+                                        write(i:5);
+                                        jem += i;
+                                    end;
+                                writeln;
+                                writeln('Berlen sanyn bolujilerinin jemi: ', jem);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-3</span>
+                        Hakyky A san we bitin N san berlen (N ˃ 0). Gaýtalanmany ulanmak arkaly aşakdaky jemi hasaplamaly we netijäni çapa çykarmaly:
+                        1+A<sup>1</sup>+A<sup>2</sup>+...+A<sup>N</sup>
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_3;
+                            var a, jem: real;
+                                n: integer;
+                            begin
+                                write('a-ny girizin: '); read(a);
+                                write('n-i girizin: '); read(n);
+                                jem := 0;
+                                for var i:=0 to n do jem := jem+power(a,i); 
+                                writeln('Netije: ', jem);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-4</span>
+                        Berlen N sanyň sifrleriniň jemini tapmaly. Meselem N=12345 bolsa, jogap 15 bolar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_4;
+                            var s:string;
+                                jem: integer;
+                            begin
+                                write('San girizin: '); read(s);
+                                for var i:=1 to s.Length do
+                                    if(s[i].IsDigit) then jem := jem+s[i].ToDigit;
+                                writeln('Berlen sanyn sifrlerinin jemi: ', jem);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-5</span>
+                        Berlen A we B sanlaryň iň uly umumy bölüjisini tapmaly. Meselem A=12, B=18 berlen bolsa Jogap=6 bolar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_5;
+                            var a,b:integer;
+                            begin
+                                write('Birinji sany girizin: '); read(a);
+                                write('Ikinji sany girizin: '); read(b);
+                                while a<>b do if a>b then a:=a-b else b:=b-a;
+                                    writeln('IUUB: ',a);
+                            end.
+                        </code>
+                    </pre>
+                </div>
+                <!---->
+                <div class="item-container" id="c-2_2">
+                    <h2 class="sticky">10-njy synp <a href="#c-2_2">#</a></h2>
+                    <div class="question">
+                        <span>MESELE-1</span>
+                        Bitin N san we A[N] massiw berlen. Massiwiň iň kiçi elementini tapmaly. Meselem N=5 we 2,6,-2,5,-3 sanlar berlen bolsa, jogap -3 bolar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_1;
+                            var m:array[1..100] of integer;
+                                in_kici, n:integer;
+                            begin
+                                write('n-i girizin: '); read(n);
+                                for var i:=1 to n do
+                                begin
+                                    m[i]:=random(-20,20);
+                                    write(m[i]:4);
+                                end;
+                                writeln;
+                                in_kici:=m[1];
+                                for i:integer :=2 to n do if m[i] < in_kici then in_kici := m[i];
+                                writeln('Massiwdaki in kici san: ', in_kici);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-2</span>
+                        Bitin N san we A[N] massiw berlen. Massiwi 2<sup>1</sup>, 2<sup>2</sup>, ..., 2<sup>N</sup> sanlar bilen doldurmaly. (Power funksiýasyny ulanmaly däl).
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_2;
+                            var m:array[1..100] of integer;
+                                n:integer;
+                            begin
+                                write('n-i girizin: '); read(n);
+                                var k:=1;
+                                for var i:=1 to n do 
+                                begin
+                                    k:=2*k;
+                                    m[i]:=k;
+                                    //m[i]:=power(2,i);
+                                end;
+                                for i:integer :=1 to n do write(m[i]:4);
+                                writeln;
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-3</span>
+                        Bitin N san we A[N] massiw berlen. Massiwiň iň kiçi we iň uly elementleriniň orunlaryny çalyşmaly we massiwi çap etmeli. Meselem N=5 we 1 2 3 4 5 massiw berlen bolsa, netije 5 2 3 4 1 bolmaly. (Swap funksiýasyny ulanmaly däl).
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_3;
+                            var m:array[1..100] of integer;
+                                n, min, min_i, max, max_i:integer;
+                            begin
+                                write('n-i girizin: '); read(n);
+                                for var i:=1 to n do
+                                begin
+                                    write('m[',i,']=');
+                                    read(m[i])
+                                end;
+                                min:=m[1]; max:=m[1];
+                                for var i:=1 to n do
+                                begin
+                                    if(m[i]<=min) then
+                                    begin
+                                        min:=m[i];
+                                        min_i:=i;
+                                    end;
+                                    if(m[i]>=max) then
+                                    begin
+                                        max:=m[i];
+                                        max_i:=i;
+                                    end;
+                                end;
+                                writeln('Massiwin in uly elementi: ', max);
+                                writeln('Massiwin in kici elementi: ', min);
+                                {var temp := m[min_i];
+                                m[min_i] := m[max_i];
+                                m[max_i] := temp;}
+                                swap(m[min_i], m[max_i]);
+                                for var i:=1 to n do write(m[i]:4);
+                                writeln;
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-4</span>
+                        N × M ölçegli matrisa berlen. Bu matrisanyň setirleriniň iň uly elementleriniň jemini tapmaly. Meselem: N=3 M=3, ((1 2 3), (4 5 6), (7 8 9)) girizilen bolsa, netije 18 bolmaly.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_4;
+                            const nMax=100; mMax=100;
+                            var a:array[1..nMax, 1..mMax] of integer;
+                                sum, max: integer;
+                            begin
+                                var (n, m) := ReadInteger2('n we m girizin: ');
+                                for var i:=1 to n do
+                                    for var j:=1 to m do a[i,j]:=random(-20,20);
+                                for var i:=1 to n do
+                                begin
+                                    for var j:=1 to m do 
+                                    begin
+                                        write(a[i,j]:5);
+                                    end;
+                                    writeln;
+                                end;
+                                for var i:=1 to n do
+                                begin
+                                    max := a[i,1];
+                                    for var j:=2 to m do 
+                                    begin
+                                        if(a[i,j]>max) then max := a[i,j];
+                                    end;
+                                    writeln(i,'-nji(y) setirin in uly elementi: ', max);
+                                    sum += max;
+                                end;
+                                writeln('Berlen matrisanyn setirlerinin in uly elementlerinin jemi: ', sum);
+                            end.
+                        </code>
+                    </pre>
+                </div>
+                <!---->
+                <div class="item-container" id="c-2_3">
+                    <h2 class="sticky">11-nji synp <a href="#c-2_3">#</a></h2>
+                    <div class="question">
+                        <span>MESELE-1</span>
+                        Bitin n sany sanlar berlipdir. Ol sanlaryň içinden köpeltmek hasyly iň uly bolan üç sany tapmaly. Meselem: n=9, {3, 5, 1, 7 ,9, 0, 9, -3, 10}; jogaby: 9, 10, 9.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_1;
+                            const nMax=100;
+                            var a:array[1..nMax] of integer;
+                            begin
+                                //Massiwe random bahalar bermek
+                                var n := ReadInteger('Massiwin element sanyny girizin: ');
+                                for var i:=1 to n do a[i] := random(-10, 10);                               
+                                //Massiwi cap etmek
+                                for var i:=1 to n do write(a[i]:4);
+                                writeln;                       
+                                //Massiwi (artyan tertipde) tertiplesdirmek - Bubble Sort
+                                for var i:=1 to n-1 do
+                                    for var j:=n downto i+1 do
+                                    if a[j] < a[j-1] then swap(a[j],a[j-1]);                             
+                                //Kopeltmek hasyly in uly bolan uc element
+                                writeln(a[n]:3, a[n-1]:3, a[n-2]:3);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-2</span>
+                        Bitin N san we A[N] massiw berlen. Massiwiň orta bahasyna iň golaý bolan elementi tapmaly. Meselem N=5 we 1 2 3 4 5 massiw berlen bolsa, netije 3 bolmaly.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_2;
+                            const nMax=100;
+                            var a,b:array[1..nMax] of real;
+                                sum: real;
+                                av, min: real;
+                                min_i:integer;
+                            begin
+                            //Massiwe random bahalar bermek
+                            var n := ReadInteger('Massiwin element sanyny girizin: ');
+                            for var i:=1 to n do a[i] := random(0, 10);
+                            //Massiwi cap etmek
+                            for var i:=1 to n do write(a[i]:4);
+                            writeln;
+                            //Massiwin ortaca bahasyny tapmak
+                            for var i:=1 to n do sum += a[i];
+                            av := sum/n;
+                            writeln('Massiwin ortaca bahasy: ', av); 
+                            //Massiwin ortaca bahasyna yakyn elementi anyklamak
+                            for var i:=1 to n do b[i] := abs(av-a[i]);
+                            min := b[1];
+                            for var i:=1 to n do
+                                if(b[i]<=min) then
+                                begin
+                                    min := b[i];
+                                    min_i := i;
+                                end;                            
+                            //Netije
+                            writeln('Massiwin ortaca bahasyna in yakyn elementi: ', a[min_i]);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-3</span>
+                        N × M ölçegli matrisa berlen. Bu matrisanyň sütünleriniň iň kiçi elementleriniň jemini tapmaly. Meselem: N=3 M=3, ((1 2 3), (4 5 6), (7 8 9)) girizilen bolsa, netije 6 bolmaly.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_3;
+                            const nMax=100; mMax=100;
+                            var a:array[1..nMax, 1..mMax] of integer;
+                                min, sum: integer;
+                            begin
+                                //Matrisan olcegini almak
+                                var (n, m) := ReadInteger2('n we m girizin: ');                            
+                                //Matrisa random bahalar bermek
+                                for var i:=1 to n do
+                                    for var j:=1 to m do a[i,j] := random(-10, 10);                          
+                                //Matrisany cap etmek
+                                for var i:=1 to n do
+                                begin
+                                    for var j:=1 to m do
+                                    begin
+                                        write(a[i,j]:5);
+                                    end;
+                                    writeln;
+                                end;                  
+                                //Matrisan sutunlerinin in kici elementlerinin jemini tapmak
+                                for var i:=1 to m do
+                                begin
+                                    min := a[1, i];
+                                    for var j:=2 to n do
+                                    begin
+                                        if(a[j,i] < min) then min := a[j,i]
+                                    end;
+                                    writeln(i,'-nji(y) sutunin in kici elementi: ', min);
+                                    sum += min;
+                                end;
+                                writeln('Matrisan sutunlerinin in kici elementlerinin jemi: ',sum);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-4</span>
+                        Baş  latyn  harplardan  ybarat  käbir  söz  berlen.  Sözde  näçe sany çekimli harp (E,Y,U,I,O,A) bardygyny kesgitlemeli. Mysal üçin “ASDAFE” berlen bolsa, jogap: 3.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program sorag_4;
+                            var c: array[1..6] of char = ('A', 'E', 'I', 'O', 'U', 'Y');
+                                s: string;
+                                count: integer;
+                            begin
+                                write('Setiri girizin: '); read(s);
+                                count := 0;
+                                for var i:=1 to s.Length do
+                                    for var j:=1 to 6 do
+                                    if(s[i]=c[j]) then
+                                    begin
+                                        inc(count);
+                                        continue;
+                                    end;
+                                writeln('Sozdaki cekimli sanlaryn mukary: ',count);
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-5</span>
+                        Berlen N natural sany 3-lik hasaplaýyş sistemasyna geçirmeli. Meselem N=3 bolsa, jogap 10 bolmaly.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            Program on_iki;
+                            var n,k:integer;
+                                s:string;
+                            begin
+                                write('San giriz: '); read(n);
+                                while(n<>0) do
+                                begin
+                                    k:=n mod 3;
+                                    s+=k.ToString;
+                                    n:=n div 3;
+                                end;
+                                for var i:=s.Length downto 1 do write(s[i]);
+                                writeln;
+                                //writeln(s.Inverse);
+                            end.
+                        </code>
+                    </pre>
+                </div>
+                <!---->
+                <div class="item-container" id="c-2_4">
+                    <h2 class="sticky">12-nji synp <a href="#c-2_4">#</a></h2>
+                    <div class="question">
+                        <span>MESELE-1</span>
+                        Berlen N sana iň golaý bolan, hem onluk, hem ikilik hasaplaýyş sistemalarynda polindrom (yzdan öňe we öňden yza meňzeş okalýan sanlar) bolan sany tapmaly.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            function ToBinary(n:integer):string;
+                            begin
+                                var s:string;
+                                while(n<>0) do
+                                begin
+                                    s += n mod 2;
+                                    n := n div 2;
+                                end;
+                                Result := s.Inverse;
+                            end;
+                            begin
+                                var min, max:integer;
+                                var n := ReadInteger('San giriz:');
+                                min := n; max := n;
+                                while(True) do
+                                begin
+                                    Inc(max);
+                                    if(max.ToString = max.ToString.Inverse) and (ToBinary(max) = ToBinary(max).Inverse) then break;
+                                end;
+                                while(True) do
+                                begin
+                                    Dec(min);
+                                    if(min.ToString = min.ToString.Inverse) and (ToBinary(min) = ToBinary(min).Inverse) then break;
+                                end;
+                                if(min < max) then 
+                                    begin
+                                        Println(min);
+                                        Println(ToBinary(min));
+                                    end
+                                else 
+                                    begin
+                                        Println(max);
+                                        Println(ToBinary(max));
+                                    end
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-2</span>
+                        1, 14 we 144 sanlaryň kombinirlenmesinden düzülen sana jadyly san diýilýär. Sanlaryň her birini islendik mukdarda ulanyp bolýar. Meselem, 14144, 141414 we 1411 – jadyly sanlar, 1444, 514 we 414 sanlar bolsa jadyly sanlar däldir. Berlen N (1 ≤  n  ≤ 10<sup>9</sup>) san jadyly bolsa “HAWA”, bolmasa “ÝOK” diýip çap etmeli.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            //Mesele çözülmedik
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-3</span>
+                        8x8 ölçegli küşt tagtasynyň käbir öýlerinde N sany pyýada bar. Maksimal pyýadalara howp salar ýaly edip K sany aty ýerleşdirmeli. 
+                        Giriş: Birinji setirde N we K sanlar, aşaky N setirde N sany pyýadanyň x, y koordinatalary berlen. 
+                        Çykyş: Pyýadalary "P", atlary "A" harpy bilen, boş öýjükleri bolsa "." bilen belgiläp, küşt tagtasyny çap etmeli.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            uses crt;
+                            var N, K: integer;
+                                A: array[1..8, 1..8] of char;
+                            begin
+                                for var i := 1 to 8 do
+                                    for var j := 1 to 8 do A[i, j] := '.';
+                                (N, K) := ReadInteger2('Pyyadalaryn we atlaryn sanyny giriz: ');
+                                
+                                for var i := 1 to N do
+                                begin
+                                    var (x, y) := Random2(1, 8);
+                                    A[x, y] := 'P';
+                                end;
+                                
+                                for var i := 1 to 8 do
+                                    for var j := 1 to 8 do 
+                                    begin
+                                        if(i-1 >= 1) and (i-1 <= 8) and (j+2 >= 1) and (j+2 <= 8) and (K <> 0) then 
+                                        if(A[i-1, j+2] = 'P') then begin A[i, j] := 'A'; dec(K);  end;
+                                            
+                                        if(i-1 >= 1) and (i-1 <= 8) and (j-2 >= 1) and (j-2 <= 8) and (K <> 0) then 
+                                        if(A[i-1, j-2] = 'P') then begin A[i, j] := 'A'; dec(K);  end;
+                                            
+                                        if(i+1 >= 1) and (i+1 <= 8) and (j+2 >= 1) and (j+2 <= 8) and (K <> 0) then 
+                                        if(A[i+1, j+2] = 'P') then begin A[i, j] := 'A'; dec(K);  end;
+                                            
+                                        if(i+1 >= 1) and (i+1 <= 8) and (j-2 >= 1) and (j-2 <= 8) and (K <> 0) then 
+                                        if(A[i+1, j-2] = 'P') then begin A[i, j] := 'A'; dec(K);  end;
+                                    end;
+                                    
+                                for var i := 1 to 8 do
+                                    for var j := 1 to 8 do 
+                                    begin
+                                        gotoxy(4*i, 2*j);
+                                        write(A[i, j]);
+                                    end;
+                                writeln;
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-4</span>
+                        0 we 1 aralygynda ýerleşen, maýdalawjysy N-den geçmeýän, gysgalmaýan droblary artýan tertipde çap etmeli. Meselem N=5 berlen bolsa, netije:
+                        1/5, 1/4, 1/3, 2/5, 1/2, 3/5, 2/3, 3/4, 4/5 bolar.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            begin
+                                var n := ReadInteger('n:');
+                                var s:string;
+                                for var i:=1 to n-1 do 
+                                    for var j:=1 to n do
+                                    if(j>i) then s += Round((i/j),2).ToString + ' ';
+                                var a := s.ToReals;
+                                a.Distinct.Sorted.Println(' | ');
+                            end.
+                        </code>
+                    </pre>
+                    <div class="question">
+                        <span>MESELE-5</span>
+                        Diňe + we – alamatlaryndan düzülen aňlatma berlen. Bu aňlatmany bahasyny hasaplamaly. Meselem -2+12-5 berlen bolsa, jogap 5 bolmaly.
+                    </div>
+                    <pre>
+                        <code class="language-pascal line-numbers" data-prismjs-copy="Kopýala" data-prismjs-copy-success="Kopýalandy">
+                            begin
+                                ReadString('Aňlatmany giriz:').ToIntegers.Sum.Println;
+                            end.
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="../about-project.html">Proýekt barada</a> |
+                <a href="../glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="../js/prism-dark.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dark-theme.js"></script>
+</body>
+
+</html>

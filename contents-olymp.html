@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tm">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodÖwren - Olimpiada programmirleme</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-2.png" alt="KodÖwren"></a>
+            </div>
+            <div id="top-nav">
+                <a href="contents-html.html">HTML</a>
+                <a href="contents-css.html">CSS</a>
+                <a href="contents-javascript.html">JavaScript</a>
+                <a href="glossary.html">Kompýuter Sözlügi</a>
+                <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+            </div>
+            <div id="theme-toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                  <i class="moon">&#9728;</i>
+                  <i class="sun">&#9788;</i>
+                  <span class="ball"></span>
+                </label>
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="topCloseNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="contents-html.html">HTML</a>
+                    <a href="contents-css.html">CSS</a>
+                    <a href="contents-javascript.html">JavaScript</a>
+                    <a href="glossary.html">Kompýuter Sözlügi</a>
+                    <a href="https://codepen.io/-azly-Atajan/pen/yLQrGar" target="_blank">Kod Ýaz</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" class="checkbox-overlay" id="checkbox-overlay">
+                    <label for="checkbox-overlay" class="checkbox-label">
+                        <i class="moon">&#9728;</i>
+                        <i class="sun">&#9788;</i>
+                      <span class="ball"></span>
+                    </label>
+                </div>
+            </div>
+            <span id="topNavOpenBtn" onclick="topOpenNav()">&#9776;</span>
+        </div>
+        <div class="main-1">
+            <div class="sidenav-1" id="mySidenav">
+                <p>
+                    Olimpiada programmirleme bölüminde mekdep maksatnamasy boýunça her ýyl olimpiada bäsleşiginde çykan meseleleri we çözüwlerini görüp
+                    bilersiňiz. 
+                </p>
+            </div>
+            <div class="topics-1" id="topics">
+                <ul class="breadcrumb breadcrumb-sticky" id="breadcrumb-sticky">
+                    <li><a href="index.html">Esasy</a><span>/</span></li>
+                    <li class="active">Olimpiada programmirleme</li>
+                </ul>
+                <!--contents-->
+                <p id="t-desc">
+                    Olimpiada programmirleme bölüminde mekdep maksatnamasy boýunça her ýyl olimpiada bäsleşiginde çykan meseleleri we çözüwlerini görüp
+                    bilersiňiz. 
+                </p>
+                <ul class="contents">
+                    <li><a href="topics-olymp/general.html#c-1">Mekdep tapgyry</a>
+                        <ul>
+                            <li><a href="topics-olymp/general.html#c-2">2016-2017 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-3">2020-2021 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-4">2021-2022 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-5">2022-2023 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-6">2023-2024 okuw ýyly</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="topics-olymp/general.html#c-7">Şäher tapgyry</a>
+                        <ul>
+                            <li><a href="topics-olymp/general.html#c-8">2021-2022 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-9">2022-2023 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-10">2023-2024 okuw ýyly</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="topics-olymp/general.html#c-11">Welaýat tapgyry</a>
+                        <ul>
+                            <li><a href="topics-olymp/general.html#c-12">2019-2020 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-13">2021-2022 okuw ýyly</a></li>
+                            <li><a href="topics-olymp/general.html#c-14">2022-2023 okuw ýyly</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-menu">
+                <a href="about-project.html">Proýekt barada</a> |
+                <a href="glossary.html">Sözlük</a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        /////////////////////////
+        //Top Nav              //
+        /////////////////////////
+        function topOpenNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function topCloseNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-theme.js"></script>
+</body>
+
+</html>
